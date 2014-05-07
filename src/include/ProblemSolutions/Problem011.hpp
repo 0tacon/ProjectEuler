@@ -14,14 +14,9 @@
 	#define _READFILEINTOVECT_
 #endif
 
-#ifndef _PRINTVECTOR_
-	#include "..\\OtherFunctions\\PrintVector.hpp"
-	#define _PRINTVECTOR_
-#endif
-
-std::vector<uint16_t> PosToCoord (uint16_t pos)
+std::vector<uint32_t> PosToCoord (uint32_t pos)
 {
-	std::vector<uint16_t> coord;
+	std::vector<uint32_t> coord;
 	
 	if (pos%20==0) 
 	{
@@ -37,37 +32,37 @@ std::vector<uint16_t> PosToCoord (uint16_t pos)
 	return coord;
 }
 
-uint16_t CoordToPos (std::vector<uint16_t> coord)
+uint32_t CoordToPos (std::vector<uint32_t> coord)
 {
-	uint16_t pos;
+	uint32_t pos;
 	
 	pos = ((coord[1]-1)*20 + coord[0])-1;
 	
 	return pos;
 }
 
-bool Extract2DigitNumbers (std::vector<uint16_t> &vect)
+bool Extract2DigitNumbers (std::vector<uint32_t> &vect)
 {
-	std::vector<uint16_t> temp;
+	std::vector<uint32_t> temp;
 	
-	for (uint16_t i=0; i<799; i+=2)	temp.push_back( vect[i]*10 + vect[i+1] );
+	for (uint32_t i=0; i<799; i+=2)	temp.push_back( vect[i]*10 + vect[i+1] );
 	
 	vect = temp;
 	
 	return true;
 }
 
-bool CreateMaps (	std::vector<uint16_t> 						&vect, 
-					std::map<uint8_t, std::vector<uint16_t> > 	&rows, 
-					std::map<uint8_t, std::vector<uint16_t> > 	&cols, 
-					std::map<uint8_t, std::vector<uint16_t> > 	&fwd_diags, 
-					std::map<uint8_t, std::vector<uint16_t> > 	&bck_diags		)
+bool CreateMaps (	std::vector<uint32_t> 						&vect, 
+					std::map<uint32_t, std::vector<uint32_t> > 	&rows, 
+					std::map<uint32_t, std::vector<uint32_t> > 	&cols, 
+					std::map<uint32_t, std::vector<uint32_t> > 	&fwd_diags, 
+					std::map<uint32_t, std::vector<uint32_t> > 	&bck_diags		)
 {
-	uint16_t count=0, x, y;
-	std::vector<uint16_t> coord;
+	uint32_t count=0, x, y;
+	std::vector<uint32_t> coord;
 	
 	// Create the maps for the rows and columns
-	for ( std::vector<uint16_t>::iterator i=vect.begin(); i!=vect.end(); i++ )
+	for ( std::vector<uint32_t>::iterator i=vect.begin(); i!=vect.end(); i++ )
 	{
 		count++;
 		
@@ -79,7 +74,7 @@ bool CreateMaps (	std::vector<uint16_t> 						&vect,
 	count=0;
 	
 	// Create the maps for the foward and backward facing diagonals
-	for ( uint16_t i=4; i<21; i++ )
+	for ( uint32_t i=4; i<21; i++ )
 	{
 		count++;
 		
@@ -113,7 +108,7 @@ bool CreateMaps (	std::vector<uint16_t> 						&vect,
 		
 		coord.erase(coord.begin(), coord.end());
 	}
-	for ( uint16_t i=2; i<18; i++ )
+	for ( uint32_t i=2; i<18; i++ )
 	{
 		count++;
 		
@@ -151,21 +146,84 @@ bool CreateMaps (	std::vector<uint16_t> 						&vect,
 	return true;
 }
 
+uint32_t FindGreatestProduct (	std::map<uint32_t, std::vector<uint32_t> > 	&rows, 
+								std::map<uint32_t, std::vector<uint32_t> > 	&cols, 
+								std::map<uint32_t, std::vector<uint32_t> > 	&fwd_diags, 
+								std::map<uint32_t, std::vector<uint32_t> > 	&bck_diags		)
+{
+	uint32_t product=0, largest_product=0;
+	std::vector<uint32_t> temp;
+	temp.resize(4);
+	
+	for ( uint32_t n = 1 ; n < 21 ; n++ )
+	{
+		for ( uint32_t i = 0; i < 17; i++ )
+		{
+			std::copy ( rows[n].begin()+i, rows[n].begin()+i+4, temp.begin() );
+			
+			product = 1;
+			for ( std::vector<uint32_t>::iterator itr = temp.begin() ; itr != temp.end() ; itr++ )
+			{
+				product = product*(*itr);
+			}
+			if (product>largest_product) largest_product = product;
+			
+			std::copy ( cols[n].begin()+i, cols[n].begin()+i+4, temp.begin() );
+			
+			product = 1;
+			for ( std::vector<uint32_t>::iterator itr = temp.begin() ; itr != temp.end() ; itr++ )
+			{
+				product = product*(*itr);
+			}
+			if (product>largest_product) largest_product = product;
+		}
+	}
+	
+	for ( uint32_t n = 1 ; n < 34 ; n++ )
+	{
+		for ( uint32_t i = 0; i < fwd_diags[n].size()-3; i++ )
+		{
+			std::copy ( fwd_diags[n].begin()+i, fwd_diags[n].begin()+i+4, temp.begin() );
+			
+			product = 1;
+			for ( std::vector<uint32_t>::iterator itr = temp.begin() ; itr != temp.end() ; itr++ )
+			{
+				product = product*(*itr);
+			}
+			if (product>largest_product) largest_product = product;
+			
+			std::copy ( bck_diags[n].begin()+i, bck_diags[n].begin()+i+4, temp.begin() );
+			
+			product = 1;
+			for ( std::vector<uint32_t>::iterator itr = temp.begin() ; itr != temp.end() ; itr++ )
+			{
+				product = product*(*itr);
+			}
+			if (product>largest_product) largest_product = product;
+		}
+	}
+	
+	return largest_product;
+}
+
 bool Problem11 ()
 {
-	std::vector<uint16_t> vect;
-	std::map<uint8_t, std::vector<uint16_t> > rows, cols, fwd_diags, bck_diags;
+	std::vector<uint32_t> vect;
+	std::map<uint32_t, std::vector<uint32_t> > rows, cols, fwd_diags, bck_diags;
 	std::string filepath = "..\\data\\Problem11.txt";
+	uint32_t prod;
 		
 	ReadFileIntoVect (vect, filepath);
 	
-	vect.erase( std::remove(vect.begin(), vect.end(), 65520), vect.end() );
+	vect.erase( std::remove(vect.begin(), vect.end(), 4294967280), vect.end() );
 	
 	Extract2DigitNumbers (vect);
 	
 	CreateMaps (vect, rows, cols, fwd_diags, bck_diags);
 	
-	std::cout << "\nProblem 011:\n";
+	prod = FindGreatestProduct (rows, cols, fwd_diags, bck_diags);
+	
+	std::cout << "\nProblem 011: " << prod << "\n";
 	
 	return true;
 }
