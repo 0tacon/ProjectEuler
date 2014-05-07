@@ -19,6 +19,33 @@
 	#define _PRINTVECTOR_
 #endif
 
+std::vector<uint16_t> PosToCoord (uint16_t pos)
+{
+	std::vector<uint16_t> coord;
+	
+	if (pos%20==0) 
+	{
+		coord.push_back(20);
+		coord.push_back( pos/20 );
+	}
+	else 
+	{
+		coord.push_back(pos%20);
+		coord.push_back( ((pos - pos%20)/20)+1 );
+	}
+	
+	return coord;
+}
+
+uint16_t CoordToPos (std::vector<uint16_t> coord)
+{
+	uint16_t pos;
+	
+	pos = ((coord[1]-1)*20 + coord[0])-1;
+	
+	return pos;
+}
+
 bool Extract2DigitNumbers (std::vector<uint16_t> &vect)
 {
 	std::vector<uint16_t> temp;
@@ -36,16 +63,89 @@ bool CreateMaps (	std::vector<uint16_t> 						&vect,
 					std::map<uint8_t, std::vector<uint16_t> > 	&fwd_diags, 
 					std::map<uint8_t, std::vector<uint16_t> > 	&bck_diags		)
 {
-	uint16_t count=0;
+	uint16_t count=0, x, y;
+	std::vector<uint16_t> coord;
 	
+	// Create the maps for the rows and columns
 	for ( std::vector<uint16_t>::iterator i=vect.begin(); i!=vect.end(); i++ )
 	{
-		rows[ (count/20)+1 ].push_back(*i);
-		
 		count++;
+		
+		rows[ ((count-1)/20)+1 ].push_back(*i);
 		
 		if ( count%20!=0 ) cols[ count%20 ].push_back(*i);
 		else cols[20].push_back(*i);
+	}
+	count=0;
+	
+	// Create the maps for the foward and backward facing diagonals
+	for ( uint16_t i=4; i<21; i++ )
+	{
+		count++;
+		
+		x=i;
+		y=1;
+		
+		coord.push_back(x);
+		coord.push_back(y);
+		
+		while (coord[0] > 0)
+		{
+			fwd_diags[count].push_back( vect.at( CoordToPos(coord) ) );
+			coord[0] -= 1;
+			coord[1] += 1;
+		}
+		
+		coord.erase(coord.begin(), coord.end());
+		
+		x=20;
+		y=i;
+		
+		coord.push_back(x);
+		coord.push_back(y);
+		
+		while (coord[1] > 0)
+		{
+			bck_diags[count].push_back( vect.at( CoordToPos(coord) ) );
+			coord[0] -= 1;
+			coord[1] -= 1;
+		}
+		
+		coord.erase(coord.begin(), coord.end());
+	}
+	for ( uint16_t i=2; i<18; i++ )
+	{
+		count++;
+		
+		x=i;
+		y=20;
+		
+		coord.push_back(x);
+		coord.push_back(y);
+		
+		while (coord[0] < 21)
+		{
+			fwd_diags[count].push_back( vect.at( CoordToPos(coord) ) );
+			coord[0] += 1;
+			coord[1] -= 1;
+		}
+		
+		coord.erase(coord.begin(), coord.end());
+		
+		x=1;
+		y=i;
+		
+		coord.push_back(x);
+		coord.push_back(y);
+		
+		while (coord[1] < 21)
+		{
+			bck_diags[count].push_back( vect.at( CoordToPos(coord) ) );
+			coord[0] += 1;
+			coord[1] += 1;
+		}
+		
+		coord.erase(coord.begin(), coord.end());
 	}
 	
 	return true;

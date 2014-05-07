@@ -19,7 +19,7 @@ int main ()
 {
 	PrintHeader();
 	
-	Problem1();
+	/*Problem1();
 	Problem2();
 	Problem3();
 	Problem4();
@@ -28,7 +28,7 @@ int main ()
 	Problem7();
 	Problem8();
 	Problem9();
-	Problem10();
+	Problem10();*/
 	Problem11();
 	
 	std::cin.get();
