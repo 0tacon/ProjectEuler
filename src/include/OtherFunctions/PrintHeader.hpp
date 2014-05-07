@@ -14,7 +14,7 @@ void PrintHeader (void)
 	std::cout << "=                                      =\n";
 	std::cout << "========================================\n";
 	std::cout << "=                                      =\n";
-	std::cout << "=             Daniel Forde             =\n";
+	std::cout << "=                0tacon                =\n";
 	std::cout << "=                                      =\n";
 	std::cout << "========================================\n\n";
 }
