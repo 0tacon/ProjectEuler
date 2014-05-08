@@ -5,7 +5,7 @@ void PrintHeader (void)
 {
 	std::cout << "\n========================================\n";
 	std::cout << "=                                      =\n";
-	std::cout << "=         Project Euler Solver         =\n";
+	std::cout << "=            Project  Euler            =\n";
 	std::cout << "=               1.00.001               =\n";
 	std::cout << "=                                      =\n";
 	std::cout << "========================================\n";
