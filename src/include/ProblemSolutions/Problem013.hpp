@@ -22,7 +22,7 @@ bool Problem13 ()
 	
 	ReadFileIntoVect (vect, filename);
 	
-	for (int16_t j=10; j>=0; j--)
+	for (int8_t j=10; j>=0; j--)
 	{
 		count++;
 		for (uint16_t i=j; i<(50*99+j+1); i+=50)

@@ -2,8 +2,8 @@
 Focused=-1
 Order=-1
 [Editor_0]
-Open=1
-Top=1
+Open=0
+Top=0
 CursorCol=16
 CursorRow=35
 TopLine=13
@@ -122,8 +122,8 @@ TopLine=21
 LeftChar=1
 [Editor_17]
 Open=1
-Top=0
-CursorCol=9
-CursorRow=19
-TopLine=1
+Top=1
+CursorCol=11
+CursorRow=25
+TopLine=8
 LeftChar=1
