@@ -1,8 +1,12 @@
-#include <windows.h>
 #include <iostream>
+#include <ctime>
 
 void PrintHeader (void)
 {
+    std::time_t time = std::time(NULL);
+    char strTime[11];
+    std::strftime(strTime, sizeof(strTime), "%d/%m/%Y", std::localtime(&time));
+	
 	std::cout << "\n========================================\n";
 	std::cout << "=                                      =\n";
 	std::cout << "=            Project  Euler            =\n";
@@ -10,7 +14,7 @@ void PrintHeader (void)
 	std::cout << "=                                      =\n";
 	std::cout << "========================================\n";
 	std::cout << "=                                      =\n";
-	std::cout << "=               07/05/14               =\n";
+	std::cout << "=              " << strTime << "              =\n";
 	std::cout << "=                                      =\n";
 	std::cout << "========================================\n";
 	std::cout << "=                                      =\n";

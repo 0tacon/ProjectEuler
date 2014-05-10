@@ -14,6 +14,7 @@
 #include "include\\ProblemSolutions\\Problem011.hpp"
 #include "include\\ProblemSolutions\\Problem012.hpp"
 #include "include\\ProblemSolutions\\Problem013.hpp"
+#include "include\\ProblemSolutions\\Problem014.hpp"
 
 #include "include\\OtherFunctions\\PrintHeader.hpp"
 
@@ -32,8 +33,9 @@ int main ()
 	Problem9();
 	Problem10();
 	Problem11();
-	Problem12();*/
-	Problem13();
+	Problem12();
+	Problem13();*/
+	Problem14();
 	
 	std::cin.get();
 	return 0;
