@@ -21,6 +21,6 @@ bool Problem17 ()
 	
 	for (uint16_t i=1; i<1000; i++) letters+=GetLettersInNum(i);
 	
-	std::cout << "\nProblem017: " << letters << "\n";
+	std::cout << "\nProblem 017: " << letters << "\n";
 	return true;
 }

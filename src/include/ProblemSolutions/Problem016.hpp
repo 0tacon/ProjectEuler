@@ -6,9 +6,24 @@
 
 #include <iostream>
 #include <cstdint>
+#include <cmath>
+
+#ifndef _GETDIGIT_
+	#include "..\\OtherFunctions\\GetDigit.hpp"
+	#define _GETDIGIT_
+#endif
+
+#ifndef _GETNUMDIGITS_
+	#include "..\\OtherFunctions\\GetNumDigits.hpp"
+	#define _GETNUMDIGITS_
+#endif
 
 bool Problem16 ()
 {
-	std::cout << "\nProblem016: " << "\n";
+	double num = pow(2,1000);
+	
+	//std::cout << GetNumDigits(num);
+	
+	std::cout << "\nProblem 016: " << "\n";
 	return true;
 }
