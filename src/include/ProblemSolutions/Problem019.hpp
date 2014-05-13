@@ -22,18 +22,18 @@
 
 bool Problem19 ()
 {
-	Date d1, d2;
+	Date sunday, max_date;
+	uint32_t sunday_the_1st_count=0;
+
+	sunday.SetMembers(6,1,1901);		// The first Sunday of the 20th century
+	max_date.SetMembers(1,1,2001);		// Must only analyse dates before this one
 	
-	d1.PrintDate();
-	d2.PrintDate();
+	while (sunday<max_date)
+	{
+		sunday.IncrementByNumDays(7);
+		if (sunday.GetDay() == 1) sunday_the_1st_count++;
+	}
 	
-	for (uint8_t i=0; i<5; i++) d2.IncrementBy1Week();
-	d1.PrintDate();
-	d2.PrintDate();
-	
-	if (d2>d1) std::cout << "\nConfirmed, d2 greater than d1\n";
-	if (d1>d2) std::cout << "\nError d1 incorrectly identified as greater than d2\n";
-	
-	std::cout << "\nProblem 019: " << "\n";
+	std::cout << "\nProblem 019: " << sunday_the_1st_count << "\n";
 	return true;
 }
