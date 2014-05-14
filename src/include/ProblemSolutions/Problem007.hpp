@@ -7,9 +7,14 @@
 #include <iostream>
 #include <cstdint>
 
+#ifndef _GETPRIMENUMBER_
+	#include "..\\OtherFunctions\\GetPrimeNumber.hpp"
+	#define _GETPRIMENUMBER_
+#endif
+
 bool Problem7 ()
 {
-	std::cout << "\nProblem 007:\n";
+	std::cout << "\nProblem 007: " << GetPrimeNumber(10001) << "\n";
 	
 	return true;
 }

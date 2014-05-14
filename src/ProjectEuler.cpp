@@ -32,8 +32,8 @@ int main ()
 	Problem3();
 	Problem4();
 	Problem5();
-	Problem6();
-	//Problem7();
+	Problem6();*/
+	Problem7();/*
 	Problem8();
 	Problem9();
 	//Problem10();
@@ -43,9 +43,9 @@ int main ()
 	Problem14();
 	//Problem15();
 	//Problem16();
-	Problem17();*/
+	Problem17();
 	//Problem18();
-	Problem19();
+	Problem19();*/
 	
 	std::cin.get();
 	return 0;
