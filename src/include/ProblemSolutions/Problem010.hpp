@@ -7,9 +7,14 @@
 #include <iostream>
 #include <cstdint>
 
+#ifndef _GETSUMPRIMESBELOW_
+	#include "..\\OtherFunctions\\GetSumPrimesBelow.hpp"
+	#define _GETSUMPRIMESBELOW_
+#endif
+
 bool Problem10 ()
 {
-	std::cout << "\nProblem 010:\n";
+	std::cout << "\nProblem 010: " << GetSumPrimesBelow(2000000) << "\n";
 	
 	return true;
 }

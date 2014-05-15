@@ -10,12 +10,14 @@
 #endif
 
 template<typename T>
-uint64_t GetPrimeNumber (T prime_pos)
+uint64_t GetSumPrimesBelow (T max)
 {
-	if (prime_pos == 1 || prime_pos == 2) return prime_pos+1;
+	uint64_t sum = 2;
+	
+	if (max < 2) return 0;
+	else if ( max == 2 ) return 2;
 	else
 	{
-		uint64_t max = 110000;
 		std::vector<uint64_t> primes;
 		primes.reserve(max);
 		
@@ -27,11 +29,7 @@ uint64_t GetPrimeNumber (T prime_pos)
 			
 		primes.erase(std::remove(primes.begin(), primes.end(), 0), primes.end());
 		
-		if (prime_pos-2<primes.size()) return primes.at(prime_pos-2);
-		else
-		{
-			std::cout << "Error: prime number requested is not less than 110,000!";
-			return 0;
-		}
+		for (std::vector<uint64_t>::iterator n = primes.begin(); n != primes.end(); n++) sum += *n;
+		return sum;
 	}
 }
