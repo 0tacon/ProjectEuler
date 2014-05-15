@@ -22,23 +22,15 @@
 
 #include <iostream>
 #include <cstdint>
-#include <cmath>
 
-uint16_t GetNumDivisors (double n)
-{
-	uint16_t divisors = 0;
-	
-	for ( double i=1.0; i<n+1.0; i++ )
-	{
-		if ( fmod(n,i)==0.0 ) divisors++;
-	}
-	
-	return divisors;	
-}
+#ifndef _GETNUMDIVISORS_
+	#include "..\\OtherFunctions\\GetNumDivisors.hpp"
+	#define _GETNUMDIVISORS_
+#endif
 
 bool Problem12 ()
 {
-	double n=1000.0, Tn=0.0;
+	double n=0.0, Tn=0.0;
 	bool num_found = false;
 	uint16_t divisors;
 	
@@ -47,13 +39,13 @@ bool Problem12 ()
 		n++;
 		Tn = (n*(n+1.0))/2.0;
 		
-		divisors = GetNumDivisors (Tn);
+		divisors = GetNumDivisors (76576500/*Tn*/);
 		
-		if ( divisors > 499 ) num_found = true;
+		if ( divisors > 500 ) num_found = true;
 		
-		std::cout << "n = " << n << ", Tn = " << Tn << ", divisors = " << divisors << "\n";
+		//std::cout << "n = " << n << ", Tn = " << Tn << ", divisors = " << divisors << "\n";
 	}
 	
-	std::cout << "\nProblem 012: " << "\n";
+	std::cout << "\nProblem 012: " << Tn << "\n";
 	return true;
 }
