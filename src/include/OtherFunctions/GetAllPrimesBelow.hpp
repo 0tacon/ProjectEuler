@@ -27,7 +27,7 @@ std::vector<uint64_t> GetAllPrimesBelow (T max)
 		
 		for (std::vector<uint64_t>::iterator n = primes.begin(); n != primes.end() && *n < sqrt(max); n++)
 			if (*n != 0)
-				std::replace_if(primes.begin(), primes.end(), std::bind(IsDivisible, std::placeholders::_1, (*n)), 0);
+				std::replace_if(n, primes.end(), std::bind(IsDivisible, std::placeholders::_1, (*n)), 0);
 			
 		primes.erase(std::remove(primes.begin(), primes.end(), 0), primes.end());
 		

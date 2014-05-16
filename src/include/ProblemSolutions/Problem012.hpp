@@ -39,7 +39,7 @@ bool Problem12 ()
 		n++;
 		Tn = (n*(n+1.0))/2.0;
 		
-		divisors = GetNumDivisors (76576500/*Tn*/);
+		divisors = GetNumDivisors (Tn);
 		
 		if ( divisors > 500 ) num_found = true;
 		
