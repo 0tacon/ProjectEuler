@@ -1,6 +1,8 @@
 #include <iostream>
 #include <ctime>
 
+#define _PRINTHEADER_
+
 void PrintHeader (void)
 {
     std::time_t time = std::time(NULL);

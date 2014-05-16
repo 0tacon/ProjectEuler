@@ -3,9 +3,10 @@
 #include <vector>
 
 #ifndef _GETNUMDIGITS_
-	#include "..\\OtherFunctions\\GetNumDigits.hpp"
-	#define _GETNUMDIGITS_
+	#include "..\\OtherFunctions\\GetNumDigits.h"
 #endif
+
+#define _ISPALENDROME_
 
 bool IsPalendrome ( uint64_t num )
 {

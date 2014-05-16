@@ -1,6 +1,8 @@
 #include <iostream>
 #include <vector>
 
+#define _PRINTVECTOR_
+
 template <typename T>
 bool PrintVector ( std::vector<T> &v )
 {

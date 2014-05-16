@@ -10,8 +10,7 @@
 #include <cstdint>
 
 #ifndef _READFILEINTOVECT_
-	#include "..\\OtherFunctions\\ReadFileIntoVect.hpp"
-	#define _READFILEINTOVECT_
+	#include "..\\OtherFunctions\\ReadFileIntoVect.h"
 #endif
 
 std::vector<uint8_t> PosToCoord (uint16_t pos)

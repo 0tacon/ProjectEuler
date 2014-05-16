@@ -8,8 +8,7 @@
 #include <cstdint>
 
 #ifndef _READFILEINTOVECT_
-	#include "..\\OtherFunctions\\ReadFileIntoVect.hpp"
-	#define _READFILEINTOVECT_
+	#include "..\\OtherFunctions\\ReadFileIntoVect.h"
 #endif
 
 bool Problem8 ()

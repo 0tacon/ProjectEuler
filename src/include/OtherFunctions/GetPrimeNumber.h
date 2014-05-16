@@ -5,9 +5,10 @@
 #include <functional>
 
 #ifndef _GETALLPRIMESBELOW_
-	#include "GetAllPrimesBelow.hpp"
-	#define _GETALLPRIMESBELOW_
+	#include "GetAllPrimesBelow.h"
 #endif
+
+#define _GETPRIMENUMBER_
 
 template<typename T>
 uint64_t GetPrimeNumber (T prime_pos)

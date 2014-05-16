@@ -1,6 +1,8 @@
 #include <cstdint>
 #include <cmath>
 
+#define _COUNTHIGHBITS_
+
 template<typename T>
 T CountHighBits(T n, uint8_t bit_length)
 {

@@ -8,8 +8,7 @@
 #include <cstdint>
 
 #ifndef _GETPRIMENUMBER_
-	#include "..\\OtherFunctions\\GetPrimeNumber.hpp"
-	#define _GETPRIMENUMBER_
+	#include "..\\OtherFunctions\\GetPrimeNumber.h"
 #endif
 
 bool Problem7 ()

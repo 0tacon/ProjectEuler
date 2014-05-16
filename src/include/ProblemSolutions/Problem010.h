@@ -8,8 +8,7 @@
 #include <cstdint>
 
 #ifndef _GETSUMPRIMESBELOW_
-	#include "..\\OtherFunctions\\GetSumPrimesBelow.hpp"
-	#define _GETSUMPRIMESBELOW_
+	#include "..\\OtherFunctions\\GetSumPrimesBelow.h"
 #endif
 
 bool Problem10 ()

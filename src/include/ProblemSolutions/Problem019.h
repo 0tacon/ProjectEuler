@@ -16,8 +16,7 @@
 #include <cstdint>
 
 #ifndef _DATE_
-	#include "..\\Classes\\Date.hpp"
-	#define _DATE_
+	#include "..\\Classes\\Date.h"
 #endif
 
 bool Problem19 ()

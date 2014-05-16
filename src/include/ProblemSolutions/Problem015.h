@@ -10,8 +10,7 @@
 #include <cmath>
 
 #ifndef _COUNTHIGHBITS_
-	#include "..\\OtherFunctions\\CountHighBits.hpp"
-	#define _COUNTHIGHBITS_
+	#include "..\\OtherFunctions\\CountHighBits.h"
 #endif
 
 uint16_t CalculateNumPaths(uint8_t grid_side_length)

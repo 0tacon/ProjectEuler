@@ -3,6 +3,8 @@
 #include <vector>
 #include <cstdint>
 
+#define _READFILEINTOVECT_
+
 template<typename T>
 bool ReadFileIntoVect ( std::vector<T> &vect, std::string &filepath )
 {

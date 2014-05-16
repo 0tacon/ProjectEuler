@@ -1,6 +1,8 @@
 #include <cstdint>
 #include <cmath>
 
+#define _ISDIVISIBLE_
+
 bool IsDivisible (uint64_t a, uint64_t b)
 {
 	if (a <= b) return false;

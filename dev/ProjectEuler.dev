@@ -61,9 +61,9 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit2]
-FileName=..\src\include\ProblemSolutions\Problem001.hpp
+FileName=W:\cppprojects\ProjectEuler\src\include\Classes\Date.h
 CompileCpp=1
-Folder=ProblemSolutions
+Folder=Classes
 Compile=1
 Link=1
 Priority=1000
@@ -71,9 +71,9 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit3]
-FileName=..\src\include\ProblemSolutions\Problem002.hpp
+FileName=W:\cppprojects\ProjectEuler\src\include\OtherFunctions\CountHighBits.h
 CompileCpp=1
-Folder=ProblemSolutions
+Folder=OtherFunctions
 Compile=1
 Link=1
 Priority=1000
@@ -81,9 +81,9 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit4]
-FileName=..\src\include\ProblemSolutions\Problem003.hpp
+FileName=W:\cppprojects\ProjectEuler\src\include\OtherFunctions\GetAllPrimesBelow.h
 CompileCpp=1
-Folder=ProblemSolutions
+Folder=OtherFunctions
 Compile=1
 Link=1
 Priority=1000
@@ -91,9 +91,9 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit5]
-FileName=..\src\include\ProblemSolutions\Problem004.hpp
+FileName=W:\cppprojects\ProjectEuler\src\include\OtherFunctions\GetDigit.h
 CompileCpp=1
-Folder=ProblemSolutions
+Folder=OtherFunctions
 Compile=1
 Link=1
 Priority=1000
@@ -101,9 +101,9 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit6]
-FileName=..\src\include\ProblemSolutions\Problem005.hpp
+FileName=W:\cppprojects\ProjectEuler\src\include\OtherFunctions\GetLettersInNum.h
 CompileCpp=1
-Folder=ProblemSolutions
+Folder=OtherFunctions
 Compile=1
 Link=1
 Priority=1000
@@ -111,9 +111,9 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit7]
-FileName=..\src\include\ProblemSolutions\Problem006.hpp
+FileName=W:\cppprojects\ProjectEuler\src\include\OtherFunctions\GetNumDigits.h
 CompileCpp=1
-Folder=ProblemSolutions
+Folder=OtherFunctions
 Compile=1
 Link=1
 Priority=1000
@@ -121,9 +121,9 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit8]
-FileName=..\src\include\ProblemSolutions\Problem007.hpp
+FileName=W:\cppprojects\ProjectEuler\src\include\OtherFunctions\GetNumDivisors.h
 CompileCpp=1
-Folder=ProblemSolutions
+Folder=OtherFunctions
 Compile=1
 Link=1
 Priority=1000
@@ -131,9 +131,9 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit9]
-FileName=..\src\include\ProblemSolutions\Problem008.hpp
+FileName=W:\cppprojects\ProjectEuler\src\include\OtherFunctions\GetPrimeNumber.h
 CompileCpp=1
-Folder=ProblemSolutions
+Folder=OtherFunctions
 Compile=1
 Link=1
 Priority=1000
@@ -141,9 +141,9 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit10]
-FileName=..\src\include\ProblemSolutions\Problem009.hpp
+FileName=W:\cppprojects\ProjectEuler\src\include\OtherFunctions\GetSumPrimesBelow.h
 CompileCpp=1
-Folder=ProblemSolutions
+Folder=OtherFunctions
 Compile=1
 Link=1
 Priority=1000
@@ -151,9 +151,9 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit11]
-FileName=..\src\include\ProblemSolutions\Problem010.hpp
+FileName=W:\cppprojects\ProjectEuler\src\include\OtherFunctions\IsDivisible.h
 CompileCpp=1
-Folder=ProblemSolutions
+Folder=OtherFunctions
 Compile=1
 Link=1
 Priority=1000
@@ -161,9 +161,9 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit12]
-FileName=..\src\include\ProblemSolutions\Problem011.hpp
+FileName=W:\cppprojects\ProjectEuler\src\include\OtherFunctions\IsPalendrome.h
 CompileCpp=1
-Folder=ProblemSolutions
+Folder=OtherFunctions
 Compile=1
 Link=1
 Priority=1000
@@ -171,7 +171,7 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit13]
-FileName=..\src\include\OtherFunctions\IsPalendrome.hpp
+FileName=W:\cppprojects\ProjectEuler\src\include\OtherFunctions\PrintHeader.h
 CompileCpp=1
 Folder=OtherFunctions
 Compile=1
@@ -181,7 +181,7 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit14]
-FileName=..\src\include\OtherFunctions\ReadFileIntoVect.hpp
+FileName=W:\cppprojects\ProjectEuler\src\include\OtherFunctions\PrintVector.h
 CompileCpp=1
 Folder=OtherFunctions
 Compile=1
@@ -191,17 +191,7 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit15]
-FileName=..\src\include\OtherFunctions\PrintVector.hpp
-CompileCpp=1
-Folder=OtherFunctions
-Compile=1
-Link=1
-Priority=1000
-OverrideBuildCmd=0
-BuildCmd=
-
-[Unit16]
-FileName=..\src\include\OtherFunctions\PrintHeader.hpp
+FileName=W:\cppprojects\ProjectEuler\src\include\OtherFunctions\ReadFileIntoVect.h
 CompileCpp=1
 Folder=OtherFunctions
 Compile=1
@@ -211,7 +201,7 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit17]
-FileName=..\src\include\ProblemSolutions\Problem012.hpp
+FileName=W:\cppprojects\ProjectEuler\src\include\ProblemSolutions\Problem002.h
 CompileCpp=1
 Folder=ProblemSolutions
 Compile=1
@@ -221,7 +211,7 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit18]
-FileName=..\src\include\ProblemSolutions\Problem013.hpp
+FileName=W:\cppprojects\ProjectEuler\src\include\ProblemSolutions\Problem003.h
 CompileCpp=1
 Folder=ProblemSolutions
 Compile=1
@@ -231,7 +221,7 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit19]
-FileName=..\src\include\ProblemSolutions\Problem014.hpp
+FileName=W:\cppprojects\ProjectEuler\src\include\ProblemSolutions\Problem004.h
 CompileCpp=1
 Folder=ProblemSolutions
 Compile=1
@@ -241,7 +231,7 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit20]
-FileName=..\src\include\ProblemSolutions\Problem015.hpp
+FileName=W:\cppprojects\ProjectEuler\src\include\ProblemSolutions\Problem005.h
 CompileCpp=1
 Folder=ProblemSolutions
 Compile=1
@@ -251,9 +241,9 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit21]
-FileName=..\src\include\OtherFunctions\CountHighBits.hpp
+FileName=W:\cppprojects\ProjectEuler\src\include\ProblemSolutions\Problem006.h
 CompileCpp=1
-Folder=OtherFunctions
+Folder=ProblemSolutions
 Compile=1
 Link=1
 Priority=1000
@@ -261,7 +251,7 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit22]
-FileName=..\src\include\ProblemSolutions\Problem017.hpp
+FileName=W:\cppprojects\ProjectEuler\src\include\ProblemSolutions\Problem007.h
 CompileCpp=1
 Folder=ProblemSolutions
 Compile=1
@@ -271,7 +261,7 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit23]
-FileName=..\src\include\ProblemSolutions\Problem016.hpp
+FileName=W:\cppprojects\ProjectEuler\src\include\ProblemSolutions\Problem008.h
 CompileCpp=1
 Folder=ProblemSolutions
 Compile=1
@@ -281,9 +271,9 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit24]
-FileName=..\src\include\OtherFunctions\GetLettersInNum.hpp
+FileName=W:\cppprojects\ProjectEuler\src\include\ProblemSolutions\Problem009.h
 CompileCpp=1
-Folder=OtherFunctions
+Folder=ProblemSolutions
 Compile=1
 Link=1
 Priority=1000
@@ -291,9 +281,9 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit25]
-FileName=..\src\include\OtherFunctions\GetNumDigits.hpp
+FileName=W:\cppprojects\ProjectEuler\src\include\ProblemSolutions\Problem010.h
 CompileCpp=1
-Folder=OtherFunctions
+Folder=ProblemSolutions
 Compile=1
 Link=1
 Priority=1000
@@ -301,9 +291,9 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit26]
-FileName=..\src\include\OtherFunctions\GetDigit.hpp
+FileName=W:\cppprojects\ProjectEuler\src\include\ProblemSolutions\Problem011.h
 CompileCpp=1
-Folder=OtherFunctions
+Folder=ProblemSolutions
 Compile=1
 Link=1
 Priority=1000
@@ -311,7 +301,7 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit27]
-FileName=..\src\include\ProblemSolutions\Problem019.hpp
+FileName=W:\cppprojects\ProjectEuler\src\include\ProblemSolutions\Problem012.h
 CompileCpp=1
 Folder=ProblemSolutions
 Compile=1
@@ -321,7 +311,7 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit28]
-FileName=..\src\include\ProblemSolutions\Problem018.hpp
+FileName=W:\cppprojects\ProjectEuler\src\include\ProblemSolutions\Problem013.h
 CompileCpp=1
 Folder=ProblemSolutions
 Compile=1
@@ -331,9 +321,9 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit29]
-FileName=..\src\include\Classes\Date.hpp
+FileName=W:\cppprojects\ProjectEuler\src\include\ProblemSolutions\Problem014.h
 CompileCpp=1
-Folder=Classes
+Folder=ProblemSolutions
 Compile=1
 Link=1
 Priority=1000
@@ -341,9 +331,9 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit30]
-FileName=..\src\include\OtherFunctions\GetPrimeNumber.hpp
+FileName=W:\cppprojects\ProjectEuler\src\include\ProblemSolutions\Problem015.h
 CompileCpp=1
-Folder=OtherFunctions
+Folder=ProblemSolutions
 Compile=1
 Link=1
 Priority=1000
@@ -351,9 +341,9 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit31]
-FileName=..\src\include\OtherFunctions\GetSumPrimesBelow.hpp
+FileName=W:\cppprojects\ProjectEuler\src\include\ProblemSolutions\Problem016.h
 CompileCpp=1
-Folder=OtherFunctions
+Folder=ProblemSolutions
 Compile=1
 Link=1
 Priority=1000
@@ -361,9 +351,9 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit32]
-FileName=..\src\include\OtherFunctions\IsDivisible.hpp
+FileName=W:\cppprojects\ProjectEuler\src\include\ProblemSolutions\Problem017.h
 CompileCpp=1
-Folder=OtherFunctions
+Folder=ProblemSolutions
 Compile=1
 Link=1
 Priority=1000
@@ -371,9 +361,9 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit33]
-FileName=..\src\include\OtherFunctions\GetNumDivisors.hpp
+FileName=W:\cppprojects\ProjectEuler\src\include\ProblemSolutions\Problem018.h
 CompileCpp=1
-Folder=OtherFunctions
+Folder=ProblemSolutions
 Compile=1
 Link=1
 Priority=1000
@@ -381,9 +371,19 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit34]
-FileName=..\src\include\OtherFunctions\GetAllPrimesBelow.hpp
+FileName=W:\cppprojects\ProjectEuler\src\include\ProblemSolutions\Problem019.h
 CompileCpp=1
-Folder=OtherFunctions
+Folder=ProblemSolutions
+Compile=1
+Link=1
+Priority=1000
+OverrideBuildCmd=0
+BuildCmd=
+
+[Unit16]
+FileName=W:\cppprojects\ProjectEuler\src\include\ProblemSolutions\Problem001.h
+CompileCpp=1
+Folder=ProblemSolutions
 Compile=1
 Link=1
 Priority=1000

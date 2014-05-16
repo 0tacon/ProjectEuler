@@ -6,14 +6,14 @@
 #include <map>
 
 #ifndef _ISDIVISIBLE_
-	#include "IsDivisible.hpp"
-	#define _ISDIVISIBLE_
+	#include "IsDivisible.h"
 #endif
 
 #ifndef _GETALLPRIMESBELOW_
-	#include "GetAllPrimesBelow.hpp"
-	#define _GETALLPRIMESBELOW_
+	#include "GetAllPrimesBelow.h"
 #endif
+
+#define _GETNUMDIVISORS_
 
 template<typename T>
 uint16_t GetNumDivisors (T n)

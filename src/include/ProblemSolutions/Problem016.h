@@ -9,13 +9,11 @@
 #include <cmath>
 
 #ifndef _GETDIGIT_
-	#include "..\\OtherFunctions\\GetDigit.hpp"
-	#define _GETDIGIT_
+	#include "..\\OtherFunctions\\GetDigit.h"
 #endif
 
 #ifndef _GETNUMDIGITS_
-	#include "..\\OtherFunctions\\GetNumDigits.hpp"
-	#define _GETNUMDIGITS_
+	#include "..\\OtherFunctions\\GetNumDigits.h"
 #endif
 
 bool Problem16 ()

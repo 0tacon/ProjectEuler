@@ -11,8 +11,7 @@
 #include <cstdint>
 
 #ifndef _GETLETTERSINNUM_
-	#include "..\\OtherFunctions\\GetLettersInNum.hpp"
-	#define _GETLETTERSINNUM_
+	#include "..\\OtherFunctions\\GetLettersInNum.h"
 #endif
 
 bool Problem17 ()

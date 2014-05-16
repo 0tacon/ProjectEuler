@@ -8,8 +8,7 @@
 #include <cstdint>
 
 #ifndef _ISPALENDROME_
-	#include "..\\OtherFunctions\\IsPalendrome.hpp"
-	#define _ISPALENDROME_
+	#include "..\\OtherFunctions\\IsPalendrome.h"
 #endif
 
 bool Problem4()

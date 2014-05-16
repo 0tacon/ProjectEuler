@@ -24,8 +24,7 @@
 #include <cstdint>
 
 #ifndef _GETNUMDIVISORS_
-	#include "..\\OtherFunctions\\GetNumDivisors.hpp"
-	#define _GETNUMDIVISORS_
+	#include "..\\OtherFunctions\\GetNumDivisors.h"
 #endif
 
 bool Problem12 ()

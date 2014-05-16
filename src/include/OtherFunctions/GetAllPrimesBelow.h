@@ -5,9 +5,10 @@
 #include <functional>
 
 #ifndef _ISDIVISIBLE_
-	#include "IsDivisible.hpp"
-	#define _ISDIVISIBLE_
+	#include "IsDivisible.h"
 #endif
+
+#define _GETALLPRIMESBELOW_
 
 template<typename T>
 std::vector<uint64_t> GetAllPrimesBelow (T max)

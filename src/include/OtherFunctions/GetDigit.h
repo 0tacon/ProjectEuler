@@ -1,5 +1,7 @@
 #include <cstdint>
 
+#define _GETDIGIT_
+
 template<typename T>
 uint8_t GetDigit(T n, uint8_t pos)
 {

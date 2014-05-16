@@ -2,10 +2,11 @@
 #include <cstdint>
 #include <map>
 
+#define _DATE_
+
 class Date
 {
 	public:
-		
 		Date();
 		~Date();
 		
@@ -29,7 +30,6 @@ class Date
 		uint8_t GetDay() const { return day; }
 		
 	private:
-		
 		uint8_t day, month, week_day;
 		
 		uint16_t year;

@@ -2,9 +2,10 @@
 #include <map>
 
 #ifndef _GETDIGIT_
-	#include "..\\OtherFunctions\\GetDigit.hpp"
-	#define _GETDIGIT_
+	#include "..\\OtherFunctions\\GetDigit.h"
 #endif
+
+#define _GETLETTERSINNUM_
 
 template<typename T>
 uint8_t GetLettersInNum (T n)

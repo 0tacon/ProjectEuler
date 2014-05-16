@@ -1,6 +1,8 @@
 #include <cstdint>
 #include <cmath>
 
+#define _GETNUMDIGITS_
+
 template<typename T>
 uint8_t GetNumDigits (T num)
 {

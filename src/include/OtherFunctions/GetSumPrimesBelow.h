@@ -5,9 +5,10 @@
 #include <functional>
 
 #ifndef _GETALLPRIMESBELOW_
-	#include "GetAllPrimesBelow.hpp"
-	#define _GETALLPRIMESBELOW_
+	#include "GetAllPrimesBelow.h"
 #endif
+
+#define _GETSUMPRIMESBELOW_
 
 template<typename T>
 uint64_t GetSumPrimesBelow (T max)
