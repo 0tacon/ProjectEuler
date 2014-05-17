@@ -9,31 +9,12 @@
 #include <cstdint>
 #include <cmath>
 
-#ifndef _COUNTHIGHBITS_
-	#include "..\\OtherFunctions\\CountHighBits.h"
+#ifndef _COMBINATION_
+	#include "..\\OtherFunctions\\Combination.h"
 #endif
-
-uint16_t CalculateNumPaths(uint8_t grid_side_length)
+	
+bool Problem15 ()
 {
-	uint8_t num_high_bits;
-	uint64_t num_paths=0;
-	
-	for (uint64_t n=0; n<pow(2, grid_side_length*2); n++)
-	{
-		num_high_bits = CountHighBits(n, grid_side_length*2);
-		if (num_high_bits==grid_side_length)	num_paths++;
-	}
-	
-	return num_paths;
-}
-
-bool Problem15()
-{
-	uint8_t grid_side_length = 20;
-	uint64_t num_paths;
-	
-	num_paths = CalculateNumPaths(grid_side_length);
-	
-	std::cout << "\nProblem 015: " << num_paths << "\n";
+	std::cout << "\nProblem 015: " << Combination(40, 20) << "\n";
 	return true;
 }
