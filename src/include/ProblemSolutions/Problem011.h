@@ -215,8 +215,6 @@ bool Problem11 ()
 		
 	ReadFileIntoVect (vect, filepath);
 	
-	vect.erase( std::remove(vect.begin(), vect.end(), 240), vect.end() );
-	
 	Extract2DigitNumbers (vect);
 	
 	CreateMaps (vect, rows, cols, fwd_diags, bck_diags);

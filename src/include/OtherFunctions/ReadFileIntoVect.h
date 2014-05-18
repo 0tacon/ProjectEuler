@@ -2,6 +2,7 @@
 #include <iostream>
 #include <vector>
 #include <cstdint>
+#include <cmath>
 
 #define _READFILEINTOVECT_
 
@@ -23,7 +24,7 @@ bool ReadFileIntoVect ( std::vector<T> &vect, std::string &filepath )
 	{
 		while ( file.get(c) ) 
 		{
-			if ( c != '\n' )	vect.push_back( c-48 );
+			if ( c != '\n' && c != 32 )	vect.push_back( c-48 );
 		}
 	}
 	
