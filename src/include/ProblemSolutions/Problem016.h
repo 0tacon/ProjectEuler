@@ -8,7 +8,6 @@
 #include <cstdint>
 #include <cmath>
 #include <cstdio>
-#include <array>
 
 bool Problem16 ()
 {
