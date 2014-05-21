@@ -29,23 +29,16 @@
 bool Problem18 ()
 {
 	std::vector<uint16_t> vect, path;
-	/*std::string filename = "..\\data\\Problem18.txt";
+	std::string filename = "..\\data\\Problem18.txt";
 	
-	ReadFileIntoVect (vect, filename);
-	
-	PrintVector(vect);*/
+	//ReadFileIntoVect (vect, filename);
 	
 	vect = {3,7,4,2,4,6,8,5,9,3};
-	path = {1,1,2,3};
 	
-	NumericTriangle tri (vect);
+	NumericTriangle tri(vect);
 	
 	tri.PrintTriangle();
 	
-	//if (tri.IsValidPath(path)) std::cout << "\nConfirmed: Path is valid\n";
-	
-	std::cout << tri.FindHighestPathSum();
-	
-	std::cout << "\nProblem 018: " << "\n";
+	std::cout << "\nProblem 018: " << tri.FindHighestPathSum() << "\n";
 	return true;
 }

@@ -44,8 +44,8 @@ int main ()
 	Problem14();
 	Problem15();
 	Problem16();
-	Problem17();
-	//Problem18();
+	Problem17();*/
+	Problem18();/*
 	Problem19();
 	Problem20();*/
 	
