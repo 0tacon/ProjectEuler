@@ -7,21 +7,24 @@
 #include <iostream>
 #include <cstdint>
 #include <cmath>
-
-#ifndef _GETDIGIT_
-	#include "..\\OtherFunctions\\GetDigit.h"
-#endif
-
-#ifndef _GETNUMDIGITS_
-	#include "..\\OtherFunctions\\GetNumDigits.h"
-#endif
+#include <cstdio>
+#include <array>
 
 bool Problem16 ()
 {
 	double num = pow(2,1000);
+	char digits[310];
+	uint16_t sum_digits = 0;
 	
-	//std::cout << GetNumDigits(num);
+	std::sprintf(digits, "%f", num);
 	
-	std::cout << "\nProblem 016: " << "\n";
+	uint16_t i = 0;
+	while (digits[i] != '.')
+	{
+		sum_digits += digits[i] - 48;
+		i++;
+	}
+	
+	std::cout << "\nProblem 016: " << sum_digits << "\n";
 	return true;
 }

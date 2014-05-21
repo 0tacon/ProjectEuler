@@ -423,7 +423,7 @@ BuildCmd=
 [Unit38]
 FileName=..\src\include\OtherFunctions\GetMaxElementIndex.h
 CompileCpp=1
-Folder=
+Folder=OtherFunctions
 Compile=1
 Link=1
 Priority=1000
