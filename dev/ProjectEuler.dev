@@ -29,7 +29,7 @@ IncludeVersionInfo=0
 SupportXPThemes=0
 CompilerSet=0
 CompilerSettings=0000000000000000001000000
-UnitCount=40
+UnitCount=42
 
 [VersionInfo]
 Major=1
@@ -444,6 +444,26 @@ BuildCmd=
 FileName=..\src\include\OtherFunctions\ExtractNDigitNums.h
 CompileCpp=1
 Folder=OtherFunctions
+Compile=1
+Link=1
+Priority=1000
+OverrideBuildCmd=0
+BuildCmd=
+
+[Unit41]
+FileName=..\src\include\OtherFunctions\LengthOfCollatzSeq.h
+CompileCpp=1
+Folder=OtherFunctions
+Compile=1
+Link=1
+Priority=1000
+OverrideBuildCmd=0
+BuildCmd=
+
+[Unit42]
+FileName=..\src\include\Classes\NumericGrid.h
+CompileCpp=1
+Folder=Classes
 Compile=1
 Link=1
 Priority=1000

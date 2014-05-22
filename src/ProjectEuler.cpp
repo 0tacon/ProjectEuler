@@ -37,15 +37,15 @@ int main ()
 	Problem7();
 	Problem8();
 	Problem9();
-	Problem10();
-	Problem11();
+	Problem10();*/
+	Problem11();/*
 	//Problem12();
 	Problem13();
 	Problem14();
 	Problem15();
 	Problem16();
-	Problem17();*/
-	Problem18();/*
+	Problem17();
+	Problem18();
 	Problem19();
 	Problem20();*/
 	

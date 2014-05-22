@@ -15,22 +15,10 @@
 
 #include <iostream>
 #include <cstdint>
-#include <cmath>
 
-bool func (double n, uint16_t &seq_length)
-{
-	if (fmod(n,2.0)==0.0)	n = n/2.0;
-	
-	else n = 3.0*n + 1.0;
-	
-	seq_length++;
-	
-	if (n>1.0) func(n, seq_length);
-	
-	else if (n==1.0) return true;
-	
-	else return false;
-}
+#ifndef _LENGTHOFCOLLATZSEQ_
+	#include "..\\OtherFunctions\\LengthOfCollatzSeq.h"
+#endif
 
 bool Problem14()
 {
@@ -39,8 +27,7 @@ bool Problem14()
 	
 	for (double n=999999.0; n>10.0; n--)
 	{
-		
-		func(n, seq_length);
+		LengthOfCollotzSeq(n, seq_length);
 		
 		if (seq_length>max_seq_length)
 		{
