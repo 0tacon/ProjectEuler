@@ -40,7 +40,7 @@ uint16_t CoordToPos (std::vector<uint8_t> coord)
 	return pos;
 }
 
-bool Extract2DigitNumbers (std::vector<uint8_t> &vect)
+bool ExtractNumbers (std::vector<uint8_t> &vect)
 {
 	std::vector<uint8_t> temp;
 	
@@ -215,7 +215,7 @@ bool Problem11 ()
 		
 	ReadFileIntoVect (vect, filepath);
 	
-	Extract2DigitNumbers (vect);
+	ExtractNumbers (vect);
 	
 	CreateMaps (vect, rows, cols, fwd_diags, bck_diags);
 	

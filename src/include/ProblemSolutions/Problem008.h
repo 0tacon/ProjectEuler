@@ -1,5 +1,5 @@
 /*
-	Find the greatest product of five consecutive digits in the 1000-digit number stored in Problem8.txt
+	Find the greatest product of thirteen consecutive digits in the 1000-digit number stored in Problem8.txt
 */
 
 #include <iostream>
@@ -14,16 +14,16 @@
 bool Problem8 ()
 {
 	std::vector<uint8_t> vect, temp;
-	uint16_t product=0, largest_product=0;
+	uint64_t product=0, largest_product=0;
 	std::string filepath = "..\\data\\Problem8.txt";
 	
 	ReadFileIntoVect (vect, filepath);
 	
-	temp.resize(5);
+	temp.resize(13);
 	
 	for ( uint16_t i = 0 ; i < 996 ; i++ )
 	{
-		std::copy ( vect.begin()+i, vect.begin()+i+5, temp.begin() );
+		std::copy ( vect.begin()+i, vect.begin()+i+13, temp.begin() );
 		
 		product = 1;
 		for ( std::vector<uint8_t>::iterator itr = temp.begin() ; itr != temp.end() ; itr++ )

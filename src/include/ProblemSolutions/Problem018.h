@@ -26,18 +26,20 @@
 	#include "..\\OtherFunctions\\PrintVector.h"
 #endif
 
+#ifndef _EXTRACTNDIGITNUMS_
+	#include "..\\OtherFunctions\\ExtractNDigitNums.h"
+#endif
+
 bool Problem18 ()
 {
 	std::vector<uint16_t> vect, path;
 	std::string filename = "..\\data\\Problem18.txt";
 	
-	//ReadFileIntoVect (vect, filename);
+	ReadFileIntoVect (vect, filename);
 	
-	vect = {3,7,4,2,4,6,8,5,9,3};
+	ExtractNDigitNums(vect, 2);
 	
 	NumericTriangle tri(vect);
-	
-	tri.PrintTriangle();
 	
 	std::cout << "\nProblem 018: " << tri.FindHighestPathSum() << "\n";
 	return true;

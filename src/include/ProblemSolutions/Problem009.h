@@ -15,6 +15,7 @@
 bool Problem9 ()
 {
 	uint16_t b=1, a=1;
+	uint32_t product;
 	bool triplet_found = false;
 	
 	while ( a<500 && !triplet_found )
@@ -28,8 +29,9 @@ bool Problem9 ()
 		if ( !triplet_found ) a++;
 	}
 	
-	std::cout 	<< "\nProblem 009: a = " << static_cast<unsigned int>(a) << ", b = " << static_cast<unsigned int>(b) 
-				<< ", c = " << static_cast<unsigned int>(sqrt(a*a + b*b)) << "\n";
+	product = a*b*sqrt(a*a + b*b);
+	
+	std::cout 	<< "\nProblem 009: " << product << "\n";
 	
 	return true;
 }
