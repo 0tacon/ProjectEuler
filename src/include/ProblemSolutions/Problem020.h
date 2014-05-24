@@ -16,11 +16,14 @@
 
 bool Problem20()
 {
-	LargeBase2 n1(4), n2(5), n3;
+	LargeBase2 ans;
 	
-	//n1.Print();
-	//n2.Print();
+	LargeFactorial fact(10);
 	
-	std::cout << "\nProblem 020: " << "\n";
+	ans = fact.GetFactorial();
+	
+	ans.Print();
+	
+	std::cout << "\nProblem 020: " << ans.SumDigits() << "\n";
 	return true;
 }

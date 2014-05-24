@@ -16,13 +16,13 @@ class LargeBase2
 		std::string GetNum () { return num; }
 		uint16_t Get1stDigitIndex() { return first_digit_index; }
 		
-		void SetNum (std::string str) { num = str; }
+		void SetNum (std::string str);
 		
 		void Print();
 		
 		uint64_t SumDigits ();
 		
-		LargeBase2 Add(LargeBase2);
+		LargeBase2 operator+(LargeBase2 other);
 		
 	private:
 		std::string num;
@@ -59,6 +59,17 @@ void LargeBase2::Print()
 	std::cout << "\n" << num << "\n";
 }
 
+void LargeBase2::SetNum (std::string str)
+{ 
+	num = str;
+	
+	uint16_t i = 0;
+	while (num[i] != '.')
+		i++;
+	
+	first_digit_index = i-1;
+}
+
 uint64_t LargeBase2::SumDigits ()
 {
 	uint64_t sum = 0;
@@ -73,13 +84,13 @@ uint64_t LargeBase2::SumDigits ()
 	return sum;
 }
 
-LargeBase2 LargeBase2::Add(LargeBase2 other)
+LargeBase2 LargeBase2::operator+(LargeBase2 other)
 {
-	std::string sum = ".";
+	std::string sum = ".000000";
 	LargeBase2 result;
-	uint16_t this_num_index = first_digit_index, other_num_index = other.Get1stDigitIndex();
-	uint8_t sum_num = 0, carry = 0, unit = 0;
+	uint16_t this_num_index = first_digit_index+1, other_num_index = other.Get1stDigitIndex()+1, sum_num = 0, carry = 0, unit = 0;
 	
+	std::string sum_ins;
 	while (this_num_index != 0 || other_num_index != 0)
 	{
 		sum_num = carry;
@@ -105,8 +116,11 @@ LargeBase2 LargeBase2::Add(LargeBase2 other)
 			
 		unit = sum_num%10;
 		
-		//sum.insert(0, std::to_string(unit+48));
+		sum.insert(0, 1, unit+48);
 	}
+	
+	if (carry == 1)
+		sum.insert(0, 1, '1');
 	
 	result.SetNum(sum);
 	
