@@ -19,7 +19,7 @@ class Date
 		uint8_t GetDaysInMonth ();
 		
 		bool operator>(const Date& other) const;
-		bool operator<(const Date& other) const { other>*this; }
+		bool operator<(const Date& other) const { return other > *this; }
 		
 		void PrintDate();
 		

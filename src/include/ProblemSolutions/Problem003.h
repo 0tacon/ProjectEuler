@@ -13,7 +13,7 @@ bool Problem3 ()
 	bool prime_found = false, is_prime = true;
 	uint64_t start_of_search, num_for_factorising = 600851475143, largest_prime=0;
 	
-	start_of_search = sqrt(num_for_factorising);
+	start_of_search = sqrt(static_cast<double>(num_for_factorising));
 	
 	uint64_t i = start_of_search;
 	while ( i>2 && !prime_found )

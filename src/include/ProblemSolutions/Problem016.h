@@ -6,24 +6,15 @@
 
 #include <iostream>
 #include <cstdint>
-#include <cmath>
-#include <cstdio>
+
+#ifndef _LARGEBASE2_
+	#include "..\\Classes\\LargeBase2.h"
+#endif
 
 bool Problem16 ()
 {
-	double num = pow(2,1000);
-	char digits[310];
-	uint16_t sum_digits = 0;
+	LargeBase2 n(1000);
 	
-	std::sprintf(digits, "%f", num);
-	
-	uint16_t i = 0;
-	while (digits[i] != '.')
-	{
-		sum_digits += digits[i] - 48;
-		i++;
-	}
-	
-	std::cout << "\nProblem 016: " << sum_digits << "\n";
+	std::cout << "\nProblem 016: " << n.SumDigits() << "\n";
 	return true;
 }

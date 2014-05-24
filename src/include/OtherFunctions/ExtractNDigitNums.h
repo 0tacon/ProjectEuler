@@ -7,7 +7,7 @@
 template<typename T, typename t>
 void ExtractNDigitNums (std::vector<T> &v, t n)
 {
-	if (fmod(static_cast<double>(v.size()), static_cast<double>(n)) != 0.0)
+	if (fmod(v.size(), n) != 0.0)
 	{
 		std::cout << "\nError: Vector size is not an integer multiple of n.\n";
 	}

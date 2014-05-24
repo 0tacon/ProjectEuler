@@ -27,24 +27,10 @@
 	#include "..\\OtherFunctions\\GetNumDivisors.h"
 #endif
 
+
 bool Problem12 ()
 {
-	double n=0.0, Tn=0.0;
-	bool num_found = false;
-	uint16_t divisors;
-	
-	while ( !num_found )
-	{
-		n++;
-		Tn = (n*(n+1.0))/2.0;
-		
-		divisors = GetNumDivisors (Tn);
-		
-		if ( divisors > 500 ) num_found = true;
-		
-		//std::cout << "n = " << n << ", Tn = " << Tn << ", divisors = " << divisors << "\n";
-	}
-	
-	std::cout << "\nProblem 012: " << Tn << "\n";
+
+	std::cout << "\nProblem 012: " << "\n";
 	return true;
 }

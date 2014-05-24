@@ -16,7 +16,7 @@ bool Problem5 ()
 	std::vector<uint8_t> primes_under_twenty = {2,3,5,7,11,13,17,19};
 	std::map<uint8_t, uint8_t> factor_frequency;
 	uint8_t temp, count;
-	
+
 	for (std::vector<uint8_t>::iterator n=primes_under_twenty.begin(); n!=primes_under_twenty.end(); n++)	factor_frequency[*n] = 0;
 	
 	for (uint8_t i=2; i<21; i++)

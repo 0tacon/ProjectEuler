@@ -19,6 +19,10 @@
 	#include "..\\OtherFunctions\\ExtractNDigitNums.h"
 #endif
 
+#ifndef _PRINTVECTOR_
+	#include "..\\OtherFunctions\\PrintVector.h"
+#endif
+
 bool Problem11 ()
 {
 	std::vector<uint8_t> vect;

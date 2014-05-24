@@ -27,7 +27,7 @@ bool Problem19 ()
 	sunday.SetMembers(6,1,1901);		// The first Sunday of the 20th century
 	max_date.SetMembers(1,1,2001);		// Must only analyse dates before this one
 	
-	while (sunday<max_date)
+	while (max_date>sunday)
 	{
 		sunday.IncrementByNumDays(7);
 		if (sunday.GetDay() == 1) sunday_the_1st_count++;

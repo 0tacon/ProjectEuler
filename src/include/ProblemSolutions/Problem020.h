@@ -10,9 +10,16 @@
 #include <iostream>
 #include <cstdint>
 
+#ifndef _LARGEFACTORIAL_
+	#include "..\\Classes\\LargeFactorial.h"
+#endif
+
 bool Problem20()
 {
+	LargeBase2 n1(4), n2(5), n3;
 	
+	//n1.Print();
+	//n2.Print();
 	
 	std::cout << "\nProblem 020: " << "\n";
 	return true;

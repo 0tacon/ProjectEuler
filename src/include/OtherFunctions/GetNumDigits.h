@@ -12,7 +12,7 @@ uint8_t GetNumDigits (T num)
 	
 	while ( i > -1 && !found_num_digits )
 	{
-		if ( num > pow(10,i-1)-1 && num < pow(10,i) )
+		if ( num > pow(10, i-1)-1 && num < pow(10, i) )
 		{
 			digits = i;
 			found_num_digits = true;

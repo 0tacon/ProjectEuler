@@ -36,3 +36,18 @@ std::vector<uint64_t> GetAllPrimesBelow (T max)
 		return primes;
 	}
 }
+
+template<typename T>
+void AppendAllPrimesBetween (T start, T end, std::vector<uint64_t> &primes)
+{
+	if (IsDivisible(start, 2))
+		start++;
+	
+	for (uint64_t i = start; i <= end; i+=2) primes.push_back(i);
+	
+	for (std::vector<uint64_t>::iterator n = primes.begin(); n != primes.end() && *n < sqrt(end); n++)
+			if (*n != 0)
+				std::replace_if(n, primes.end(), std::bind(IsDivisible, std::placeholders::_1, (*n)), 0);
+				
+	primes.erase(std::remove(primes.begin(), primes.end(), 0), primes.end());
+}
