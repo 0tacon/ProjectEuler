@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Header Files\ProblemSolutions">
+      <UniqueIdentifier>{54e2de15-a472-44b0-888c-9f7b9a05dd27}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\OtherFunctions">
+      <UniqueIdentifier>{66df738c-3749-48fe-aacf-8e284d9c29e8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Classes">
+      <UniqueIdentifier>{a7ef1b73-2707-4ade-925a-283f5b3e986b}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\ProjectEuler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\src\include\ProblemSolutions\Problem001.h">
+      <Filter>Header Files\ProblemSolutions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\include\ProblemSolutions\Problem002.h">
+      <Filter>Header Files\ProblemSolutions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\include\ProblemSolutions\Problem003.h">
+      <Filter>Header Files\ProblemSolutions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\include\ProblemSolutions\Problem004.h">
+      <Filter>Header Files\ProblemSolutions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\include\ProblemSolutions\Problem005.h">
+      <Filter>Header Files\ProblemSolutions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\include\ProblemSolutions\Problem006.h">
+      <Filter>Header Files\ProblemSolutions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\include\ProblemSolutions\Problem007.h">
+      <Filter>Header Files\ProblemSolutions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\include\ProblemSolutions\Problem008.h">
+      <Filter>Header Files\ProblemSolutions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\include\ProblemSolutions\Problem009.h">
+      <Filter>Header Files\ProblemSolutions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\include\ProblemSolutions\Problem010.h">
+      <Filter>Header Files\ProblemSolutions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\include\ProblemSolutions\Problem011.h">
+      <Filter>Header Files\ProblemSolutions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\include\ProblemSolutions\Problem012.h">
+      <Filter>Header Files\ProblemSolutions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\include\ProblemSolutions\Problem013.h">
+      <Filter>Header Files\ProblemSolutions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\include\ProblemSolutions\Problem014.h">
+      <Filter>Header Files\ProblemSolutions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\include\ProblemSolutions\Problem015.h">
+      <Filter>Header Files\ProblemSolutions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\include\ProblemSolutions\Problem016.h">
+      <Filter>Header Files\ProblemSolutions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\include\ProblemSolutions\Problem017.h">
+      <Filter>Header Files\ProblemSolutions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\include\ProblemSolutions\Problem018.h">
+      <Filter>Header Files\ProblemSolutions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\include\ProblemSolutions\Problem019.h">
+      <Filter>Header Files\ProblemSolutions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\include\ProblemSolutions\Problem020.h">
+      <Filter>Header Files\ProblemSolutions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\include\OtherFunctions\Combination.h">
+      <Filter>Header Files\OtherFunctions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\include\OtherFunctions\CountHighBits.h">
+      <Filter>Header Files\OtherFunctions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\include\OtherFunctions\ExtractNDigitNums.h">
+      <Filter>Header Files\OtherFunctions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\include\OtherFunctions\Factorial.h">
+      <Filter>Header Files\OtherFunctions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\include\OtherFunctions\GetAllPrimesBelow.h">
+      <Filter>Header Files\OtherFunctions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\include\OtherFunctions\GetDigit.h">
+      <Filter>Header Files\OtherFunctions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\include\OtherFunctions\GetLettersInNum.h">
+      <Filter>Header Files\OtherFunctions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\include\OtherFunctions\GetMaxElementIndex.h">
+      <Filter>Header Files\OtherFunctions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\include\OtherFunctions\GetNumDigits.h">
+      <Filter>Header Files\OtherFunctions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\include\OtherFunctions\GetNumDivisors.h">
+      <Filter>Header Files\OtherFunctions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\include\OtherFunctions\GetPrimeNumber.h">
+      <Filter>Header Files\OtherFunctions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\include\OtherFunctions\GetSumPrimesBelow.h">
+      <Filter>Header Files\OtherFunctions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\include\OtherFunctions\IsDivisible.h">
+      <Filter>Header Files\OtherFunctions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\include\OtherFunctions\IsPalendrome.h">
+      <Filter>Header Files\OtherFunctions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\include\OtherFunctions\LengthOfCollatzSeq.h">
+      <Filter>Header Files\OtherFunctions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\include\OtherFunctions\PrintHeader.h">
+      <Filter>Header Files\OtherFunctions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\include\OtherFunctions\PrintVector.h">
+      <Filter>Header Files\OtherFunctions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\include\OtherFunctions\ReadFileIntoVect.h">
+      <Filter>Header Files\OtherFunctions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\include\Classes\Date.h">
+      <Filter>Header Files\Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\include\Classes\LargeBase2.h">
+      <Filter>Header Files\Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\include\Classes\LargeFactorial.h">
+      <Filter>Header Files\Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\include\Classes\NumericGrid.h">
+      <Filter>Header Files\Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\include\Classes\NumericTriangle.h">
+      <Filter>Header Files\Classes</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

@@ -54,14 +54,14 @@ void Date::SetMembers (uint8_t d, uint8_t m, uint16_t y)
 	month = m;
 	year = y;
 	
-	while (reference<*this)
+	while (reference < *this)
 	{
 		reference.IncrementByNumDays(1);
 		difference++;
 	}
 	
 	week_day += difference%7;
-	if (week_day%7!=0) week_day = week_day%7;
+	if (week_day%7 != 0) week_day = week_day%7;
 	else week_day = 7;
 }
 
@@ -142,7 +142,8 @@ bool Date::operator>(const Date& other) const
     if ( this->GetYear() > other.GetYear() ) return true;
     else if ( this->GetYear()==other.GetYear() && this->GetMonth()>other.GetMonth() ) return true;
     else if ( this->GetYear()==other.GetYear() && this->GetMonth()==other.GetMonth() && this->GetDay()>other.GetDay() ) return true;
-    else false;
+    else 
+		return false;
 }
 
 void Date::PrintDate ()

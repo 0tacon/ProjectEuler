@@ -1,0 +1,70 @@
+﻿Build started 2014-05-26 06:28:43 PM.
+     1>Project "C:\Users\Daniel.Daniels_Laptop\dev\branch\ProjectEuler\ProjectEuler\ProjectEuler.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _CRT_SECURE_NO_WARNINGS /D _MBCS /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt ..\src\ProjectEuler.cpp
+         ProjectEuler.cpp
+     1>c:\users\daniel.daniels_laptop\dev\branch\projecteuler\src\include\problemsolutions\problem003.h(16): warning C4244: '=' : conversion from 'double' to 'uint64_t', possible loss of data
+     1>c:\users\daniel.daniels_laptop\dev\branch\projecteuler\src\include\problemsolutions\problem005.h(37): warning C4244: '*=' : conversion from 'double' to 'uint32_t', possible loss of data
+     1>c:\users\daniel.daniels_laptop\dev\branch\projecteuler\src\include\problemsolutions\problem009.h(32): warning C4244: '=' : conversion from 'double' to 'uint32_t', possible loss of data
+     1>c:\users\daniel.daniels_laptop\dev\branch\projecteuler\src\include\classes\numericgrid.h(55): warning C4244: 'argument' : conversion from 'uint16_t' to 'const unsigned char', possible loss of data
+     1>c:\users\daniel.daniels_laptop\dev\branch\projecteuler\src\include\classes\numericgrid.h(70): warning C4244: 'argument' : conversion from 'uint16_t' to 'const unsigned char', possible loss of data
+     1>c:\users\daniel.daniels_laptop\dev\branch\projecteuler\src\include\classes\numericgrid.h(89): warning C4244: 'argument' : conversion from 'uint16_t' to 'const unsigned char', possible loss of data
+     1>c:\users\daniel.daniels_laptop\dev\branch\projecteuler\src\include\classes\numericgrid.h(104): warning C4244: 'argument' : conversion from 'uint16_t' to 'const unsigned char', possible loss of data
+     1>c:\users\daniel.daniels_laptop\dev\branch\projecteuler\src\include\problemsolutions\problem013.h(36): warning C4244: '+=' : conversion from 'double' to 'uint64_t', possible loss of data
+     1>c:\users\daniel.daniels_laptop\dev\branch\projecteuler\src\include\classes\numerictriangle.h(37): warning C4244: '=' : conversion from 'double' to 'uint16_t', possible loss of data
+     1>c:\users\daniel.daniels_laptop\dev\branch\projecteuler\src\include\classes\date.h(28): warning C4244: 'return' : conversion from 'const uint16_t' to 'uint8_t', possible loss of data
+     1>c:\users\daniel.daniels_laptop\dev\branch\projecteuler\src\include\classes\largefactorial.h(70): warning C4244: 'argument' : conversion from 'double' to 'unsigned int', possible loss of data
+     1>c:\users\daniel.daniels_laptop\dev\branch\projecteuler\src\include\classes\largefactorial.h(72): warning C4244: 'argument' : conversion from 'double' to 'unsigned int', possible loss of data
+     1>c:\users\daniel.daniels_laptop\dev\branch\projecteuler\src\include\classes\largefactorial.h(88): warning C4244: '+=' : conversion from 'double' to 'unsigned short', possible loss of data
+     1>c:\users\daniel.daniels_laptop\dev\branch\projecteuler\src\include\classes\largefactorial.h(108): warning C4244: 'argument' : conversion from 'double' to 'const unsigned short', possible loss of data
+     1>c:\users\daniel.daniels_laptop\dev\branch\projecteuler\src\include\otherfunctions\getprimenumber.h(21): warning C4244: 'argument' : conversion from 'uint64_t' to 'unsigned int', possible loss of data
+                 c:\users\daniel.daniels_laptop\dev\branch\projecteuler\src\include\problemsolutions\problem007.h(16) : see reference to function template instantiation 'uint64_t GetPrimeNumber<int>(T)' being compiled
+                 with
+                 [
+                     T=int
+                 ]
+     1>c:\users\daniel.daniels_laptop\dev\branch\projecteuler\src\include\otherfunctions\getprimenumber.h(25): warning C4018: '<=' : signed/unsigned mismatch
+     1>c:\users\daniel.daniels_laptop\dev\branch\projecteuler\src\include\otherfunctions\extractndigitnums.h(19): warning C4018: '<' : signed/unsigned mismatch
+                 c:\users\daniel.daniels_laptop\dev\branch\projecteuler\src\include\problemsolutions\problem011.h(34) : see reference to function template instantiation 'void ExtractNDigitNums<uint8_t,int>(std::vector<uint8_t,std::allocator<_Ty>> &,t)' being compiled
+                 with
+                 [
+                     _Ty=uint8_t
+         ,            t=int
+                 ]
+     1>c:\users\daniel.daniels_laptop\dev\branch\projecteuler\src\include\otherfunctions\extractndigitnums.h(24): warning C4244: '+=' : conversion from 'double' to 'uint8_t', possible loss of data
+     1>c:\users\daniel.daniels_laptop\dev\branch\projecteuler\src\include\classes\largebase2.h(40): warning C4102: 'std' : unreferenced label
+                 c:\users\daniel.daniels_laptop\dev\branch\projecteuler\src\include\problemsolutions\problem016.h(16) : see reference to function template instantiation 'LargeBase2::LargeBase2<int>(exp)' being compiled
+                 with
+                 [
+                     exp=int
+                 ]
+     1>c:\users\daniel.daniels_laptop\dev\branch\projecteuler\src\include\otherfunctions\getlettersinnum.h(67): warning C4244: 'argument' : conversion from 'uint16_t' to 'const unsigned char', possible loss of data
+                 c:\users\daniel.daniels_laptop\dev\branch\projecteuler\src\include\problemsolutions\problem017.h(21) : see reference to function template instantiation 'uint8_t GetLettersInNum<uint16_t>(T)' being compiled
+                 with
+                 [
+                     T=uint16_t
+                 ]
+     1>c:\users\daniel.daniels_laptop\dev\branch\projecteuler\src\include\otherfunctions\extractndigitnums.h(24): warning C4244: '+=' : conversion from 'double' to 'uint16_t', possible loss of data
+     1>c:\users\daniel.daniels_laptop\dev\branch\projecteuler\src\include\otherfunctions\getallprimesbelow.h(17): warning C4244: 'argument' : conversion from 'uint64_t' to 'unsigned int', possible loss of data
+                 c:\users\daniel.daniels_laptop\dev\branch\projecteuler\src\include\otherfunctions\getprimenumber.h(23) : see reference to function template instantiation 'std::vector<uint64_t,std::allocator<_Ty>> GetAllPrimesBelow<uint64_t>(T)' being compiled
+                 with
+                 [
+                     _Ty=uint64_t
+         ,            T=uint64_t
+                 ]
+                 c:\users\daniel.daniels_laptop\dev\branch\projecteuler\src\include\problemsolutions\problem007.h(16) : see reference to function template instantiation 'uint64_t GetPrimeNumber<int>(T)' being compiled
+                 with
+                 [
+                     T=int
+                 ]
+     1>c:\users\daniel.daniels_laptop\dev\branch\projecteuler\src\include\otherfunctions\getallprimesbelow.h(22): warning C4244: 'argument' : conversion from 'double' to 'unsigned __int64', possible loss of data
+     1>c:\users\daniel.daniels_laptop\dev\branch\projecteuler\src\include\otherfunctions\lengthofcollatzseq.h(19): warning C4715: 'LengthOfCollotzSeq' : not all control paths return a value
+     1>c:\users\daniel.daniels_laptop\dev\branch\projecteuler\src\include\classes\date.h(146): warning C4715: 'Date::operator>' : not all control paths return a value
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Daniel.Daniels_Laptop\dev\branch\ProjectEuler\ProjectEuler\Debug\ProjectEuler.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Daniel.Daniels_Laptop\dev\branch\ProjectEuler\ProjectEuler\Debug\ProjectEuler.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Daniel.Daniels_Laptop\dev\branch\ProjectEuler\ProjectEuler\Debug\ProjectEuler.lib" /MACHINE:X86 Debug\ProjectEuler.obj
+         ProjectEuler.vcxproj -> C:\Users\Daniel.Daniels_Laptop\dev\branch\ProjectEuler\ProjectEuler\Debug\ProjectEuler.exe
+     1>Done Building Project "C:\Users\Daniel.Daniels_Laptop\dev\branch\ProjectEuler\ProjectEuler\ProjectEuler.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:02.01
