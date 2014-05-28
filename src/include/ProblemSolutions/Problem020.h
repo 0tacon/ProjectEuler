@@ -16,14 +16,9 @@
 
 bool Problem20()
 {
-	LargeBase2 ans;
-	
-	LargeFactorial fact(10);
-	
-	ans = fact.GetFactorial();
-	
-	ans.Print();
-	
-	std::cout << "\nProblem 020: " << ans.SumDigits() << "\n";
+	StringNum n("100.000000");
+	LargeFactorial fact(n);
+
+	std::cout << "\nProblem 020: " << fact.GetResult().SumDigits() << "\n";
 	return true;
 }

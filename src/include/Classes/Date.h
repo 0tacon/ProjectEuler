@@ -6,33 +6,33 @@
 
 class Date
 {
-	public:
-		Date();
-		~Date();
+public:
+	Date();
+	~Date();
 		
-		void SetMembers (uint8_t d, uint8_t m, uint16_t y);
+	void SetMembers (uint8_t d, uint8_t m, uint16_t y);
 		
-		void IncrementByNumDays(uint16_t days);
+	void IncrementByNumDays(uint16_t days);
 		
-		bool IsLeapYear();
+	bool IsLeapYear();
 		
-		uint8_t GetDaysInMonth ();
+	uint8_t GetDaysInMonth ();
 		
-		bool operator>(const Date& other) const;
-		bool operator<(const Date& other) const { return other > *this; }
+	bool operator>(const Date& other) const;
+	bool operator<(const Date& other) const { return other > *this; }
 		
-		void PrintDate();
+	void PrintDate();
 		
-		void PrintWeekDay ();
+	void PrintWeekDay ();
 		
-		uint8_t GetYear() const { return year; }
-		uint8_t GetMonth() const { return month; }
-		uint8_t GetDay() const { return day; }
+	uint8_t GetYear() const { return year; }
+	uint8_t GetMonth() const { return month; }
+	uint8_t GetDay() const { return day; }
 		
-	private:
-		uint8_t day, month, week_day;
+private:
+	uint8_t day, month, week_day;
 		
-		uint16_t year;
+	uint16_t year;
 };
 
 Date::Date ()

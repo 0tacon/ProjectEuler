@@ -13,22 +13,22 @@
 
 class NumericTriangle
 {
-	public:
-		NumericTriangle (std::vector<uint16_t>);
-		~NumericTriangle ();
+public:
+	NumericTriangle (std::vector<uint16_t>);
+	~NumericTriangle ();
 		
-		void PrintTriangle();
+	void PrintTriangle();
 		
-		bool IsValidPath (std::vector<uint16_t>);
+	bool IsValidPath (std::vector<uint16_t>);
 		
-		void RecursivePathSum (uint32_t &current_sum, uint32_t &largest_sum, uint16_t &row, uint16_t &node_index);
+	void RecursivePathSum (uint32_t &current_sum, uint32_t &largest_sum, uint16_t &row, uint16_t &node_index);
 		
-		uint64_t FindHighestPathSum ();
+	uint64_t FindHighestPathSum ();
 		
-	private:
-		std::map<uint16_t, std::vector<uint16_t> > tri_rows;
+private:
+	std::map<uint16_t, std::vector<uint16_t> > tri_rows;
 		
-		uint16_t num_rows;
+	uint16_t num_rows;
 };
 
 NumericTriangle::NumericTriangle (std::vector<uint16_t> vect)

@@ -146,9 +146,6 @@
     <ClInclude Include="..\src\include\Classes\Date.h">
       <Filter>Header Files\Classes</Filter>
     </ClInclude>
-    <ClInclude Include="..\src\include\Classes\LargeBase2.h">
-      <Filter>Header Files\Classes</Filter>
-    </ClInclude>
     <ClInclude Include="..\src\include\Classes\LargeFactorial.h">
       <Filter>Header Files\Classes</Filter>
     </ClInclude>
@@ -156,6 +153,9 @@
       <Filter>Header Files\Classes</Filter>
     </ClInclude>
     <ClInclude Include="..\src\include\Classes\NumericTriangle.h">
+      <Filter>Header Files\Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\include\Classes\StringNum.h">
       <Filter>Header Files\Classes</Filter>
     </ClInclude>
   </ItemGroup>

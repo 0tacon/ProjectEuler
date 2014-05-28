@@ -124,10 +124,10 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\src\include\Classes\Date.h" />
-    <ClInclude Include="..\src\include\Classes\LargeBase2.h" />
     <ClInclude Include="..\src\include\Classes\LargeFactorial.h" />
     <ClInclude Include="..\src\include\Classes\NumericGrid.h" />
     <ClInclude Include="..\src\include\Classes\NumericTriangle.h" />
+    <ClInclude Include="..\src\include\Classes\StringNum.h" />
     <ClInclude Include="..\src\include\OtherFunctions\Combination.h" />
     <ClInclude Include="..\src\include\OtherFunctions\CountHighBits.h" />
     <ClInclude Include="..\src\include\OtherFunctions\ExtractNDigitNums.h" />

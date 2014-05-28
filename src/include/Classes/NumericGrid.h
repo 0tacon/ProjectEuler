@@ -7,18 +7,18 @@
 
 class NumericGrid
 {
-	public:
-		NumericGrid(std::vector<uint8_t>);
-		~NumericGrid();
+public:
+	NumericGrid(std::vector<uint8_t>);
+	~NumericGrid();
 		
-		uint16_t CoordToPos (std::vector<uint8_t>);
+	uint16_t CoordToPos (std::vector<uint8_t>);
 		
-		std::vector<uint8_t> PosToCoord (uint16_t);
+	std::vector<uint8_t> PosToCoord (uint16_t);
 		
-		uint32_t FindGreatestProduct ();
+	uint32_t FindGreatestProduct ();
 		
-	private:
-		std::map<uint8_t, std::vector<uint8_t> > rows, cols, fwd_diags, bck_diags;
+private:
+	std::map<uint8_t, std::vector<uint8_t> > rows, cols, fwd_diags, bck_diags;
 };
 
 NumericGrid::NumericGrid (std::vector<uint8_t> vect)

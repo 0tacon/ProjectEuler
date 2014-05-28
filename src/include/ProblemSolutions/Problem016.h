@@ -6,15 +6,20 @@
 
 #include <iostream>
 #include <cstdint>
+#include <cmath>
+#include <cstdio>
 
-#ifndef _LARGEBASE2_
-	#include "..\\Classes\\LargeBase2.h"
+#ifndef _STRINGNUM_
+#include "..\\Classes\\StringNum.h"
 #endif
 
 bool Problem16 ()
 {
-	LargeBase2 n(1000);
-	
-	std::cout << "\nProblem 016: " << n.SumDigits() << "\n";
+	StringNum result("2.000000"), unity("1.000000"), base("2.000000");
+
+	for (StringNum i("1.000000"); i.GetNum() != "1000.000000"; i = i + unity)
+		result = result * base;
+
+	std::cout << "\nProblem 016: " << result.SumDigits() << "\n";
 	return true;
 }
