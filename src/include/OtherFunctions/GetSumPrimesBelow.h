@@ -14,12 +14,12 @@ template<typename T>
 uint64_t GetSumPrimesBelow (T max)
 {
 	uint64_t sum = 0;
-	std::vector<uint64_t> primes;
+	std::vector<uint32_t> primes;
 	primes.reserve(max);
 	
 	primes = GetAllPrimesBelow(max);
 	
-	for (std::vector<uint64_t>::iterator n = primes.begin(); n != primes.end(); n++) sum += *n;
+	for (std::vector<uint32_t>::iterator n = primes.begin(); n != primes.end(); n++) sum += *n;
 	
 	return sum;
 }

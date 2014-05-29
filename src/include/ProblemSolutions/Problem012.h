@@ -22,15 +22,27 @@
 
 #include <iostream>
 #include <cstdint>
+#include <vector>
 
 #ifndef _GETNUMDIVISORS_
-	#include "..\\OtherFunctions\\GetNumDivisors.h"
+#include "..//OtherFunctions//GetNumDivisors.h"
 #endif
 
 
 bool Problem12 ()
 {
+	uint16_t ans = 0;
+	uint32_t n = 0, Tn = 0;
 
-	std::cout << "\nProblem 012: " << "\n";
+	while (ans < 500)
+	{
+		n++;
+		Tn = ((n)*(n + 1))/2;		
+
+		if (Tn%2 == 0 && Tn%3 ==0 && Tn%5 == 0 && Tn%7 == 0)
+			ans = GetNumDivisors(Tn);
+	}
+
+	std::cout << "\nProblem 012: " << Tn << "\n";
 	return true;
 }

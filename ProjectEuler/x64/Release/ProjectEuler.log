@@ -1,4 +1,4 @@
-﻿Build started 2014-05-28 10:59:57 PM.
+﻿Build started 2014-05-29 10:57:08 PM.
      1>Project "W:\cppprojects\ProjectEuler\ProjectEuler\ProjectEuler.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\CL.exe /c /Zi /nologo /W3 /WX- /sdl /O2 /Oi /GL /D _CRT_SECURE_NO_WARNINGS /D _MBCS /D _MBCS /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"x64\Release\\" /Fd"x64\Release\vc120.pdb" /Gd /TP /errorReport:prompt ..\src\ProjectEuler.cpp
@@ -32,18 +32,18 @@
                  [
                      t=int
                  ]
-     1>w:\cppprojects\projecteuler\src\include\otherfunctions\GetAllPrimesBelow.h(22): warning C4244: 'argument' : conversion from 'double' to 'unsigned __int64', possible loss of data
-                 w:\cppprojects\projecteuler\src\include\problemsolutions\..\\OtherFunctions\\GetPrimeNumber.h(23) : see reference to function template instantiation 'std::vector<uint64_t,std::allocator<_Ty>> GetAllPrimesBelow<uint64_t>(T)' being compiled
-                 with
-                 [
-                     _Ty=uint64_t
-         ,            T=uint64_t
-                 ]
-                 w:\cppprojects\projecteuler\src\include\\ProblemSolutions\\Problem007.h(16) : see reference to function template instantiation 'uint64_t GetPrimeNumber<int>(T)' being compiled
+     1>w:\cppprojects\projecteuler\src\include\otherfunctions\GetAllPrimesBelow.h(28): warning C4018: '<' : signed/unsigned mismatch
+                 w:\cppprojects\projecteuler\src\include\problemsolutions\..\\OtherFunctions\\GetSumPrimesBelow.h(20) : see reference to function template instantiation 'std::vector<uint32_t,std::allocator<char32_t>> GetAllPrimesBelow<T>(T)' being compiled
                  with
                  [
                      T=int
                  ]
+                 w:\cppprojects\projecteuler\src\include\\ProblemSolutions\\Problem010.h(16) : see reference to function template instantiation 'uint64_t GetSumPrimesBelow<int>(T)' being compiled
+                 with
+                 [
+                     T=int
+                 ]
+     1>w:\cppprojects\projecteuler\src\include\otherfunctions\GetAllPrimesBelow.h(33): warning C4018: '<' : signed/unsigned mismatch
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"W:\cppprojects\ProjectEuler\ProjectEuler\x64\Release\ProjectEuler.exe" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"W:\cppprojects\ProjectEuler\ProjectEuler\x64\Release\ProjectEuler.pdb" /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"W:\cppprojects\ProjectEuler\ProjectEuler\x64\Release\ProjectEuler.lib" /MACHINE:X64 x64\Release\ProjectEuler.obj
          Generating code
@@ -54,4 +54,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:04.27
+Time Elapsed 00:00:05.20

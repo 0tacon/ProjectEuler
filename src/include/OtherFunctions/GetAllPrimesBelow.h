@@ -1,53 +1,43 @@
 #include <cstdint>
 #include <vector>
+#include <map>
 #include <algorithm>
 #include <cmath>
 #include <functional>
 
-#ifndef _ISDIVISIBLE_
-	#include "IsDivisible.h"
-#endif
-
 #define _GETALLPRIMESBELOW_
 
 template<typename T>
-std::vector<uint64_t> GetAllPrimesBelow (T max)
+std::vector<uint32_t> GetAllPrimesBelow (T max)
 {
-	std::vector<uint64_t> primes;
-	primes.reserve(max);
+	std::vector<uint32_t> ret;
+	std::map<uint32_t, bool> primes;
 	
-	if (max < 2) return primes;
+	if (max < 2)
+	{
+		ret.push_back(0);
+		return ret;
+	}
 	else if ( max == 2 ) 
 	{
-		primes.push_back(2.0);
-		return primes;
+		ret.push_back(2);
+		return ret;
 	}
 	else
 	{
-		for (uint64_t i = 3; i < max; i+=2) primes.push_back(i);
+		for (uint32_t i = 3; i < max; i += 2)
+			primes[i] = true;
 		
-		for (std::vector<uint64_t>::iterator n = primes.begin(); n != primes.end() && *n < sqrt(max); n++)
-			if (*n != 0)
-				std::replace_if(n, primes.end(), std::bind(IsDivisible, std::placeholders::_1, (*n)), 0);
-			
-		primes.erase(std::remove(primes.begin(), primes.end(), 0), primes.end());
-		
-		primes.insert(primes.begin(), 2);
-		return primes;
-	}
-}
+		for (uint32_t i = 3; i < sqrt(max); i += 2)
+			if (primes[i] == true)
+				for (uint32_t n = i*i; n < max; n+=i)
+					primes[n] = false;
 
-template<typename T>
-void AppendAllPrimesBetween (T start, T end, std::vector<uint64_t> &primes)
-{
-	if (IsDivisible(start, 2))
-		start++;
-	
-	for (uint64_t i = start; i <= end; i+=2) primes.push_back(i);
-	
-	for (std::vector<uint64_t>::iterator n = primes.begin(); n != primes.end() && *n < sqrt(end); n++)
-			if (*n != 0)
-				std::replace_if(n, primes.end(), std::bind(IsDivisible, std::placeholders::_1, (*n)), 0);
-				
-	primes.erase(std::remove(primes.begin(), primes.end(), 0), primes.end());
+		for (std::map<uint32_t, bool>::iterator p = primes.begin(); p != primes.end(); p++)
+			if (p->second == true)
+				ret.push_back(p->first);
+		
+		ret.insert(ret.begin(), 2);
+		return ret;
+	}
 }

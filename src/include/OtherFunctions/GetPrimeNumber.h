@@ -11,13 +11,13 @@
 #define _GETPRIMENUMBER_
 
 template<typename T>
-uint64_t GetPrimeNumber (T prime_pos)
+uint32_t GetPrimeNumber (T prime_pos)
 {
 	if (prime_pos == 1 || prime_pos == 2) return prime_pos+1;
 	else
 	{
-		uint64_t max = 110000;
-		std::vector<uint64_t> primes;
+		uint32_t max = 110000;
+		std::vector<uint32_t> primes;
 		primes.reserve(max);
 		
 		primes = GetAllPrimesBelow(max);

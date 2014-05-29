@@ -15,9 +15,9 @@
 
 bool Problem16 ()
 {
-	StringNum result("2.000000"), unity("1.000000"), base("2.000000");
+	StringNum result("2.000000"), unity("1.000000"), base("2.000000"), exp("1000.000000");
 
-	for (StringNum i("1.000000"); i.GetNum() != "1000.000000"; i = i + unity)
+	for (StringNum i("1.000000"); i.GetNum() != exp.GetNum(); i = i + unity)
 		result = result * base;
 
 	std::cout << "\nProblem 016: " << result.SumDigits() << "\n";
