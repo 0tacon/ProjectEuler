@@ -132,6 +132,8 @@
     <ClInclude Include="..\src\include\OtherFunctions\CountHighBits.h" />
     <ClInclude Include="..\src\include\OtherFunctions\ExtractNDigitNums.h" />
     <ClInclude Include="..\src\include\OtherFunctions\Factorial.h" />
+    <ClInclude Include="..\src\include\OtherFunctions\GetAllFactors.h" />
+    <ClInclude Include="..\src\include\OtherFunctions\GetPrimeFactors.h" />
     <ClInclude Include="..\src\include\OtherFunctions\GetAllPrimesBelow.h" />
     <ClInclude Include="..\src\include\OtherFunctions\GetDigit.h" />
     <ClInclude Include="..\src\include\OtherFunctions\GetLettersInNum.h" />
@@ -166,6 +168,7 @@
     <ClInclude Include="..\src\include\ProblemSolutions\Problem018.h" />
     <ClInclude Include="..\src\include\ProblemSolutions\Problem019.h" />
     <ClInclude Include="..\src\include\ProblemSolutions\Problem020.h" />
+    <ClInclude Include="..\src\include\ProblemSolutions\Problem021.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

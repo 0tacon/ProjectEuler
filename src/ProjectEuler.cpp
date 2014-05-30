@@ -2,7 +2,6 @@
 #include <cstdint>
 
 #include "include\\OtherFunctions\\PrintHeader.h"
-
 #include "include\\ProblemSolutions\\Problem001.h"
 #include "include\\ProblemSolutions\\Problem002.h"
 #include "include\\ProblemSolutions\\Problem003.h"
@@ -23,12 +22,13 @@
 #include "include\\ProblemSolutions\\Problem018.h"
 #include "include\\ProblemSolutions\\Problem019.h"
 #include "include\\ProblemSolutions\\Problem020.h"
+#include "include\\ProblemSolutions\\Problem021.h"
 
 int main ()
 {
 	PrintHeader();
 	
-	Problem1();
+	/*Problem1();
 	Problem2();
 	Problem3();
 	Problem4();
@@ -47,7 +47,8 @@ int main ()
 	Problem17();
 	Problem18();
 	Problem19();
-	Problem20();
+	Problem20();*/
+	Problem21();
 	
 	std::cin.get();
 	return 0;
