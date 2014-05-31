@@ -167,5 +167,11 @@
     <ClInclude Include="..\src\include\OtherFunctions\GetAllFactors.h">
       <Filter>Header Files\OtherFunctions</Filter>
     </ClInclude>
+    <ClInclude Include="..\src\include\OtherFunctions\GetAllPossibleProducts.h">
+      <Filter>Header Files\OtherFunctions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\include\OtherFunctions\SumAllFactors.h">
+      <Filter>Header Files\OtherFunctions</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

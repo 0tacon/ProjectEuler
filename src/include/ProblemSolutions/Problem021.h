@@ -11,20 +11,25 @@
 #include <cstdint>
 #include <vector>
 
-#ifndef _GETALLFACTORS_
-#include "..\\OtherFunctions\\GetAllFactors.h"
+#ifndef _SUMALLFACTORS_
+#include "..\\OtherFunctions\\SumAllFactors.h"
 #endif
 
 bool Problem21()
 {
-	std::vector<uint32_t> factors = GetAllFactors(284);
-	std::map<uint32_t, uint32_t> prime_factors = GetPrimeFactors(16200);
+	std::map<uint32_t, uint64_t> Divisors_Below_10000;
+	uint64_t sum_amicable_nums = 0;
 
-	PrintVector(factors);
+	for (uint32_t i = 1; i < 10000; i++)
+		Divisors_Below_10000[i] = SumAllFactors(i);
 
-	for (std::map<uint32_t, uint32_t>::iterator factor = prime_factors.begin(); factor != prime_factors.end(); factor++)
-		std::cout << "\nfactor = " << factor->first << ", exp = " << factor->second;
+	for (std::map<uint32_t, uint64_t>::iterator a = Divisors_Below_10000.begin(); a != Divisors_Below_10000.end(); a++)
+		for (std::map<uint32_t, uint64_t>::iterator b = Divisors_Below_10000.begin(); b != Divisors_Below_10000.end(); b++)
+			if (a->first != b->first && a->first == b->second && a->second == b->first)
+				sum_amicable_nums += a->first + a->second;
 
-	std::cout << "\nProblem 021: " << "\n";
+	sum_amicable_nums /= 2;
+
+	std::cout << "\nProblem 021: " << sum_amicable_nums << "\n";
 	return true;
 }
