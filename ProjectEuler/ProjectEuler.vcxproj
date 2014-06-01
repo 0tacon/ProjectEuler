@@ -175,6 +175,7 @@
     <ClInclude Include="..\src\include\ProblemSolutions\Problem021.h" />
     <ClInclude Include="..\src\include\ProblemSolutions\Problem022.h" />
     <ClInclude Include="..\src\include\ProblemSolutions\Problem023.h" />
+    <ClInclude Include="..\src\include\ProblemSolutions\Problem024.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

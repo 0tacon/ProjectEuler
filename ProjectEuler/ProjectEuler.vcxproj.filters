@@ -185,5 +185,8 @@
     <ClInclude Include="..\src\include\ProblemSolutions\Problem023.h">
       <Filter>Header Files\ProblemSolutions</Filter>
     </ClInclude>
+    <ClInclude Include="..\src\include\ProblemSolutions\Problem024.h">
+      <Filter>Header Files\ProblemSolutions</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

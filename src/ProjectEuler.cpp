@@ -25,6 +25,7 @@
 #include "include\\ProblemSolutions\\Problem021.h"
 #include "include\\ProblemSolutions\\Problem022.h"
 #include "include\\ProblemSolutions\\Problem023.h"
+#include "include\\ProblemSolutions\\Problem024.h"
 
 int main ()
 {
@@ -51,8 +52,9 @@ int main ()
 	Problem19();
 	Problem20();
 	Problem21();
-	Problem22();*/
-	Problem23();
+	Problem22();
+	Problem23();*/
+	Problem24();
 
 	std::cin.get();
 	return 0;
