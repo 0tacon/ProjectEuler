@@ -173,5 +173,14 @@
     <ClInclude Include="..\src\include\OtherFunctions\SumAllFactors.h">
       <Filter>Header Files\OtherFunctions</Filter>
     </ClInclude>
+    <ClInclude Include="..\src\include\ProblemSolutions\Problem022.h">
+      <Filter>Header Files\ProblemSolutions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\include\Classes\NameList.h">
+      <Filter>Header Files\Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\include\OtherFunctions\SumLetters.h">
+      <Filter>Header Files\OtherFunctions</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

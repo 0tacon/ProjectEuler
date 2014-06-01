@@ -125,6 +125,7 @@
   <ItemGroup>
     <ClInclude Include="..\src\include\Classes\Date.h" />
     <ClInclude Include="..\src\include\Classes\LargeFactorial.h" />
+    <ClInclude Include="..\src\include\Classes\NameList.h" />
     <ClInclude Include="..\src\include\Classes\NumericGrid.h" />
     <ClInclude Include="..\src\include\Classes\NumericTriangle.h" />
     <ClInclude Include="..\src\include\Classes\StringNum.h" />
@@ -150,6 +151,7 @@
     <ClInclude Include="..\src\include\OtherFunctions\PrintVector.h" />
     <ClInclude Include="..\src\include\OtherFunctions\ReadFileIntoVect.h" />
     <ClInclude Include="..\src\include\OtherFunctions\SumAllFactors.h" />
+    <ClInclude Include="..\src\include\OtherFunctions\SumLetters.h" />
     <ClInclude Include="..\src\include\ProblemSolutions\Problem001.h" />
     <ClInclude Include="..\src\include\ProblemSolutions\Problem002.h" />
     <ClInclude Include="..\src\include\ProblemSolutions\Problem003.h" />
@@ -171,6 +173,7 @@
     <ClInclude Include="..\src\include\ProblemSolutions\Problem019.h" />
     <ClInclude Include="..\src\include\ProblemSolutions\Problem020.h" />
     <ClInclude Include="..\src\include\ProblemSolutions\Problem021.h" />
+    <ClInclude Include="..\src\include\ProblemSolutions\Problem022.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

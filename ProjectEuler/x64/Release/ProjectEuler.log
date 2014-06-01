@@ -1,4 +1,4 @@
-﻿Build started 2014-06-01 01:04:09 AM.
+﻿Build started 2014-06-01 12:43:08 PM.
      1>Project "W:\cppprojects\ProjectEuler\ProjectEuler\ProjectEuler.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\CL.exe /c /Zi /nologo /W3 /WX- /sdl /O2 /Oi /GL /D _CRT_SECURE_NO_WARNINGS /D _MBCS /D _MBCS /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"x64\Release\\" /Fd"x64\Release\vc120.pdb" /Gd /TP /errorReport:prompt ..\src\ProjectEuler.cpp
@@ -59,11 +59,10 @@
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"W:\cppprojects\ProjectEuler\ProjectEuler\x64\Release\ProjectEuler.exe" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"W:\cppprojects\ProjectEuler\ProjectEuler\x64\Release\ProjectEuler.pdb" /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"W:\cppprojects\ProjectEuler\ProjectEuler\x64\Release\ProjectEuler.lib" /MACHINE:X64 x64\Release\ProjectEuler.obj
          Generating code
-     1>w:\cppprojects\projecteuler\src\include\otherfunctions\lengthofcollatzseq.h(19): warning C4715: 'LengthOfCollotzSeq' : not all control paths return a value
          Finished generating code
          ProjectEuler.vcxproj -> W:\cppprojects\ProjectEuler\ProjectEuler\x64\Release\ProjectEuler.exe
      1>Done Building Project "W:\cppprojects\ProjectEuler\ProjectEuler\ProjectEuler.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:04.55
+Time Elapsed 00:00:03.50
