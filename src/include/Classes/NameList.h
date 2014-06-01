@@ -9,10 +9,6 @@
 #include "..//OtherFunctions//ReadFileIntoVect.h"
 #endif
 
-#ifndef _PRINTVECTOR_
-#include "..//OtherFunctions//PrintVector.h"
-#endif
-
 #ifndef _SUMLETTERS_
 #include "..//OtherFunctions//SumLetters.h"
 #endif

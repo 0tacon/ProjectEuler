@@ -182,5 +182,8 @@
     <ClInclude Include="..\src\include\OtherFunctions\SumLetters.h">
       <Filter>Header Files\OtherFunctions</Filter>
     </ClInclude>
+    <ClInclude Include="..\src\include\ProblemSolutions\Problem023.h">
+      <Filter>Header Files\ProblemSolutions</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
