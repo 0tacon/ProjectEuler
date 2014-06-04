@@ -11,15 +11,15 @@
 #include <cstdint>
 
 #ifndef _GETLETTERSINNUM_
-	#include "..\\OtherFunctions\\GetLettersInNum.h"
+	#include "../OtherFunctions/GetLettersInNum.h"
 #endif
 
 bool Problem17 ()
 {
 	uint16_t letters = 11;	// one thousand = 11
-	
+
 	for (uint16_t i=1; i<1000; i++) letters+=GetLettersInNum(i);
-	
+
 	std::cout << "\nProblem 017: " << letters << "\n";
 	return true;
 }

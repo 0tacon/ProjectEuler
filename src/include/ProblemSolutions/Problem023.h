@@ -14,7 +14,7 @@
 #include <algorithm>
 
 #ifndef _SUMALLFACTORS_
-#include "..\\OtherFunctions\\SumAllFactors.h"
+#include "../OtherFunctions/SumAllFactors.h"
 #endif
 
 bool Problem23()

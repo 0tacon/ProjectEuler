@@ -6,7 +6,7 @@
 #include <cmath>
 
 #ifndef _GETMAXELEMENTINDEX_
-	#include "..\\OtherFunctions\\GetMaxElementIndex.h"
+	#include "../OtherFunctions/GetMaxElementIndex.h"
 #endif
 
 #define _NUMERICTRIANGLE_
@@ -16,18 +16,18 @@ class NumericTriangle
 public:
 	NumericTriangle (std::vector<uint16_t>);
 	~NumericTriangle ();
-		
+
 	void PrintTriangle();
-		
+
 	bool IsValidPath (std::vector<uint16_t>);
-		
+
 	void RecursivePathSum (uint32_t &current_sum, uint32_t &largest_sum, uint16_t &row, uint16_t &node_index);
-		
+
 	uint64_t FindHighestPathSum ();
-		
+
 private:
 	std::map<uint16_t, std::vector<uint16_t> > tri_rows;
-		
+
 	uint16_t num_rows;
 };
 
@@ -52,15 +52,15 @@ void NumericTriangle::PrintTriangle ()
 	{
 		for (uint8_t i = 0; i < 2*(num_rows-row->first)+5; i++)
 				std::cout << " ";
-		
+
 		for (std::vector<uint16_t>::iterator element = row->second.begin(); element != row->second.end(); element++)
 		{
 			if (*element < 10)
 				std::cout << "0";
-			
+
 			std::cout << *element << "  ";
 		}
-		
+
 		std::cout << "\n";
 	}
 }
@@ -69,42 +69,42 @@ bool NumericTriangle::IsValidPath (std::vector<uint16_t> path)
 {
 	if (path.size() != num_rows)
 		return false;
-	
+
 	bool validity = true;
-	
+
 	uint16_t pos = 1;
 	while (pos < path.size() && validity)
 	{
 		if (path[pos] != path[pos-1] && path[pos] != path[pos-1]+1)
 			validity = false;
-			
+
 		pos++;
 	}
-	
+
 	return validity;
 }
 
 void NumericTriangle::RecursivePathSum (uint32_t &current_sum, uint32_t &largest_sum, uint16_t &row, uint16_t &node_index)
 {
 	row++;
-	
+
 	if (row < tri_rows.size()+1)
 	{
 		for (uint16_t leaf_index = node_index; leaf_index < node_index+2 && leaf_index < tri_rows.at(row).size(); leaf_index++)
 		{
-			//std::cout << "\nElement = " << tri_rows.at(row).at(leaf_index);		
+			//std::cout << "\nElement = " << tri_rows.at(row).at(leaf_index);
 			current_sum += tri_rows.at(row).at(leaf_index);
-			
+
 			if (current_sum > largest_sum)
 				largest_sum = current_sum;
-			
+
 			RecursivePathSum (current_sum, largest_sum, row, leaf_index);
-	
+
 			//std::cout << "\nCurrent Sum = " << current_sum << "\n";
 			current_sum -= tri_rows.at(row).at(leaf_index);
 		}
 	}
-	
+
 	row--;
 }
 
@@ -112,8 +112,8 @@ uint64_t NumericTriangle::FindHighestPathSum ()
 {
 	uint32_t current_sum = 0, largest_sum = 0;
 	uint16_t row = 0, node_index = 0;
-	
+
 	RecursivePathSum (current_sum, largest_sum, row, node_index);
-	
+
 	return largest_sum;
 }

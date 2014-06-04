@@ -8,12 +8,12 @@
 #include <cstdint>
 
 #ifndef _GETSUMPRIMESBELOW_
-	#include "..\\OtherFunctions\\GetSumPrimesBelow.h"
+	#include "../OtherFunctions/GetSumPrimesBelow.h"
 #endif
 
 bool Problem10 ()
 {
 	std::cout << "\nProblem 010: " << GetSumPrimesBelow(2000000) << "\n";
-	
+
 	return true;
 }

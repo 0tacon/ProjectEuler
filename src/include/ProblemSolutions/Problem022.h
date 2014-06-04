@@ -16,7 +16,7 @@
 
 bool Problem22()
 {
-	std::string filename = "..\\data\\names.txt";
+	std::string filename = "../../data/names.txt";
 
 	NameList name_list(filename);
 

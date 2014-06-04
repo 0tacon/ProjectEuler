@@ -8,19 +8,19 @@
 #include <cmath>
 
 #ifndef _READFILEINTOVECT_
-	#include "..\\OtherFunctions\\ReadFileIntoVect.h"
+#include "../OtherFunctions/ReadFileIntoVect.h"
 #endif
 
 bool Problem13 ()
 {
 	std::vector<uint8_t> vect;
-	std::string filename = "..\\data\\Problem13.txt";
+	std::string filename = "../../data/Problem13.txt";
 	uint8_t digit=0, count=0;
 	uint16_t carry=0;
 	uint64_t answer=0;
-	
+
 	ReadFileIntoVect (vect, filename);
-	
+
 	for (int8_t j=10; j>=0; j--)
 	{
 		count++;
@@ -37,9 +37,9 @@ bool Problem13 ()
 		digit = 0;
 		carry = 0;
 	}
-	
+
 	answer = (answer - answer%1000)/1000;
-	
+
 	std::cout << "\nProblem 013: " << answer << "\n";
 	return true;
 }

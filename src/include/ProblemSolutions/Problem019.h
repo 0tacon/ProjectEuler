@@ -1,6 +1,6 @@
 /*
 	You are given the following information, but you may prefer to do some research for yourself.
-	
+
 	1 Jan 1900 was a Monday.
 	Thirty days has September,
 	April, June and November.
@@ -16,7 +16,7 @@
 #include <cstdint>
 
 #ifndef _DATE_
-	#include "..\\Classes\\Date.h"
+	#include "../Classes/Date.h"
 #endif
 
 bool Problem19 ()
@@ -26,13 +26,13 @@ bool Problem19 ()
 
 	sunday.SetMembers(6,1,1901);		// The first Sunday of the 20th century
 	max_date.SetMembers(1,1,2001);		// Must only analyse dates before this one
-	
+
 	while (max_date>sunday)
 	{
 		sunday.IncrementByNumDays(7);
 		if (sunday.GetDay() == 1) sunday_the_1st_count++;
 	}
-	
+
 	std::cout << "\nProblem 019: " << sunday_the_1st_count << "\n";
 	return true;
 }

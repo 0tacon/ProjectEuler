@@ -22,6 +22,6 @@ bool Problem25()
 		pos++;
 	}
 
-	printf("\nProblem 025: %d\n", pos);
+	printf("\nProblem 025: %lu\n", pos);
 	return true;
 }

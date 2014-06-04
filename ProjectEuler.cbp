@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="ProjectEuler" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/ProjectEuler" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/ProjectEuler" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+		</Compiler>
+		<Unit filename="src/ProjectEuler.cpp" />
+		<Unit filename="src/include/Classes/Date.h" />
+		<Unit filename="src/include/Classes/LargeFactorial.h" />
+		<Unit filename="src/include/Classes/NameList.h" />
+		<Unit filename="src/include/Classes/NumericGrid.h" />
+		<Unit filename="src/include/Classes/NumericTriangle.h" />
+		<Unit filename="src/include/Classes/StringNum.h" />
+		<Unit filename="src/include/OtherFunctions/Combination.h" />
+		<Unit filename="src/include/OtherFunctions/CountHighBits.h" />
+		<Unit filename="src/include/OtherFunctions/ExtractNDigitNums.h" />
+		<Unit filename="src/include/OtherFunctions/Factorial.h" />
+		<Unit filename="src/include/OtherFunctions/GetAllFactors.h" />
+		<Unit filename="src/include/OtherFunctions/GetAllPossibleProducts.h" />
+		<Unit filename="src/include/OtherFunctions/GetAllPrimesBelow.h" />
+		<Unit filename="src/include/OtherFunctions/GetDigit.h" />
+		<Unit filename="src/include/OtherFunctions/GetLettersInNum.h" />
+		<Unit filename="src/include/OtherFunctions/GetMaxElementIndex.h" />
+		<Unit filename="src/include/OtherFunctions/GetNumDigits.h" />
+		<Unit filename="src/include/OtherFunctions/GetNumDivisors.h" />
+		<Unit filename="src/include/OtherFunctions/GetPrimeFactors.h" />
+		<Unit filename="src/include/OtherFunctions/GetPrimeNumber.h" />
+		<Unit filename="src/include/OtherFunctions/GetSumPrimesBelow.h" />
+		<Unit filename="src/include/OtherFunctions/IsDivisible.h" />
+		<Unit filename="src/include/OtherFunctions/IsPalendrome.h" />
+		<Unit filename="src/include/OtherFunctions/LengthOfCollatzSeq.h" />
+		<Unit filename="src/include/OtherFunctions/PrintHeader.h" />
+		<Unit filename="src/include/OtherFunctions/PrintVector.h" />
+		<Unit filename="src/include/OtherFunctions/ReadFileIntoVect.h" />
+		<Unit filename="src/include/OtherFunctions/SumAllFactors.h" />
+		<Unit filename="src/include/OtherFunctions/SumLetters.h" />
+		<Unit filename="src/include/ProblemSolutions/Problem001.h" />
+		<Unit filename="src/include/ProblemSolutions/Problem002.h" />
+		<Unit filename="src/include/ProblemSolutions/Problem003.h" />
+		<Unit filename="src/include/ProblemSolutions/Problem004.h" />
+		<Unit filename="src/include/ProblemSolutions/Problem005.h" />
+		<Unit filename="src/include/ProblemSolutions/Problem006.h" />
+		<Unit filename="src/include/ProblemSolutions/Problem007.h" />
+		<Unit filename="src/include/ProblemSolutions/Problem008.h" />
+		<Unit filename="src/include/ProblemSolutions/Problem009.h" />
+		<Unit filename="src/include/ProblemSolutions/Problem010.h" />
+		<Unit filename="src/include/ProblemSolutions/Problem011.h" />
+		<Unit filename="src/include/ProblemSolutions/Problem012.h" />
+		<Unit filename="src/include/ProblemSolutions/Problem013.h" />
+		<Unit filename="src/include/ProblemSolutions/Problem014.h" />
+		<Unit filename="src/include/ProblemSolutions/Problem015.h" />
+		<Unit filename="src/include/ProblemSolutions/Problem016.h" />
+		<Unit filename="src/include/ProblemSolutions/Problem017.h" />
+		<Unit filename="src/include/ProblemSolutions/Problem018.h" />
+		<Unit filename="src/include/ProblemSolutions/Problem019.h" />
+		<Unit filename="src/include/ProblemSolutions/Problem020.h" />
+		<Unit filename="src/include/ProblemSolutions/Problem021.h" />
+		<Unit filename="src/include/ProblemSolutions/Problem022.h" />
+		<Unit filename="src/include/ProblemSolutions/Problem023.h" />
+		<Unit filename="src/include/ProblemSolutions/Problem024.h" />
+		<Unit filename="src/include/ProblemSolutions/Problem025.h" />
+		<Extensions>
+			<code_completion />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

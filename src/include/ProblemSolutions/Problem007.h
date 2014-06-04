@@ -8,12 +8,12 @@
 #include <cstdint>
 
 #ifndef _GETPRIMENUMBER_
-	#include "..\\OtherFunctions\\GetPrimeNumber.h"
+	#include "../OtherFunctions/GetPrimeNumber.h"
 #endif
 
 bool Problem7 ()
 {
 	std::cout << "\nProblem 007: " << GetPrimeNumber(10001) << "\n";
-	
+
 	return true;
 }

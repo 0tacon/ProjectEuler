@@ -8,14 +8,13 @@
 #include <cstdint>
 
 #ifndef _ISPALENDROME_
-	#include "..\\OtherFunctions\\IsPalendrome.h"
+	#include "../OtherFunctions/IsPalendrome.h"
 #endif
 
 bool Problem4()
 {
-	bool pdrome_found = false;
 	uint32_t prod, largest_pdrome=0;
-	
+
 	for ( uint32_t num1=100 ; num1<1000 ; num1++ )
 	{
 		for ( uint32_t num2=100 ; num2<1000 ; num2++ )
@@ -24,8 +23,8 @@ bool Problem4()
 			if ( IsPalendrome( prod ) && prod>largest_pdrome ) largest_pdrome = prod;
 		}
 	}
-	
+
 	std::cout << "\nProblem 004: " << largest_pdrome << "\n";
-	
+
 	return true;
 }

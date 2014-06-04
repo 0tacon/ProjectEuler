@@ -10,7 +10,7 @@
 #include <cstdio>
 
 #ifndef _STRINGNUM_
-#include "..\\Classes\\StringNum.h"
+#include "../Classes/StringNum.h"
 #endif
 
 bool Problem16 ()
