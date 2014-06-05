@@ -27,12 +27,13 @@
 #include "include/ProblemSolutions/Problem023.h"
 #include "include/ProblemSolutions/Problem024.h"
 #include "include/ProblemSolutions/Problem025.h"
+#include "include/ProblemSolutions/Problem026.h"
 
 int main ()
 {
 	PrintHeader();
 
-	Problem1();
+	/*Problem1();
 	Problem2();
 	Problem3();
 	Problem4();
@@ -56,7 +57,8 @@ int main ()
 	Problem22();
 	Problem23();
 	Problem24();
-	Problem25();
+	Problem25();*/
+	Problem26();
 
 	std::cin.get();
 	return 0;

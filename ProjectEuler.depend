@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1401900829 source:/home/daniel/dev/cppprojects/ProjectEuler/src/ProjectEuler.cpp
+1401988335 source:/home/daniel/dev/cppprojects/ProjectEuler/src/ProjectEuler.cpp
 	<iostream>
 	<cstdint>
 	"include/OtherFunctions/PrintHeader.h"
@@ -28,6 +28,7 @@
 	"include/ProblemSolutions/Problem023.h"
 	"include/ProblemSolutions/Problem024.h"
 	"include/ProblemSolutions/Problem025.h"
+	"include/ProblemSolutions/Problem026.h"
 
 1401121694 /home/daniel/dev/cppprojects/ProjectEuler/src/include/OtherFunctions/PrintHeader.h
 	<iostream>
@@ -348,4 +349,17 @@
 	<cstdio>
 	<cstdint>
 	".//Classes//StringNum.h"
+
+1401996072 /home/daniel/dev/cppprojects/ProjectEuler/src/include/ProblemSolutions/Problem026.h
+	<cstdint>
+	<iostream>
+	<cstdio>
+	<vector>
+	"../OtherFunctions/PrintVector.h"
+	"../OtherFunctions/GetQuotient.h"
+
+1401996084 /home/daniel/dev/cppprojects/ProjectEuler/src/include/OtherFunctions/GetQuotient.h
+	<cstdint>
+	<vector>
+	"../OtherFunctions/GetNumDigits.h"
 
