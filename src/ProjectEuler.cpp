@@ -60,6 +60,5 @@ int main ()
 	Problem25();*/
 	Problem26();
 
-	std::cin.get();
 	return 0;
 }

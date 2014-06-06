@@ -20,31 +20,22 @@
 #include <iostream>
 #include <cstdio>
 #include <vector>
+#include <algorithm>
 
 #ifndef _PRINTVECTOR_
 #include "../OtherFunctions/PrintVector.h"
 #endif
 
-#ifndef _GETQUOTIENT_
-#include "../OtherFunctions/GetQuotient.h"
+#ifndef _GETINVERSENUMDECIMALPART_
+#include "../OtherFunctions/GetInverseNumDecimalPart.h"
 #endif
 
 bool Problem26()
 {
-    uint16_t denom = 983, num = 1;
-    std::vector<uint16_t> ans;
+    std::vector<uint16_t> ans = GetInverseNumDecimalPart(983);
 
-    GetQuotient(ans, num, denom);
-
+    std::cout << "\nans = ";
     PrintVector(ans);
-
-    std::cout << "\nnum = " << num << "\n";
-
-    GetQuotient(ans, num, denom);
-
-    PrintVector(ans);
-
-    std::cout << "\nnum = " << num << "\n";
 
     printf("\nProblem 026: \n");
     return true;

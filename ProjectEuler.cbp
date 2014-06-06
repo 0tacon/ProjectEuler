@@ -52,6 +52,7 @@
 		<Unit filename="src/include/OtherFunctions/GetNumDivisors.h" />
 		<Unit filename="src/include/OtherFunctions/GetPrimeFactors.h" />
 		<Unit filename="src/include/OtherFunctions/GetPrimeNumber.h" />
+		<Unit filename="src/include/OtherFunctions/GetQuotient.h" />
 		<Unit filename="src/include/OtherFunctions/GetSumPrimesBelow.h" />
 		<Unit filename="src/include/OtherFunctions/IsDivisible.h" />
 		<Unit filename="src/include/OtherFunctions/IsPalendrome.h" />
@@ -86,6 +87,7 @@
 		<Unit filename="src/include/ProblemSolutions/Problem023.h" />
 		<Unit filename="src/include/ProblemSolutions/Problem024.h" />
 		<Unit filename="src/include/ProblemSolutions/Problem025.h" />
+		<Unit filename="src/include/ProblemSolutions/Problem026.h" />
 		<Extensions>
 			<code_completion />
 			<debugger />

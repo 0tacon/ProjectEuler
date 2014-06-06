@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1401988335 source:/home/daniel/dev/cppprojects/ProjectEuler/src/ProjectEuler.cpp
+1402077007 source:/home/daniel/dev/cppprojects/ProjectEuler/src/ProjectEuler.cpp
 	<iostream>
 	<cstdint>
 	"include/OtherFunctions/PrintHeader.h"
@@ -350,16 +350,28 @@
 	<cstdint>
 	".//Classes//StringNum.h"
 
-1401996072 /home/daniel/dev/cppprojects/ProjectEuler/src/include/ProblemSolutions/Problem026.h
+1402090040 /home/daniel/dev/cppprojects/ProjectEuler/src/include/ProblemSolutions/Problem026.h
 	<cstdint>
 	<iostream>
 	<cstdio>
 	<vector>
+	<algorithm>
 	"../OtherFunctions/PrintVector.h"
-	"../OtherFunctions/GetQuotient.h"
+	"../OtherFunctions/GetInverseNumDecimalPart.h"
 
-1401996084 /home/daniel/dev/cppprojects/ProjectEuler/src/include/OtherFunctions/GetQuotient.h
+1402074572 /home/daniel/dev/cppprojects/ProjectEuler/src/include/OtherFunctions/GetQuotient.h
 	<cstdint>
 	<vector>
 	"../OtherFunctions/GetNumDigits.h"
+
+1402089792 /home/daniel/dev/cppprojects/ProjectEuler/src/include/OtherFunctions/GetQuotientUntilRepeat.h
+	<cstdint>
+	<vector>
+	"../OtherFunctions/GetNumDigits.h"
+
+1402089925 /home/daniel/dev/cppprojects/ProjectEuler/src/include/OtherFunctions/GetInverseNumDecimalPart.h
+	<cstdint>
+	<vector>
+	<algorithm>
+	<iostream>
 
