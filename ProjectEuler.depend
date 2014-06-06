@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1402077007 source:/home/daniel/dev/cppprojects/ProjectEuler/src/ProjectEuler.cpp
+1402090596 source:/home/daniel/dev/cppprojects/ProjectEuler/src/ProjectEuler.cpp
 	<iostream>
 	<cstdint>
 	"include/OtherFunctions/PrintHeader.h"
@@ -350,7 +350,7 @@
 	<cstdint>
 	".//Classes//StringNum.h"
 
-1402090040 /home/daniel/dev/cppprojects/ProjectEuler/src/include/ProblemSolutions/Problem026.h
+1402095021 /home/daniel/dev/cppprojects/ProjectEuler/src/include/ProblemSolutions/Problem026.h
 	<cstdint>
 	<iostream>
 	<cstdio>
@@ -369,9 +369,17 @@
 	<vector>
 	"../OtherFunctions/GetNumDigits.h"
 
-1402089925 /home/daniel/dev/cppprojects/ProjectEuler/src/include/OtherFunctions/GetInverseNumDecimalPart.h
+1402095021 /home/daniel/dev/cppprojects/ProjectEuler/src/include/OtherFunctions/GetInverseNumDecimalPart.h
 	<cstdint>
 	<vector>
 	<algorithm>
 	<iostream>
+	"../OtherFunctions/FindLargestRepeatedSet.h"
+
+1402095021 /home/daniel/dev/cppprojects/ProjectEuler/src/include/OtherFunctions/FindLargestRepeatedSet.h
+	<cstdint>
+	<vector>
+	<algorithm>
+	<iostream>
+	"../OtherFunctions/PrintVector.h"
 

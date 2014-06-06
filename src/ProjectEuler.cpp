@@ -31,7 +31,7 @@
 
 int main ()
 {
-	PrintHeader();
+	//PrintHeader();
 
 	/*Problem1();
 	Problem2();
@@ -60,5 +60,6 @@ int main ()
 	Problem25();*/
 	Problem26();
 
+	std::cout << "\n";
 	return 0;
 }

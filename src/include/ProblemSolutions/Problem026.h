@@ -32,11 +32,21 @@
 
 bool Problem26()
 {
-    std::vector<uint16_t> ans = GetInverseNumDecimalPart(983);
+    std::vector<uint16_t> ans;
+    uint16_t longest_recurring_seq = 0, num = 0;
 
-    std::cout << "\nans = ";
-    PrintVector(ans);
+    for (uint16_t i = 2; i < 1000; i++)
+    {
+        ans = GetInverseNumDecimalPart(i);
 
-    printf("\nProblem 026: \n");
+        if (ans.size() > longest_recurring_seq)
+        {
+            longest_recurring_seq = ans.size();
+
+            num = i;
+        }
+    }
+
+    printf("\nProblem 026: %d\n", num);
     return true;
 }
