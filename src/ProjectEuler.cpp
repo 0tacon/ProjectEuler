@@ -1,3 +1,19 @@
+/*
+    ========================================
+    =                                      =
+    =            Project  Euler            =
+    =               1.00.001               =
+    =                                      =
+    ========================================
+    =                                      =
+    =                0tacon                =
+    =                                      =
+    ========================================
+
+    This program computes the answers to the popular programming/mathematics challenge Project Euler
+    https://projecteuler.net
+*/
+
 #include <iostream>
 #include <cstdint>
 
@@ -28,6 +44,7 @@
 #include "include/ProblemSolutions/Problem024.h"
 #include "include/ProblemSolutions/Problem025.h"
 #include "include/ProblemSolutions/Problem026.h"
+#include "include/ProblemSolutions/Problem027.h"
 
 int main ()
 {
@@ -57,8 +74,9 @@ int main ()
 	Problem22();
 	Problem23();
 	Problem24();
-	Problem25();*/
-	Problem26();
+	Problem25();
+	Problem26();*/
+	Problem27();
 
 	std::cout << "\n";
 	return 0;
