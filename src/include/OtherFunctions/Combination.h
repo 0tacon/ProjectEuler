@@ -1,7 +1,7 @@
 /*
     Computes the combination: n choose k
 
-    n choose k = n!/(k!(n-k)!) = (n(n-1)...(n-k))/(k(k-1)...1)
+    n choose k = n!/(k!(n-k)!) = (n(n-1)...(n-k+1))/(k(k-1)...1)
 */
 
 #include <cstdint>
@@ -20,7 +20,7 @@ uint64_t Combination (T n, T k)
 	std::vector<uint16_t> num, denom;
 	bool factor_cancelled = true;
 
-	// Fill the numerator product vector with all nums from n-k to n
+	// Fill the numerator product vector with all nums from n-k+1 to n
 	for (uint16_t i = n; i > k; i--)
 		num.push_back(i);
 

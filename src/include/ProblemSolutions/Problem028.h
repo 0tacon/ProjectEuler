@@ -14,11 +14,6 @@
 
 #include <cstdint>
 #include <cstdio>
-#include <vector>
-
-#ifndef _PRINTVECTOR_
-#include "../OtherFunctions/PrintVector.h"
-#endif
 
 bool Problem28()
 {

@@ -11,12 +11,13 @@ public:
 
 	void SetNum(std::string str);
 
-	std::string GetNum() { return number; }
-	uint16_t Get1stDigitIndex() { return first_digit_index; }
+	std::string GetNum() const { return number; }
+	uint16_t Get1stDigitIndex() const { return first_digit_index; }
 
 	StringNum operator+(StringNum other);
 	StringNum operator-(StringNum other);
 	StringNum operator*(StringNum other);
+	bool operator==(const StringNum other);
 
 	uint64_t SumDigits();
 
@@ -180,12 +181,12 @@ StringNum StringNum::operator-(StringNum other)
 	if (str[0] == '0')
 	{
 		uint16_t i = 0;
-		while (str[i] == '0') 
+		while (str[i] == '0')
 			i++;
 
 		result.SetNum(str.erase(0, i));
 	}
-	
+
 	return result;
 }
 
@@ -201,4 +202,12 @@ StringNum StringNum::operator*(StringNum other)
 	}
 
 	return result;
+}
+
+bool StringNum::operator==(const StringNum other)
+{
+    if (this->GetNum() == other.GetNum())
+        return true;
+    else
+        return false;
 }

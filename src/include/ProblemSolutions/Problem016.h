@@ -6,8 +6,6 @@
 
 #include <iostream>
 #include <cstdint>
-#include <cmath>
-#include <cstdio>
 
 #ifndef _STRINGNUM_
 #include "../Classes/StringNum.h"
