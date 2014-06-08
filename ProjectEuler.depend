@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1402174401 source:/home/daniel/dev/cppprojects/ProjectEuler/src/ProjectEuler.cpp
+1402217818 source:/home/daniel/dev/cppprojects/ProjectEuler/src/ProjectEuler.cpp
 	<iostream>
 	<cstdint>
 	"include/OtherFunctions/PrintHeader.h"
@@ -30,6 +30,7 @@
 	"include/ProblemSolutions/Problem025.h"
 	"include/ProblemSolutions/Problem026.h"
 	"include/ProblemSolutions/Problem027.h"
+	"include/ProblemSolutions/Problem028.h"
 
 1401121694 /home/daniel/dev/cppprojects/ProjectEuler/src/include/OtherFunctions/PrintHeader.h
 	<iostream>
@@ -389,4 +390,10 @@
 	<cstdio>
 	<vector>
 	"../OtherFunctions/GetAllPrimesBelow.h"
+
+1402219008 /home/daniel/dev/cppprojects/ProjectEuler/src/include/ProblemSolutions/Problem028.h
+	<cstdint>
+	<cstdio>
+	<vector>
+	"../OtherFunctions/PrintVector.h"
 
