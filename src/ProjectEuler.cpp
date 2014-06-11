@@ -47,6 +47,7 @@
 #include "include/ProblemSolutions/Problem027.h"
 #include "include/ProblemSolutions/Problem028.h"
 #include "include/ProblemSolutions/Problem029.h"
+#include "include/ProblemSolutions/Problem030.h"
 
 int main ()
 {
@@ -79,8 +80,9 @@ int main ()
 	Problem25();
 	Problem26();
 	Problem27();
-	Problem28();*/
-	Problem29();
+	Problem28();
+	Problem29();*/
+	Problem30();
 
 	std::cout << "\n";
 	return 0;

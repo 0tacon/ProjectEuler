@@ -45,6 +45,7 @@
 		<Unit filename="src/include/OtherFunctions/FindLargestRepeatedSet.h" />
 		<Unit filename="src/include/OtherFunctions/GetAllFactors.h" />
 		<Unit filename="src/include/OtherFunctions/GetAllPossibleProducts.h" />
+		<Unit filename="src/include/OtherFunctions/GetAllPossibleSums.h" />
 		<Unit filename="src/include/OtherFunctions/GetAllPrimesBelow.h" />
 		<Unit filename="src/include/OtherFunctions/GetDigit.h" />
 		<Unit filename="src/include/OtherFunctions/GetInverseNumDecimalPart.h" />
@@ -91,6 +92,8 @@
 		<Unit filename="src/include/ProblemSolutions/Problem026.h" />
 		<Unit filename="src/include/ProblemSolutions/Problem027.h" />
 		<Unit filename="src/include/ProblemSolutions/Problem028.h" />
+		<Unit filename="src/include/ProblemSolutions/Problem029.h" />
+		<Unit filename="src/include/ProblemSolutions/Problem030.h" />
 		<Extensions>
 			<code_completion />
 			<debugger />
