@@ -1,49 +1,44 @@
 #include <cstdint>
 #include <vector>
-#include <iostream>
+#include <utility>
+#include <algorithm>
 
 #define _GETALLPOSSIBLESUMS_
 
-#ifndef _PRINTVECTOR_
-#include "PrintVector.h"
-#endif
-
 template<typename T>
-void GetAllPossibleSums_RecursiveLoop(T n, std::vector<T> v, std::vector<T> &sums)
+void GetAllPossibleSums_RecursiveLoop(T n, std::vector<T> v, std::vector<std::pair<T, std::vector<T> > > &sums, std::vector<T> &temp_nums)
 {
-    std::vector<T> temp(v.size()-1);
+    std::vector<T> temp_v(v.size()-1);
 
     for (typename std::vector<T>::iterator a = v.begin(); a != v.end(); a++)
     {
-        /*std::cout << "n = " << n << "\n";
-        std::cout << "v.size() = " << v.size() << "\n";
-        std::cout << "a = " << *a << "\n";*/
+        temp_nums.push_back(*a);
 
         if (n != 0)
-            sums.push_back(n + *a);
+            sums.push_back(std::make_pair(n + *a, temp_nums));
 
         if (v.size() > 1 && a != std::prev(v.end(), 1))
         {
-            //std::copy(std::next(a, 1), v.end(), temp.begin());
-            temp = v;
-            temp.erase(temp.begin(), std::next(std::find(temp.begin(), temp.end(), *a), 1));
+            std::copy(std::next(a, 1), v.end(), temp_v.begin());
+            temp_v = v;
+            temp_v.erase(temp_v.begin(), std::next(std::find(temp_v.begin(), temp_v.end(), *a), 1));
 
-            //std::cout << "temp.size() = " << temp.size() << "\n";
-            //PrintVector(temp); std::cout << "\n\n";
+            GetAllPossibleSums_RecursiveLoop(static_cast<T>(n + *a), temp_v, sums, temp_nums);
 
-            GetAllPossibleSums_RecursiveLoop(static_cast<T>(n + *a), temp, sums);
-
-            temp.clear();
+            temp_v.clear();
         }
+
+        temp_nums.erase(std::prev(temp_nums.end(), 1), temp_nums.end());
     }
 }
 
 template<typename T>
-std::vector<T> GetAllPossibleSums(std::vector<T> v)
+std::vector<std::pair<T, std::vector<T> > > GetAllPossibleSums(std::vector<T> v)
 {
-    std::vector<T> sums;
+    std::vector<std::pair<T, std::vector<T> > > sums;
+    std::vector<T> temp_nums;
 
-    GetAllPossibleSums_RecursiveLoop(static_cast<T>(0), v, sums);
+    GetAllPossibleSums_RecursiveLoop(static_cast<T>(0), v, sums, temp_nums);
 
     return sums;
 }

@@ -16,37 +16,45 @@
 #include <cstdio>
 #include <cmath>
 #include <map>
-
-#ifndef _FACTORIAL_
-#include "../OtherFunctions/Factorial.h"
-#endif
+#include <vector>
+#include <utility>
+#include <string>
+#include <algorithm>
 
 #ifndef _GETALLPOSSIBLESUMS_
 #include "../OtherFunctions/GetAllPossibleSums.h"
 #endif
 
-#ifndef _PRINTVECTOR_
-#include "../OtherFunctions/PrintVector.h"
-#endif
-
 bool Problem30()
 {
     std::map<uint8_t, uint16_t> v;
-    std::vector<uint16_t> vect = {1,2,3,4}, sums;
+    std::vector<uint32_t> vect;
+    std::vector<std::pair<uint32_t, std::vector<uint32_t> > > sums;
+    std::string str1, str2;
 
-    /*for (uint8_t i = 1; i != 10; i++)
-        v[i] = pow(i,5);
+    for (uint8_t i = 1; i != 10; i++)
+        v[i] = pow(i,4);
 
     for (std::map<uint8_t, uint16_t>::iterator i = v.begin(); i != v.end(); i++)
-        printf("%d => %d\n", i->first, i->second);
-
-    printf("9! = %lf\n", Factorial(9));*/
+        vect.push_back(i->second);
 
     sums = GetAllPossibleSums(vect);
 
-    PrintVector(vect);
-    printf("\n");
-    PrintVector(sums);
+    for (std::vector<std::pair<uint32_t, std::vector<uint32_t> > >::iterator itr = sums.begin(); itr != sums.end(); itr++)
+    {
+        for (uint32_t i = 0; i < itr->second.size(); i++)
+            itr->second.at(i) = pow(itr->second.at(i), 0.25);
+
+        str1 = std::to_string(itr->first);
+
+        for (std::vector<uint32_t>::iterator n = itr->second.begin(); n != itr->second.end(); n++)
+            str2 += std::to_string(*n);
+
+        if (std::is_permutation(str1.begin(), str1.end(), str2.begin()) && str1.size() == str2.size())
+            printf("\nsum = %s, nums = %s", str1.c_str(), str2.c_str());
+
+        str2 = "";
+    }
 
     printf("\nProblem 030: \n");
     return true;
