@@ -27,35 +27,67 @@
 
 bool Problem30()
 {
+    uint8_t exp = 5;
     std::map<uint8_t, uint16_t> v;
-    std::vector<uint32_t> vect;
-    std::vector<std::pair<uint32_t, std::vector<uint32_t> > > sums;
+    std::vector<uint64_t> vect, results, temp_vect;
+    std::vector<std::pair<uint64_t, std::vector<uint64_t> > > sums;
     std::string str1, str2;
+    uint64_t ans = 0;
 
     for (uint8_t i = 1; i != 10; i++)
-        v[i] = pow(i,4);
+        v[i] = pow(i,exp);
 
     for (std::map<uint8_t, uint16_t>::iterator i = v.begin(); i != v.end(); i++)
         vect.push_back(i->second);
 
-    sums = GetAllPossibleSums(vect);
+    GetAllPossibleSums(vect, sums);
 
-    for (std::vector<std::pair<uint32_t, std::vector<uint32_t> > >::iterator itr = sums.begin(); itr != sums.end(); itr++)
+    for (std::vector<uint64_t>::iterator i = vect.begin(); i != vect.end(); i++)
     {
-        for (uint32_t i = 0; i < itr->second.size(); i++)
-            itr->second.at(i) = pow(itr->second.at(i), 0.25);
+        temp_vect.push_back(*i);
+
+        GetAllPossibleSums(vect, sums, temp_vect);
+
+        for (std::vector<uint64_t>::iterator j = std::next(i, 1); j != vect.end(); j++)
+        {
+            temp_vect.push_back(*j);
+
+            GetAllPossibleSums(vect, sums, temp_vect);
+
+            temp_vect.erase(std::prev(temp_vect.end(), 1), temp_vect.end());
+        }
+
+        temp_vect.push_back(*i);
+
+        GetAllPossibleSums(vect, sums, temp_vect);
+
+        temp_vect.erase(temp_vect.begin(), temp_vect.end());
+    }
+
+    for (std::vector<std::pair<uint64_t, std::vector<uint64_t> > >::iterator itr = sums.begin(); itr != sums.end(); itr++)
+    {
+        for (uint64_t i = 0; i < itr->second.size(); i++)
+            itr->second.at(i) = pow(itr->second.at(i), static_cast<float>(static_cast<float>(1.0)/exp));
 
         str1 = std::to_string(itr->first);
 
-        for (std::vector<uint32_t>::iterator n = itr->second.begin(); n != itr->second.end(); n++)
+        for (std::vector<uint64_t>::iterator n = itr->second.begin(); n != itr->second.end(); n++)
             str2 += std::to_string(*n);
 
+        if (std::count(str1.begin(), str1.end(), '0') > 0)
+            for (uint8_t i = 0; i < std::count(str1.begin(), str1.end(), '0'); i++)
+                str2 += '0';
+
         if (std::is_permutation(str1.begin(), str1.end(), str2.begin()) && str1.size() == str2.size())
-            printf("\nsum = %s, nums = %s", str1.c_str(), str2.c_str());
+            if (std::count(results.begin(), results.end(), itr->first) == 0)
+                results.push_back(itr->first);
 
         str2 = "";
     }
 
-    printf("\nProblem 030: \n");
+    for (std::vector<uint64_t>::iterator i = results.begin(); i != results.end(); i++)
+        ans += *i;
+
+    printf("\nProblem 030: %lu\n", ans);
     return true;
 }
