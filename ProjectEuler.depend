@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1402236779 source:/home/daniel/dev/cppprojects/ProjectEuler/src/ProjectEuler.cpp
+1403453480 source:/home/daniel/dev/cppprojects/ProjectEuler/src/ProjectEuler.cpp
 	<iostream>
 	<cstdint>
 	"include/OtherFunctions/PrintHeader.h"
@@ -33,6 +33,7 @@
 	"include/ProblemSolutions/Problem028.h"
 	"include/ProblemSolutions/Problem029.h"
 	"include/ProblemSolutions/Problem030.h"
+	"include/ProblemSolutions/Problem031.h"
 
 1401121694 /home/daniel/dev/cppprojects/ProjectEuler/src/include/OtherFunctions/PrintHeader.h
 	<iostream>
@@ -416,9 +417,21 @@
 	<algorithm>
 	"../OtherFunctions/GetAllPossibleSums.h"
 
-1402681312 /home/daniel/dev/cppprojects/ProjectEuler/src/include/OtherFunctions/GetAllPossibleSums.h
+1403454953 /home/daniel/dev/cppprojects/ProjectEuler/src/include/OtherFunctions/GetAllPossibleSums.h
 	<cstdint>
 	<vector>
 	<utility>
+	<algorithm>
+
+1403469817 /home/daniel/dev/cppprojects/ProjectEuler/src/include/ProblemSolutions/Problem031.h
+	<cstdint>
+	<cstdio>
+	<vector>
+	"../OtherFunctions/MakeTotalFromSet.h"
+
+1403469817 /home/daniel/dev/cppprojects/ProjectEuler/src/include/OtherFunctions/MakeTotalFromSet.h
+	<cstdint>
+	<cstdio>
+	<vector>
 	<algorithm>
 

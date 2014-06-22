@@ -59,6 +59,7 @@
 		<Unit filename="src/include/OtherFunctions/IsDivisible.h" />
 		<Unit filename="src/include/OtherFunctions/IsPalendrome.h" />
 		<Unit filename="src/include/OtherFunctions/LengthOfCollatzSeq.h" />
+		<Unit filename="src/include/OtherFunctions/MakeTotalFromSet.h" />
 		<Unit filename="src/include/OtherFunctions/PrintHeader.h" />
 		<Unit filename="src/include/OtherFunctions/PrintVector.h" />
 		<Unit filename="src/include/OtherFunctions/ReadFileIntoVect.h" />
@@ -94,6 +95,7 @@
 		<Unit filename="src/include/ProblemSolutions/Problem028.h" />
 		<Unit filename="src/include/ProblemSolutions/Problem029.h" />
 		<Unit filename="src/include/ProblemSolutions/Problem030.h" />
+		<Unit filename="src/include/ProblemSolutions/Problem031.h" />
 		<Extensions>
 			<code_completion />
 			<debugger />

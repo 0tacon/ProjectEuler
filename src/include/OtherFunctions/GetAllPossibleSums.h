@@ -5,6 +5,11 @@
 
 #define _GETALLPOSSIBLESUMS_
 
+template<typename T> void GetAllPossibleSums_RecursiveLoop(T n, std::vector<T> v, std::vector<std::pair<T, std::vector<T> > > &sums, std::vector<T> &temp_nums);
+template<typename T> void GetAllPossibleSums(std::vector<T> v, std::vector<std::pair<T, std::vector<T> > > &sums);
+template<typename T> void GetAllPossibleSums_RecursiveLoop(T n, std::vector<T> v, std::vector<std::pair<T, std::vector<T> > > &sums, std::vector<T> &temp_nums, std::vector<T> &additional_vals);
+template<typename T> void GetAllPossibleSums(std::vector<T> v, std::vector<std::pair<T, std::vector<T> > > &sums, std::vector<T> &additional_vals);
+
 template<typename T>
 void GetAllPossibleSums_RecursiveLoop(T n, std::vector<T> v, std::vector<std::pair<T, std::vector<T> > > &sums, std::vector<T> &temp_nums)
 {
