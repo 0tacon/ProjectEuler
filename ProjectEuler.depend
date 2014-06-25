@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1403542152 source:/home/daniel/dev/cppprojects/ProjectEuler/src/ProjectEuler.cpp
+1403715867 source:/home/daniel/dev/cppprojects/ProjectEuler/src/ProjectEuler.cpp
 	<iostream>
 	<cstdint>
 	"include/OtherFunctions/PrintHeader.h"
@@ -35,6 +35,7 @@
 	"include/ProblemSolutions/Problem030.h"
 	"include/ProblemSolutions/Problem031.h"
 	"include/ProblemSolutions/Problem032.h"
+	"include/ProblemSolutions/Problem033.h"
 
 1401121694 /home/daniel/dev/cppprojects/ProjectEuler/src/include/OtherFunctions/PrintHeader.h
 	<iostream>
@@ -441,6 +442,18 @@
 	<cstdio>
 	<vector>
 	<utility>
+	<string>
+	<algorithm>
+
+1403726235 /home/daniel/dev/cppprojects/ProjectEuler/src/include/ProblemSolutions/Problem033.h
+	<cstdint>
+	<cstdio>
+	<vector>
+	"../Classes/Fraction.h"
+
+1403726341 /home/daniel/dev/cppprojects/ProjectEuler/src/include/Classes/Fraction.h
+	<cstdint>
+	<cstdio>
 	<string>
 	<algorithm>
 

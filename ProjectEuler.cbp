@@ -33,6 +33,7 @@
 		</Compiler>
 		<Unit filename="src/ProjectEuler.cpp" />
 		<Unit filename="src/include/Classes/Date.h" />
+		<Unit filename="src/include/Classes/Fraction.h" />
 		<Unit filename="src/include/Classes/LargeFactorial.h" />
 		<Unit filename="src/include/Classes/NameList.h" />
 		<Unit filename="src/include/Classes/NumericGrid.h" />
@@ -97,6 +98,7 @@
 		<Unit filename="src/include/ProblemSolutions/Problem030.h" />
 		<Unit filename="src/include/ProblemSolutions/Problem031.h" />
 		<Unit filename="src/include/ProblemSolutions/Problem032.h" />
+		<Unit filename="src/include/ProblemSolutions/Problem033.h" />
 		<Extensions>
 			<code_completion />
 			<debugger />
