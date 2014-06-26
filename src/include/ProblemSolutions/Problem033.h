@@ -35,22 +35,20 @@ bool Problem33()
                     other_frac = a_frac.CancelIncorrectly();
 
                     if (a_frac.GetVal() == other_frac.GetVal())
-                        vect.push_back(a_frac);
+                        vect.push_back(other_frac);
                 }
             }
 
     for (std::vector<Fraction>::iterator itr = vect.begin(); itr != vect.end(); itr++)
     {
-        printf("%d/%d = %f\n", itr->GetNum(), itr->GetDenom(), itr->GetVal());
-
         numerator *= itr->GetNum();
         denominator *= itr->GetDenom();
     }
 
     ans.SetNum(numerator);
     ans.SetDenom(denominator);
-    ans.Print();
+    ans = ans.Cancel();
 
-    printf("\nProblem 033: \n");
+    printf("\nProblem 033: %d\n", ans.GetDenom());
     return true;
 }

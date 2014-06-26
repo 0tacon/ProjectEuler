@@ -2,6 +2,19 @@
 #include <cstdio>
 #include <string>
 #include <algorithm>
+#include <map>
+
+#ifndef _GETPRIMEFACTORS_
+#include "../OtherFunctions/GetPrimeFactors.h"
+#endif // _GETPRIMEFACTORS_
+
+#ifndef _ISDIVISIBLE_
+#include "../OtherFunctions/IsDivisible.h"
+#endif // _ISDIVISIBLE_
+
+#ifndef _PRINTVECTOR_
+#include "../OtherFunctions/PrintVector.h"
+#endif // _PRINTVECTOR_
 
 #define _FRACTION_
 
@@ -31,6 +44,8 @@ public:
     void Print() { printf("\n%d/%d = %f\n", num, denom, val); }
 
     bool DoNumDenomShareDigits();
+
+    Fraction Cancel();
 
     Fraction CancelIncorrectly();
 
@@ -84,6 +99,61 @@ Fraction Fraction::CancelIncorrectly()
 
     ans.SetNum(stoi(str_num));
     ans.SetDenom(stoi(str_denom));
+
+    return ans;
+}
+
+Fraction Fraction::Cancel()
+{
+    Fraction ans;
+    uint32_t ans_num = 1, ans_denom = 1;
+    bool factor_cancelled = true;
+
+    std::map<uint32_t, uint32_t> num_factors = GetPrimeFactors(static_cast<uint32_t>(num)), denom_factors = GetPrimeFactors(static_cast<uint32_t>(denom));
+
+    std::vector<uint32_t> num_prod, denom_prod;
+
+    for (std::map<uint32_t, uint32_t>::iterator factor = num_factors.begin(); factor != num_factors.end(); factor++)
+        for (uint8_t i = 0; i < factor->second; i++)
+            num_prod.push_back(factor->first);
+
+    for (std::map<uint32_t, uint32_t>::iterator factor = denom_factors.begin(); factor != denom_factors.end(); factor++)
+        for (uint8_t i = 0; i < factor->second; i++)
+            denom_prod.push_back(factor->first);
+
+    // Cancel out all common factors in numerator and denominator product vectors
+	while (factor_cancelled)
+	{
+		factor_cancelled = false;
+
+		for (uint16_t a = 0; a < num_prod.size(); a++)
+			for (uint16_t b = 0; b < denom_prod.size(); b++)
+			{
+				if (num_prod[a] != 1 && denom_prod[b] != 1)
+				{
+					if (IsDivisible(num_prod[a], denom_prod[b]))
+					{
+						num_prod[a] = num_prod[a] / denom_prod[b];
+						denom_prod[b] = 1;
+						factor_cancelled = true;
+					}
+					else if (num_prod[a] == denom_prod[b])
+					{
+						num_prod[a] = 1;
+						denom_prod[b] = 1;
+						factor_cancelled = true;
+					}
+				}
+			}
+	}
+
+    for (std::vector<uint32_t>::iterator i = num_prod.begin(); i != num_prod.end(); i++)
+        ans_num *= *i;
+    for (std::vector<uint32_t>::iterator i = denom_prod.begin(); i != denom_prod.end(); i++)
+        ans_denom *= *i;
+
+    ans.SetNum(ans_num);
+    ans.SetDenom(ans_denom);
 
     return ans;
 }
