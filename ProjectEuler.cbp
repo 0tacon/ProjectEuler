@@ -65,6 +65,7 @@
 		<Unit filename="src/include/OtherFunctions/PrintVector.h" />
 		<Unit filename="src/include/OtherFunctions/ReadFileIntoVect.h" />
 		<Unit filename="src/include/OtherFunctions/SumAllFactors.h" />
+		<Unit filename="src/include/OtherFunctions/SumDigits.h" />
 		<Unit filename="src/include/OtherFunctions/SumLetters.h" />
 		<Unit filename="src/include/ProblemSolutions/Problem001.h" />
 		<Unit filename="src/include/ProblemSolutions/Problem002.h" />
@@ -99,6 +100,7 @@
 		<Unit filename="src/include/ProblemSolutions/Problem031.h" />
 		<Unit filename="src/include/ProblemSolutions/Problem032.h" />
 		<Unit filename="src/include/ProblemSolutions/Problem033.h" />
+		<Unit filename="src/include/ProblemSolutions/Problem034.h" />
 		<Extensions>
 			<code_completion />
 			<debugger />
