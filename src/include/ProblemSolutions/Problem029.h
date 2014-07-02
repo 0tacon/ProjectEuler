@@ -20,7 +20,7 @@
 
 #ifndef _STRINGNUM_
 #include "../Classes/StringNum.h"
-#endif
+#endif // _STRINGNUM_
 
 bool Problem29()
 {
@@ -29,8 +29,12 @@ bool Problem29()
 
     for (StringNum base("2.000000"); base.GetNum() != max.GetNum(); base = base + unity)
     {
+        //base.Print();
+
         for (StringNum exp("2.000000"); exp.GetNum() != max.GetNum(); exp = exp + unity)
         {
+            //exp.Print();
+
             result = base;
 
             for (StringNum i("1.000000"); i.GetNum() != exp.GetNum(); i = i + unity)
@@ -38,8 +42,13 @@ bool Problem29()
 
             if (std::count(results.begin(), results.end(), result.GetNum()) == 0)
                 results.push_back(result.GetNum());
+
+            //result.Print();
         }
     }
+
+    //for (std::vector<std::string>::iterator itr = results.begin(); itr != results.end(); itr++)
+        //printf("\n%s", itr->c_str());
 
     printf("\nProblem 029: %lu\n", results.size());
     return true;

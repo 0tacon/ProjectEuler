@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1404067792 source:/home/daniel/dev/cppprojects/ProjectEuler/src/ProjectEuler.cpp
+1404332660 source:/home/daniel/dev/cppprojects/ProjectEuler/src/ProjectEuler.cpp
 	<iostream>
 	<cstdint>
 	"include/OtherFunctions/PrintHeader.h"
@@ -38,57 +38,61 @@
 	"include/ProblemSolutions/Problem033.h"
 	"include/ProblemSolutions/Problem034.h"
 	"include/ProblemSolutions/Problem035.h"
+	"include/ProblemSolutions/Problem036.h"
 
-1401121694 /home/daniel/dev/cppprojects/ProjectEuler/src/include/OtherFunctions/PrintHeader.h
+1404276969 /home/daniel/dev/cppprojects/ProjectEuler/src/include/OtherFunctions/PrintHeader.h
 	<iostream>
 	<ctime>
 
-1400773592 /home/daniel/dev/cppprojects/ProjectEuler/src/include/ProblemSolutions/Problem001.h
+1404276969 /home/daniel/dev/cppprojects/ProjectEuler/src/include/ProblemSolutions/Problem001.h
 	<iostream>
 	<cstdint>
 
-1400773592 /home/daniel/dev/cppprojects/ProjectEuler/src/include/ProblemSolutions/Problem002.h
+1404276969 /home/daniel/dev/cppprojects/ProjectEuler/src/include/ProblemSolutions/Problem002.h
 	<iostream>
 	<cstdint>
 	<vector>
 
-1400885292 /home/daniel/dev/cppprojects/ProjectEuler/src/include/ProblemSolutions/Problem003.h
+1404276969 /home/daniel/dev/cppprojects/ProjectEuler/src/include/ProblemSolutions/Problem003.h
 	<iostream>
 	<cstdint>
 	<cmath>
 
-1401898627 /home/daniel/dev/cppprojects/ProjectEuler/src/include/ProblemSolutions/Problem004.h
+1404276969 /home/daniel/dev/cppprojects/ProjectEuler/src/include/ProblemSolutions/Problem004.h
 	<iostream>
 	<cstdint>
 	"../OtherFunctions/IsPalendrome.h"
 
-1401897768 /home/daniel/dev/cppprojects/ProjectEuler/src/include/OtherFunctions/IsPalendrome.h
+1404332660 /home/daniel/dev/cppprojects/ProjectEuler/src/include/OtherFunctions/IsPalendrome.h
 	<iostream>
 	<cstdint>
+	<cstdio>
 	<vector>
+	<cstring>
 	"../OtherFunctions/GetNumDigits.h"
 
-1400889340 /home/daniel/dev/cppprojects/ProjectEuler/src/include/OtherFunctions/GetNumDigits.h
+1404332660 /home/daniel/dev/cppprojects/ProjectEuler/src/include/OtherFunctions/GetNumDigits.h
 	<cstdint>
 	<cmath>
+	<cstring>
 
-1400889340 /home/daniel/dev/cppprojects/ProjectEuler/src/include/ProblemSolutions/Problem005.h
+1404276969 /home/daniel/dev/cppprojects/ProjectEuler/src/include/ProblemSolutions/Problem005.h
 	<iostream>
 	<cstdint>
 	<cmath>
 	<vector>
 	<map>
 
-1400773592 /home/daniel/dev/cppprojects/ProjectEuler/src/include/ProblemSolutions/Problem006.h
+1404276969 /home/daniel/dev/cppprojects/ProjectEuler/src/include/ProblemSolutions/Problem006.h
 	<iostream>
 	<cstdint>
 
-1401897747 /home/daniel/dev/cppprojects/ProjectEuler/src/include/ProblemSolutions/Problem007.h
+1404276969 /home/daniel/dev/cppprojects/ProjectEuler/src/include/ProblemSolutions/Problem007.h
 	<iostream>
 	<cstdint>
 	"../OtherFunctions/GetPrimeNumber.h"
 
-1401394868 /home/daniel/dev/cppprojects/ProjectEuler/src/include/OtherFunctions/GetPrimeNumber.h
+1404276969 /home/daniel/dev/cppprojects/ProjectEuler/src/include/OtherFunctions/GetPrimeNumber.h
 	<cstdint>
 	<vector>
 	<algorithm>
@@ -96,7 +100,7 @@
 	<functional>
 	"GetAllPrimesBelow.h"
 
-1401396952 /home/daniel/dev/cppprojects/ProjectEuler/src/include/OtherFunctions/GetAllPrimesBelow.h
+1404276969 /home/daniel/dev/cppprojects/ProjectEuler/src/include/OtherFunctions/GetAllPrimesBelow.h
 	<cstdint>
 	<vector>
 	<map>
@@ -104,31 +108,31 @@
 	<cmath>
 	<functional>
 
-1401900502 /home/daniel/dev/cppprojects/ProjectEuler/src/include/ProblemSolutions/Problem008.h
+1404276969 /home/daniel/dev/cppprojects/ProjectEuler/src/include/ProblemSolutions/Problem008.h
 	<iostream>
 	<vector>
 	<algorithm>
 	<cstdint>
 	"../OtherFunctions/ReadFileIntoVect.h"
 
-1401900502 /home/daniel/dev/cppprojects/ProjectEuler/src/include/OtherFunctions/ReadFileIntoVect.h
+1404276969 /home/daniel/dev/cppprojects/ProjectEuler/src/include/OtherFunctions/ReadFileIntoVect.h
 	<fstream>
 	<iostream>
 	<vector>
 	<cstdint>
 	<cmath>
 
-1400889340 /home/daniel/dev/cppprojects/ProjectEuler/src/include/ProblemSolutions/Problem009.h
+1404276969 /home/daniel/dev/cppprojects/ProjectEuler/src/include/ProblemSolutions/Problem009.h
 	<iostream>
 	<cstdint>
 	<cmath>
 
-1401897749 /home/daniel/dev/cppprojects/ProjectEuler/src/include/ProblemSolutions/Problem010.h
+1404276969 /home/daniel/dev/cppprojects/ProjectEuler/src/include/ProblemSolutions/Problem010.h
 	<iostream>
 	<cstdint>
 	"../OtherFunctions/GetSumPrimesBelow.h"
 
-1401394868 /home/daniel/dev/cppprojects/ProjectEuler/src/include/OtherFunctions/GetSumPrimesBelow.h
+1404276969 /home/daniel/dev/cppprojects/ProjectEuler/src/include/OtherFunctions/GetSumPrimesBelow.h
 	<cstdint>
 	<vector>
 	<algorithm>
@@ -136,7 +140,7 @@
 	<functional>
 	"GetAllPrimesBelow.h"
 
-1401900502 /home/daniel/dev/cppprojects/ProjectEuler/src/include/ProblemSolutions/Problem011.h
+1404276969 /home/daniel/dev/cppprojects/ProjectEuler/src/include/ProblemSolutions/Problem011.h
 	<iostream>
 	<vector>
 	<cstdint>
@@ -144,33 +148,33 @@
 	"../Classes/NumericGrid.h"
 	"../OtherFunctions/ExtractNDigitNums.h"
 
-1401125606 /home/daniel/dev/cppprojects/ProjectEuler/src/include/Classes/NumericGrid.h
+1404276969 /home/daniel/dev/cppprojects/ProjectEuler/src/include/Classes/NumericGrid.h
 	<vector>
 	<map>
 	<algorithm>
 	<cstdint>
 
-1400889340 /home/daniel/dev/cppprojects/ProjectEuler/src/include/OtherFunctions/ExtractNDigitNums.h
+1404276969 /home/daniel/dev/cppprojects/ProjectEuler/src/include/OtherFunctions/ExtractNDigitNums.h
 	<vector>
 	<cmath>
 	<iostream>
 
-1404069962 /home/daniel/dev/cppprojects/ProjectEuler/src/include/OtherFunctions/PrintVector.h
+1404276969 /home/daniel/dev/cppprojects/ProjectEuler/src/include/OtherFunctions/PrintVector.h
 	<iostream>
 	<vector>
 
-1401396952 /home/daniel/dev/cppprojects/ProjectEuler/src/include/ProblemSolutions/Problem012.h
+1404276969 /home/daniel/dev/cppprojects/ProjectEuler/src/include/ProblemSolutions/Problem012.h
 	<iostream>
 	<cstdint>
 	<vector>
 	"..//OtherFunctions//GetNumDivisors.h"
 
-1401488356 /home/daniel/dev/cppprojects/ProjectEuler/src/include//OtherFunctions//GetNumDivisors.h
+1404276969 /home/daniel/dev/cppprojects/ProjectEuler/src/include//OtherFunctions//GetNumDivisors.h
 	<cstdint>
 	<map>
 	"GetPrimeFactors.h"
 
-1401488356 /home/daniel/dev/cppprojects/ProjectEuler/src/include//OtherFunctions//GetPrimeFactors.h
+1404276969 /home/daniel/dev/cppprojects/ProjectEuler/src/include//OtherFunctions//GetPrimeFactors.h
 	<cstdint>
 	<cmath>
 	<functional>
@@ -179,11 +183,11 @@
 	"IsDivisible.h"
 	"GetAllPrimesBelow.h"
 
-1400773592 /home/daniel/dev/cppprojects/ProjectEuler/src/include//OtherFunctions//IsDivisible.h
+1404276969 /home/daniel/dev/cppprojects/ProjectEuler/src/include//OtherFunctions//IsDivisible.h
 	<cstdint>
 	<cmath>
 
-1401396952 /home/daniel/dev/cppprojects/ProjectEuler/src/include//OtherFunctions//GetAllPrimesBelow.h
+1404276969 /home/daniel/dev/cppprojects/ProjectEuler/src/include//OtherFunctions//GetAllPrimesBelow.h
 	<cstdint>
 	<vector>
 	<map>
@@ -191,59 +195,59 @@
 	<cmath>
 	<functional>
 
-1401900624 /home/daniel/dev/cppprojects/ProjectEuler/src/include/ProblemSolutions/Problem013.h
+1404276969 /home/daniel/dev/cppprojects/ProjectEuler/src/include/ProblemSolutions/Problem013.h
 	<iostream>
 	<cstdint>
 	<vector>
 	<cmath>
 	"../OtherFunctions/ReadFileIntoVect.h"
 
-1401897748 /home/daniel/dev/cppprojects/ProjectEuler/src/include/ProblemSolutions/Problem014.h
+1404276969 /home/daniel/dev/cppprojects/ProjectEuler/src/include/ProblemSolutions/Problem014.h
 	<iostream>
 	<cstdint>
 	"../OtherFunctions/LengthOfCollatzSeq.h"
 
-1401898661 /home/daniel/dev/cppprojects/ProjectEuler/src/include/OtherFunctions/LengthOfCollatzSeq.h
+1404276969 /home/daniel/dev/cppprojects/ProjectEuler/src/include/OtherFunctions/LengthOfCollatzSeq.h
 	<cstdint>
 	<cmath>
 
-1401897770 /home/daniel/dev/cppprojects/ProjectEuler/src/include/ProblemSolutions/Problem015.h
+1404276969 /home/daniel/dev/cppprojects/ProjectEuler/src/include/ProblemSolutions/Problem015.h
 	<iostream>
 	<cstdint>
 	<cmath>
 	"../OtherFunctions/Combination.h"
 
-1402231685 /home/daniel/dev/cppprojects/ProjectEuler/src/include/OtherFunctions/Combination.h
+1404276969 /home/daniel/dev/cppprojects/ProjectEuler/src/include/OtherFunctions/Combination.h
 	<cstdint>
 	<vector>
 	"IsDivisible.h"
 
-1400773592 /home/daniel/dev/cppprojects/ProjectEuler/src/include/OtherFunctions/IsDivisible.h
+1404276969 /home/daniel/dev/cppprojects/ProjectEuler/src/include/OtherFunctions/IsDivisible.h
 	<cstdint>
 	<cmath>
 
-1402234541 /home/daniel/dev/cppprojects/ProjectEuler/src/include/ProblemSolutions/Problem016.h
+1404276969 /home/daniel/dev/cppprojects/ProjectEuler/src/include/ProblemSolutions/Problem016.h
 	<iostream>
 	<cstdint>
 	"../Classes/StringNum.h"
 
-1402235812 /home/daniel/dev/cppprojects/ProjectEuler/src/include/Classes/StringNum.h
+1404276969 /home/daniel/dev/cppprojects/ProjectEuler/src/include/Classes/StringNum.h
 	<string>
 
-1401897770 /home/daniel/dev/cppprojects/ProjectEuler/src/include/ProblemSolutions/Problem017.h
+1404276969 /home/daniel/dev/cppprojects/ProjectEuler/src/include/ProblemSolutions/Problem017.h
 	<iostream>
 	<cstdint>
 	"../OtherFunctions/GetLettersInNum.h"
 
-1401897747 /home/daniel/dev/cppprojects/ProjectEuler/src/include/OtherFunctions/GetLettersInNum.h
+1404276969 /home/daniel/dev/cppprojects/ProjectEuler/src/include/OtherFunctions/GetLettersInNum.h
 	<cstdint>
 	<map>
 	"../OtherFunctions/GetDigit.h"
 
-1400773592 /home/daniel/dev/cppprojects/ProjectEuler/src/include/OtherFunctions/GetDigit.h
+1404276969 /home/daniel/dev/cppprojects/ProjectEuler/src/include/OtherFunctions/GetDigit.h
 	<cstdint>
 
-1401900965 /home/daniel/dev/cppprojects/ProjectEuler/src/include/ProblemSolutions/Problem018.h
+1404276969 /home/daniel/dev/cppprojects/ProjectEuler/src/include/ProblemSolutions/Problem018.h
 	<iostream>
 	<string>
 	<vector>
@@ -251,7 +255,7 @@
 	"../OtherFunctions/ReadFileIntoVect.h"
 	"../OtherFunctions/ExtractNDigitNums.h"
 
-1401897770 /home/daniel/dev/cppprojects/ProjectEuler/src/include/Classes/NumericTriangle.h
+1404276969 /home/daniel/dev/cppprojects/ProjectEuler/src/include/Classes/NumericTriangle.h
 	<iostream>
 	<cstdint>
 	<vector>
@@ -260,27 +264,27 @@
 	<cmath>
 	"../OtherFunctions/GetMaxElementIndex.h"
 
-1400773592 /home/daniel/dev/cppprojects/ProjectEuler/src/include/OtherFunctions/GetMaxElementIndex.h
+1404276969 /home/daniel/dev/cppprojects/ProjectEuler/src/include/OtherFunctions/GetMaxElementIndex.h
 	<cstdint>
 	<vector>
 	<algorithm>
 
-1401897770 /home/daniel/dev/cppprojects/ProjectEuler/src/include/ProblemSolutions/Problem019.h
+1404276969 /home/daniel/dev/cppprojects/ProjectEuler/src/include/ProblemSolutions/Problem019.h
 	<iostream>
 	<cstdint>
 	"../Classes/Date.h"
 
-1401125606 /home/daniel/dev/cppprojects/ProjectEuler/src/include/Classes/Date.h
+1404276969 /home/daniel/dev/cppprojects/ProjectEuler/src/include/Classes/Date.h
 	<iostream>
 	<cstdint>
 	<map>
 
-1401897770 /home/daniel/dev/cppprojects/ProjectEuler/src/include/ProblemSolutions/Problem020.h
+1404276969 /home/daniel/dev/cppprojects/ProjectEuler/src/include/ProblemSolutions/Problem020.h
 	<iostream>
 	<cstdint>
 	"../Classes/LargeFactorial.h"
 
-1401309598 /home/daniel/dev/cppprojects/ProjectEuler/src/include/Classes/LargeFactorial.h
+1404276969 /home/daniel/dev/cppprojects/ProjectEuler/src/include/Classes/LargeFactorial.h
 	<cstdint>
 	<iostream>
 	<vector>
@@ -288,18 +292,18 @@
 	<cmath>
 	"StringNum.h"
 
-1401897770 /home/daniel/dev/cppprojects/ProjectEuler/src/include/ProblemSolutions/Problem021.h
+1404276969 /home/daniel/dev/cppprojects/ProjectEuler/src/include/ProblemSolutions/Problem021.h
 	<iostream>
 	<cstdint>
 	<vector>
 	"../OtherFunctions/SumAllFactors.h"
 
-1401576556 /home/daniel/dev/cppprojects/ProjectEuler/src/include/OtherFunctions/SumAllFactors.h
+1404276969 /home/daniel/dev/cppprojects/ProjectEuler/src/include/OtherFunctions/SumAllFactors.h
 	<cstdint>
 	<vector>
 	"GetAllFactors.h"
 
-1401575890 /home/daniel/dev/cppprojects/ProjectEuler/src/include/OtherFunctions/GetAllFactors.h
+1404276969 /home/daniel/dev/cppprojects/ProjectEuler/src/include/OtherFunctions/GetAllFactors.h
 	<cstdint>
 	<map>
 	<vector>
@@ -309,7 +313,7 @@
 	"GetPrimeFactors.h"
 	"GetAllPossibleProducts.h"
 
-1401488356 /home/daniel/dev/cppprojects/ProjectEuler/src/include/OtherFunctions/GetPrimeFactors.h
+1404276969 /home/daniel/dev/cppprojects/ProjectEuler/src/include/OtherFunctions/GetPrimeFactors.h
 	<cstdint>
 	<cmath>
 	<functional>
@@ -318,17 +322,17 @@
 	"IsDivisible.h"
 	"GetAllPrimesBelow.h"
 
-1401575542 /home/daniel/dev/cppprojects/ProjectEuler/src/include/OtherFunctions/GetAllPossibleProducts.h
+1404276969 /home/daniel/dev/cppprojects/ProjectEuler/src/include/OtherFunctions/GetAllPossibleProducts.h
 	<cstdint>
 	<vector>
 
-1401898167 /home/daniel/dev/cppprojects/ProjectEuler/src/include/ProblemSolutions/Problem022.h
+1404276969 /home/daniel/dev/cppprojects/ProjectEuler/src/include/ProblemSolutions/Problem022.h
 	<iostream>
 	<cstdint>
 	<string>
 	"..//Classes//NameList.h"
 
-1401620018 /home/daniel/dev/cppprojects/ProjectEuler/src/include//Classes//NameList.h
+1404276969 /home/daniel/dev/cppprojects/ProjectEuler/src/include//Classes//NameList.h
 	<iostream>
 	<cstdint>
 	<string>
@@ -338,26 +342,26 @@
 	"..//OtherFunctions//ReadFileIntoVect.h"
 	"..//OtherFunctions//SumLetters.h"
 
-1401897747 /home/daniel/dev/cppprojects/ProjectEuler/src/include/ProblemSolutions/Problem023.h
+1404276969 /home/daniel/dev/cppprojects/ProjectEuler/src/include/ProblemSolutions/Problem023.h
 	<iostream>
 	<cstdint>
 	<vector>
 	<algorithm>
 	"../OtherFunctions/SumAllFactors.h"
 
-1401897900 /home/daniel/dev/cppprojects/ProjectEuler/src/include/ProblemSolutions/Problem024.h
+1404276969 /home/daniel/dev/cppprojects/ProjectEuler/src/include/ProblemSolutions/Problem024.h
 	<iostream>
 	<cstdio>
 	<cstdint>
 	<string>
 	<algorithm>
 
-1401901443 /home/daniel/dev/cppprojects/ProjectEuler/src/include/ProblemSolutions/Problem025.h
+1404276969 /home/daniel/dev/cppprojects/ProjectEuler/src/include/ProblemSolutions/Problem025.h
 	<cstdio>
 	<cstdint>
 	".//Classes//StringNum.h"
 
-1402095021 /home/daniel/dev/cppprojects/ProjectEuler/src/include/ProblemSolutions/Problem026.h
+1404276969 /home/daniel/dev/cppprojects/ProjectEuler/src/include/ProblemSolutions/Problem026.h
 	<cstdint>
 	<iostream>
 	<cstdio>
@@ -376,41 +380,41 @@
 	<vector>
 	"../OtherFunctions/GetNumDigits.h"
 
-1402095021 /home/daniel/dev/cppprojects/ProjectEuler/src/include/OtherFunctions/GetInverseNumDecimalPart.h
+1404276969 /home/daniel/dev/cppprojects/ProjectEuler/src/include/OtherFunctions/GetInverseNumDecimalPart.h
 	<cstdint>
 	<vector>
 	<algorithm>
 	<iostream>
 	"../OtherFunctions/FindLargestRepeatedSet.h"
 
-1402095021 /home/daniel/dev/cppprojects/ProjectEuler/src/include/OtherFunctions/FindLargestRepeatedSet.h
+1404276969 /home/daniel/dev/cppprojects/ProjectEuler/src/include/OtherFunctions/FindLargestRepeatedSet.h
 	<cstdint>
 	<vector>
 	<algorithm>
 	<iostream>
 	"../OtherFunctions/PrintVector.h"
 
-1402177237 /home/daniel/dev/cppprojects/ProjectEuler/src/include/ProblemSolutions/Problem027.h
+1404276969 /home/daniel/dev/cppprojects/ProjectEuler/src/include/ProblemSolutions/Problem027.h
 	<cstdint>
 	<cstdio>
 	<vector>
 	"../OtherFunctions/GetAllPrimesBelow.h"
 
-1402219365 /home/daniel/dev/cppprojects/ProjectEuler/src/include/ProblemSolutions/Problem028.h
+1404276969 /home/daniel/dev/cppprojects/ProjectEuler/src/include/ProblemSolutions/Problem028.h
 	<cstdint>
 	<cstdio>
 
-1402236454 /home/daniel/dev/cppprojects/ProjectEuler/src/include/ProblemSolutions/Problem029.h
+1404326307 /home/daniel/dev/cppprojects/ProjectEuler/src/include/ProblemSolutions/Problem029.h
 	<cstdint>
 	<cstdio>
 	<vector>
 	<string>
 	"../Classes/StringNum.h"
 
-1400773592 /home/daniel/dev/cppprojects/ProjectEuler/src/include/OtherFunctions/Factorial.h
+1404276969 /home/daniel/dev/cppprojects/ProjectEuler/src/include/OtherFunctions/Factorial.h
 	<cstdint>
 
-1402681257 /home/daniel/dev/cppprojects/ProjectEuler/src/include/ProblemSolutions/Problem030.h
+1404276969 /home/daniel/dev/cppprojects/ProjectEuler/src/include/ProblemSolutions/Problem030.h
 	<cstdint>
 	<cstdio>
 	<cmath>
@@ -421,25 +425,25 @@
 	<algorithm>
 	"../OtherFunctions/GetAllPossibleSums.h"
 
-1403454953 /home/daniel/dev/cppprojects/ProjectEuler/src/include/OtherFunctions/GetAllPossibleSums.h
+1404276969 /home/daniel/dev/cppprojects/ProjectEuler/src/include/OtherFunctions/GetAllPossibleSums.h
 	<cstdint>
 	<vector>
 	<utility>
 	<algorithm>
 
-1403469817 /home/daniel/dev/cppprojects/ProjectEuler/src/include/ProblemSolutions/Problem031.h
+1404276969 /home/daniel/dev/cppprojects/ProjectEuler/src/include/ProblemSolutions/Problem031.h
 	<cstdint>
 	<cstdio>
 	<vector>
 	"../OtherFunctions/MakeTotalFromSet.h"
 
-1403469817 /home/daniel/dev/cppprojects/ProjectEuler/src/include/OtherFunctions/MakeTotalFromSet.h
+1404276969 /home/daniel/dev/cppprojects/ProjectEuler/src/include/OtherFunctions/MakeTotalFromSet.h
 	<cstdint>
 	<cstdio>
 	<vector>
 	<algorithm>
 
-1403544643 /home/daniel/dev/cppprojects/ProjectEuler/src/include/ProblemSolutions/Problem032.h
+1404276969 /home/daniel/dev/cppprojects/ProjectEuler/src/include/ProblemSolutions/Problem032.h
 	<cstdint>
 	<cstdio>
 	<vector>
@@ -447,13 +451,13 @@
 	<string>
 	<algorithm>
 
-1403803506 /home/daniel/dev/cppprojects/ProjectEuler/src/include/ProblemSolutions/Problem033.h
+1404276969 /home/daniel/dev/cppprojects/ProjectEuler/src/include/ProblemSolutions/Problem033.h
 	<cstdint>
 	<cstdio>
 	<vector>
 	"../Classes/Fraction.h"
 
-1403803394 /home/daniel/dev/cppprojects/ProjectEuler/src/include/Classes/Fraction.h
+1404276969 /home/daniel/dev/cppprojects/ProjectEuler/src/include/Classes/Fraction.h
 	<cstdint>
 	<cstdio>
 	<string>
@@ -463,7 +467,7 @@
 	"../OtherFunctions/IsDivisible.h"
 	"../OtherFunctions/PrintVector.h"
 
-1404067696 /home/daniel/dev/cppprojects/ProjectEuler/src/include/ProblemSolutions/Problem034.h
+1404276969 /home/daniel/dev/cppprojects/ProjectEuler/src/include/ProblemSolutions/Problem034.h
 	<cstdint>
 	<cstdio>
 	<map>
@@ -477,11 +481,20 @@
 	<string>
 	<iterator>
 
-1404149411 /home/daniel/dev/cppprojects/ProjectEuler/src/include/ProblemSolutions/Problem035.h
+1404276969 /home/daniel/dev/cppprojects/ProjectEuler/src/include/ProblemSolutions/Problem035.h
 	<cstdio>
 	<cstdint>
 	<vector>
 	<algorithm>
 	<string>
 	"../OtherFunctions/GetAllPrimesBelow.h"
+
+1404332749 /home/daniel/dev/cppprojects/ProjectEuler/src/include/ProblemSolutions/Problem036.h
+	<cstdint>
+	<cstdio>
+	<vector>
+	<cmath>
+	<cstring>
+	"../OtherFunctions/IsPalendrome.h"
+	"../OtherFunctions/PrintVector.h"
 

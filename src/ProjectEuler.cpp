@@ -53,12 +53,13 @@
 #include "include/ProblemSolutions/Problem033.h"
 #include "include/ProblemSolutions/Problem034.h"
 #include "include/ProblemSolutions/Problem035.h"
+#include "include/ProblemSolutions/Problem036.h"
 
 int main ()
 {
 	//PrintHeader();
 
-	/*Problem1();
+    /*Problem1();
 	Problem2();
 	Problem3();
 	Problem4();
@@ -91,8 +92,9 @@ int main ()
 	Problem31();
 	Problem32();
 	Problem33();
-    Problem34();*/
-    Problem35();
+    Problem34();
+    Problem35();*/
+    Problem36();
 
 	std::cout << "\n";
 	return 0;
