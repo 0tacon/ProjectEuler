@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1404332660 source:/home/daniel/dev/cppprojects/ProjectEuler/src/ProjectEuler.cpp
+1404490868 source:/home/daniel/dev/cppprojects/ProjectEuler/src/ProjectEuler.cpp
 	<iostream>
 	<cstdint>
 	"include/OtherFunctions/PrintHeader.h"
@@ -39,6 +39,7 @@
 	"include/ProblemSolutions/Problem034.h"
 	"include/ProblemSolutions/Problem035.h"
 	"include/ProblemSolutions/Problem036.h"
+	"include/ProblemSolutions/Problem037.h"
 
 1404276969 /home/daniel/dev/cppprojects/ProjectEuler/src/include/OtherFunctions/PrintHeader.h
 	<iostream>
@@ -497,4 +498,19 @@
 	<cstring>
 	"../OtherFunctions/IsPalendrome.h"
 	"../OtherFunctions/PrintVector.h"
+
+1404495821 /home/daniel/dev/cppprojects/ProjectEuler/src/include/ProblemSolutions/Problem037.h
+	<cstdio>
+	<cstdint>
+	<vector>
+	<algorithm>
+	"../OtherFunctions/GetAllPrimesBelow.h"
+	"../OtherFunctions/TruncateNum.h"
+	"../OtherFunctions/GetNumDigits.h"
+
+1404493478 /home/daniel/dev/cppprojects/ProjectEuler/src/include/OtherFunctions/TruncateNum.h
+	<cstdint>
+	<cstdio>
+	<string>
+	<algorithm>
 

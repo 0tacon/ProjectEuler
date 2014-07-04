@@ -67,6 +67,7 @@
 		<Unit filename="src/include/OtherFunctions/SumAllFactors.h" />
 		<Unit filename="src/include/OtherFunctions/SumDigits.h" />
 		<Unit filename="src/include/OtherFunctions/SumLetters.h" />
+		<Unit filename="src/include/OtherFunctions/TruncateNum.h" />
 		<Unit filename="src/include/ProblemSolutions/Problem001.h" />
 		<Unit filename="src/include/ProblemSolutions/Problem002.h" />
 		<Unit filename="src/include/ProblemSolutions/Problem003.h" />
@@ -103,6 +104,7 @@
 		<Unit filename="src/include/ProblemSolutions/Problem034.h" />
 		<Unit filename="src/include/ProblemSolutions/Problem035.h" />
 		<Unit filename="src/include/ProblemSolutions/Problem036.h" />
+		<Unit filename="src/include/ProblemSolutions/Problem037.h" />
 		<Extensions>
 			<code_completion />
 			<debugger />
