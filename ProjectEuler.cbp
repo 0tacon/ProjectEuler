@@ -105,6 +105,8 @@
 		<Unit filename="src/include/ProblemSolutions/Problem035.h" />
 		<Unit filename="src/include/ProblemSolutions/Problem036.h" />
 		<Unit filename="src/include/ProblemSolutions/Problem037.h" />
+		<Unit filename="src/include/ProblemSolutions/Problem038.h" />
+		<Unit filename="src/include/ProblemSolutions/Problem039.h" />
 		<Extensions>
 			<code_completion />
 			<debugger />
