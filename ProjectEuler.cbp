@@ -59,6 +59,7 @@
 		<Unit filename="src/include/OtherFunctions/GetSumPrimesBelow.h" />
 		<Unit filename="src/include/OtherFunctions/IsDivisible.h" />
 		<Unit filename="src/include/OtherFunctions/IsPalendrome.h" />
+		<Unit filename="src/include/OtherFunctions/IsPanDigital.h" />
 		<Unit filename="src/include/OtherFunctions/LengthOfCollatzSeq.h" />
 		<Unit filename="src/include/OtherFunctions/MakeTotalFromSet.h" />
 		<Unit filename="src/include/OtherFunctions/PrintHeader.h" />
@@ -107,6 +108,8 @@
 		<Unit filename="src/include/ProblemSolutions/Problem037.h" />
 		<Unit filename="src/include/ProblemSolutions/Problem038.h" />
 		<Unit filename="src/include/ProblemSolutions/Problem039.h" />
+		<Unit filename="src/include/ProblemSolutions/Problem040.h" />
+		<Unit filename="src/include/ProblemSolutions/Problem041.h" />
 		<Extensions>
 			<code_completion />
 			<debugger />

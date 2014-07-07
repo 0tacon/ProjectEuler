@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1404755665 source:/home/daniel/dev/cppprojects/ProjectEuler/src/ProjectEuler.cpp
+1404756332 source:/home/daniel/dev/cppprojects/ProjectEuler/src/ProjectEuler.cpp
 	<iostream>
 	<cstdint>
 	"include/OtherFunctions/PrintHeader.h"
@@ -43,6 +43,7 @@
 	"include/ProblemSolutions/Problem038.h"
 	"include/ProblemSolutions/Problem039.h"
 	"include/ProblemSolutions/Problem040.h"
+	"include/ProblemSolutions/Problem041.h"
 
 1404276969 /home/daniel/dev/cppprojects/ProjectEuler/src/include/OtherFunctions/PrintHeader.h
 	<iostream>
@@ -536,4 +537,17 @@
 	<cstdint>
 	<string>
 	<iterator>
+
+1404760764 /home/daniel/dev/cppprojects/ProjectEuler/src/include/ProblemSolutions/Problem041.h
+	<cstdio>
+	<cstdint>
+	<vector>
+	"../OtherFunctions/IsPanDigital.h"
+	"../OtherFunctions/GetAllPrimesBelow.h"
+
+1404760069 /home/daniel/dev/cppprojects/ProjectEuler/src/include/OtherFunctions/IsPanDigital.h
+	<cstdio>
+	<cstdint>
+	<string>
+	<algorithm>
 
