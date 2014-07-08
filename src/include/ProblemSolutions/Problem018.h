@@ -32,6 +32,10 @@ bool Problem18 ()
 	std::string filename = "../../data/Problem18.txt";
 
 	ReadFileIntoVect (vect, filename);
+	vect.erase(std::remove(vect.begin(), vect.end(), 13), vect.end());
+    vect.erase(std::remove(vect.begin(), vect.end(), 10), vect.end());
+	for (uint32_t i = 0; i < vect.size(); i++)
+        vect[i] -= 48;
 
     vect.erase(std::remove(vect.begin(), vect.end(), 65520), vect.end());
 

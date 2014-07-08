@@ -20,6 +20,10 @@ bool Problem13 ()
 	uint64_t answer=0;
 
 	ReadFileIntoVect (vect, filename);
+	vect.erase(std::remove(vect.begin(), vect.end(), 13), vect.end());
+    vect.erase(std::remove(vect.begin(), vect.end(), 10), vect.end());
+	for (uint32_t i = 0; i < vect.size(); i++)
+        vect[i] -= 48;
 
 	for (int8_t j=10; j>=0; j--)
 	{

@@ -18,6 +18,10 @@ bool Problem8 ()
 	std::string filepath = "../../data/Problem8.txt";
 
 	ReadFileIntoVect (vect, filepath);
+	vect.erase(std::remove(vect.begin(), vect.end(), 13), vect.end());
+    vect.erase(std::remove(vect.begin(), vect.end(), 10), vect.end());
+	for (uint32_t i = 0; i < vect.size(); i++)
+        vect[i] -= 48;
 
 	temp.resize(13);
 

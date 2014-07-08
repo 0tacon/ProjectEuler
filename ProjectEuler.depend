@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1404756332 source:/home/daniel/dev/cppprojects/ProjectEuler/src/ProjectEuler.cpp
+1404840884 source:/home/daniel/dev/cppprojects/ProjectEuler/src/ProjectEuler.cpp
 	<iostream>
 	<cstdint>
 	"include/OtherFunctions/PrintHeader.h"
@@ -44,6 +44,7 @@
 	"include/ProblemSolutions/Problem039.h"
 	"include/ProblemSolutions/Problem040.h"
 	"include/ProblemSolutions/Problem041.h"
+	"include/ProblemSolutions/Problem042.h"
 
 1404276969 /home/daniel/dev/cppprojects/ProjectEuler/src/include/OtherFunctions/PrintHeader.h
 	<iostream>
@@ -113,14 +114,14 @@
 	<cmath>
 	<functional>
 
-1404276969 /home/daniel/dev/cppprojects/ProjectEuler/src/include/ProblemSolutions/Problem008.h
+1404841038 /home/daniel/dev/cppprojects/ProjectEuler/src/include/ProblemSolutions/Problem008.h
 	<iostream>
 	<vector>
 	<algorithm>
 	<cstdint>
 	"../OtherFunctions/ReadFileIntoVect.h"
 
-1404276969 /home/daniel/dev/cppprojects/ProjectEuler/src/include/OtherFunctions/ReadFileIntoVect.h
+1404837751 /home/daniel/dev/cppprojects/ProjectEuler/src/include/OtherFunctions/ReadFileIntoVect.h
 	<fstream>
 	<iostream>
 	<vector>
@@ -145,7 +146,7 @@
 	<functional>
 	"GetAllPrimesBelow.h"
 
-1404276969 /home/daniel/dev/cppprojects/ProjectEuler/src/include/ProblemSolutions/Problem011.h
+1404841038 /home/daniel/dev/cppprojects/ProjectEuler/src/include/ProblemSolutions/Problem011.h
 	<iostream>
 	<vector>
 	<cstdint>
@@ -200,7 +201,7 @@
 	<cmath>
 	<functional>
 
-1404276969 /home/daniel/dev/cppprojects/ProjectEuler/src/include/ProblemSolutions/Problem013.h
+1404841038 /home/daniel/dev/cppprojects/ProjectEuler/src/include/ProblemSolutions/Problem013.h
 	<iostream>
 	<cstdint>
 	<vector>
@@ -252,7 +253,7 @@
 1404276969 /home/daniel/dev/cppprojects/ProjectEuler/src/include/OtherFunctions/GetDigit.h
 	<cstdint>
 
-1404276969 /home/daniel/dev/cppprojects/ProjectEuler/src/include/ProblemSolutions/Problem018.h
+1404841038 /home/daniel/dev/cppprojects/ProjectEuler/src/include/ProblemSolutions/Problem018.h
 	<iostream>
 	<string>
 	<vector>
@@ -337,7 +338,7 @@
 	<string>
 	"..//Classes//NameList.h"
 
-1404276969 /home/daniel/dev/cppprojects/ProjectEuler/src/include//Classes//NameList.h
+1404841038 /home/daniel/dev/cppprojects/ProjectEuler/src/include//Classes//NameList.h
 	<iostream>
 	<cstdint>
 	<string>
@@ -525,7 +526,7 @@
 	<vector>
 	<algorithm>
 
-1404666320 /home/daniel/dev/cppprojects/ProjectEuler/src/include/ProblemSolutions/Problem039.h
+1404841101 /home/daniel/dev/cppprojects/ProjectEuler/src/include/ProblemSolutions/Problem039.h
 	<cstdint>
 	<cstdio>
 	<vector>
@@ -550,4 +551,12 @@
 	<cstdint>
 	<string>
 	<algorithm>
+
+1404840550 /home/daniel/dev/cppprojects/ProjectEuler/src/include/ProblemSolutions/Problem042.h
+	<cstdio>
+	<cstdint>
+	<vector>
+	<cmath>
+	"../OtherFunctions/ReadFileIntoVect.h"
+	"../OtherFunctions/PrintVector.h"
 

@@ -36,6 +36,11 @@ NameList::NameList(std::string filename)
 	std::vector<std::string> temp;
 	ReadFileIntoVect(vect, filename);
 
+    vect.erase(std::remove(vect.begin(), vect.end(), 13), vect.end());
+    vect.erase(std::remove(vect.begin(), vect.end(), 10), vect.end());
+	for (uint32_t i = 0; i < vect.size(); i++)
+        vect[i] -= 48;
+
 	for (uint32_t i = 0; i < vect.size(); i++)
 		vect.at(i) += 48;
 

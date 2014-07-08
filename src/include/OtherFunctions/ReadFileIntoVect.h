@@ -22,7 +22,7 @@ bool ReadFileIntoVect ( std::vector<T> &vect, std::string &filepath )
 	}
 	else
 		while ( file.get(c) )
-            if (c != 13 && c != 10) vect.push_back( c-48 );
+            vect.push_back(c);
 
 	file.close();
 

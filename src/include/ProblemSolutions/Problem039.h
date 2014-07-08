@@ -18,7 +18,7 @@ bool Problem39()
     std::vector<float> temp_vect;
     float a;
     uint8_t largest_num_triplets = 0;
-    uint16_t ans;
+    uint16_t ans = 0;
 
     for (float p = 12.0f; p < 1001.0f; p++)
         for (float b = 1; b <= p/(2.0f + sqrt(2.0f)); b++)
