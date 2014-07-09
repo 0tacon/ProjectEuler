@@ -39,6 +39,7 @@
 		<Unit filename="src/include/Classes/NumericGrid.h" />
 		<Unit filename="src/include/Classes/NumericTriangle.h" />
 		<Unit filename="src/include/Classes/StringNum.h" />
+		<Unit filename="src/include/OtherFunctions/AreDigitsRepeated.h" />
 		<Unit filename="src/include/OtherFunctions/Combination.h" />
 		<Unit filename="src/include/OtherFunctions/CountHighBits.h" />
 		<Unit filename="src/include/OtherFunctions/ExtractNDigitNums.h" />
@@ -111,6 +112,7 @@
 		<Unit filename="src/include/ProblemSolutions/Problem040.h" />
 		<Unit filename="src/include/ProblemSolutions/Problem041.h" />
 		<Unit filename="src/include/ProblemSolutions/Problem042.h" />
+		<Unit filename="src/include/ProblemSolutions/Problem043.h" />
 		<Extensions>
 			<code_completion />
 			<debugger />

@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1404840884 source:/home/daniel/dev/cppprojects/ProjectEuler/src/ProjectEuler.cpp
+1404929746 source:/home/daniel/dev/cppprojects/ProjectEuler/src/ProjectEuler.cpp
 	<iostream>
 	<cstdint>
 	"include/OtherFunctions/PrintHeader.h"
@@ -45,6 +45,7 @@
 	"include/ProblemSolutions/Problem040.h"
 	"include/ProblemSolutions/Problem041.h"
 	"include/ProblemSolutions/Problem042.h"
+	"include/ProblemSolutions/Problem043.h"
 
 1404276969 /home/daniel/dev/cppprojects/ProjectEuler/src/include/OtherFunctions/PrintHeader.h
 	<iostream>
@@ -559,4 +560,18 @@
 	<cmath>
 	"../OtherFunctions/ReadFileIntoVect.h"
 	"../OtherFunctions/PrintVector.h"
+
+1404929852 /home/daniel/dev/cppprojects/ProjectEuler/src/include/ProblemSolutions/Problem043.h
+	<cstdint>
+	<cstdio>
+	<vector>
+	<map>
+	"../OtherFunctions/GetNumDigits.h"
+	"../OtherFunctions/AreDigitsRepeated.h"
+
+1404929746 /home/daniel/dev/cppprojects/ProjectEuler/src/include/OtherFunctions/AreDigitsRepeated.h
+	<cstdint>
+	<string>
+	<iterator>
+	<algorithm>
 
