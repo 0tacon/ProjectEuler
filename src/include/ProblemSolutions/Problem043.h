@@ -17,36 +17,51 @@
 #include <cstdint>
 #include <cstdio>
 #include <vector>
+#include <string>
 #include <map>
 
 #ifndef _GETNUMDIGITS_
 #include "../OtherFunctions/GetNumDigits.h"
 #endif // _GETNUMDIGITS_
 
-#ifndef _AREDIGITSREPEATED_
-#include "../OtherFunctions/AreDigitsRepeated.h"
-#endif // _AREDIGITSREPEATED_
+#ifndef _PRINTVECTOR_
+#include "../OtherFunctions/PrintVector.h"
+#endif // _PRINTVECTOR_
 
 bool Problem43()
 {
     std::vector<uint16_t> primes = {2,3,5,7,11,13,17};
-    std::map<uint8_t, std::vector<uint16_t> > numbers;
+    std::map<uint8_t, std::vector<std::string> > numbers;
     uint16_t num;
+    std::string temp_num;
+    bool repeated_digits = false;
 
     for (std::vector<uint16_t>::iterator prime = primes.begin(); prime != primes.end(); prime++)
-        for (uint16_t i = (100/ *prime) + 1; i < (1000/ *prime) + 1; i++)
+        for (uint16_t i = (10/ *prime); i < (1000/ *prime) + 1; i++)
         {
-            num = *prime*i;
+            temp_num = std::to_string(*prime*i);
 
-            if (GetNumDigits(num) == 3 && !AreDigitsRepeated(num))
-                numbers[*prime].push_back(num);
+            if (temp_num.size() == 2 || temp_num.size() == 3)
+            {
+                if (temp_num.size() == 2)
+                    temp_num = "0" + temp_num;
+
+                for (std::string::iterator letter = temp_num.begin(); letter != temp_num.end(); letter++)
+                    if (std::count(temp_num.begin(), temp_num.end(), *letter) > 1)
+                        repeated_digits = true;
+
+                if (!repeated_digits)
+                    numbers[*prime].push_back(temp_num);
+
+                repeated_digits = false;
+            }
         }
 
-    for (std::map<uint8_t, std::vector<uint16_t> >::iterator i = numbers.begin(); i != numbers.end(); i++)
+    for (std::map<uint8_t, std::vector<std::string> >::iterator i = numbers.begin(); i != numbers.end(); i++)
     {
         std::printf("\nPrime = %d\n", i->first);
-        for (std::vector<uint16_t>::iterator j = i->second.begin(); j != i->second.end(); j++)
-            std::printf("%d, ", *j);
+        for (std::vector<std::string>::iterator j = i->second.begin(); j != i->second.end(); j++)
+            std::printf("%s, ", j->c_str());
         std::printf("\n");
     }
 

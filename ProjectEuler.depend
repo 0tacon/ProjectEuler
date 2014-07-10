@@ -561,16 +561,29 @@
 	"../OtherFunctions/ReadFileIntoVect.h"
 	"../OtherFunctions/PrintVector.h"
 
-1404929852 /home/daniel/dev/cppprojects/ProjectEuler/src/include/ProblemSolutions/Problem043.h
+1405025140 /home/daniel/dev/cppprojects/ProjectEuler/src/include/ProblemSolutions/Problem043.h
 	<cstdint>
 	<cstdio>
 	<vector>
+	<string>
 	<map>
 	"../OtherFunctions/GetNumDigits.h"
-	"../OtherFunctions/AreDigitsRepeated.h"
+	"../OtherFunctions/PrintVector.h"
 
 1404929746 /home/daniel/dev/cppprojects/ProjectEuler/src/include/OtherFunctions/AreDigitsRepeated.h
 	<cstdint>
+	<string>
+	<iterator>
+	<algorithm>
+
+1405013907 /home/daniel/dev/cppprojects/ProjectEuler/src/include/OtherFunctions/DoNumsShareDigits.h
+	<cstdint>
+	<string>
+	<iterator>
+
+1405022738 /home/daniel/dev/cppprojects/ProjectEuler/src/include/OtherFunctions/DoNumsOverlap.h
+	<cstdint>
+	<cstdio>
 	<string>
 	<iterator>
 	<algorithm>

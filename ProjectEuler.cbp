@@ -42,6 +42,7 @@
 		<Unit filename="src/include/OtherFunctions/AreDigitsRepeated.h" />
 		<Unit filename="src/include/OtherFunctions/Combination.h" />
 		<Unit filename="src/include/OtherFunctions/CountHighBits.h" />
+		<Unit filename="src/include/OtherFunctions/DoNumsShareDigits.h" />
 		<Unit filename="src/include/OtherFunctions/ExtractNDigitNums.h" />
 		<Unit filename="src/include/OtherFunctions/Factorial.h" />
 		<Unit filename="src/include/OtherFunctions/FindLargestRepeatedSet.h" />
