@@ -20,23 +20,27 @@
 #include <string>
 #include <map>
 
-#ifndef _GETNUMDIGITS_
-#include "../OtherFunctions/GetNumDigits.h"
-#endif // _GETNUMDIGITS_
+#ifndef _ARECHARSREPEATED_
+#include "../OtherFunctions/AreCharsRepeated.h"
+#endif // _ARECHARSREPEATED_
 
-#ifndef _PRINTVECTOR_
-#include "../OtherFunctions/PrintVector.h"
-#endif // _PRINTVECTOR_
+#ifndef _STRINGNUM_
+#include "../Classes/StringNum.h"
+#endif // _STRINGNUM_
+
+void Problem43_RecursiveLoop (std::map<uint8_t, std::vector<std::string> > &numbers, std::string &current_concatenation, uint8_t &num_set, std::vector<std::string> &possible_concatenations);
 
 bool Problem43()
 {
     std::vector<uint16_t> primes = {2,3,5,7,11,13,17};
     std::map<uint8_t, std::vector<std::string> > numbers;
-    uint16_t num;
-    std::string temp_num;
-    bool repeated_digits = false;
+    uint8_t num_set = 0;
+    std::string temp_num, current_concatenation;
+    std::vector<std::string> possible_concatenations;
+    StringNum ans("0.000000"), temp_stringnum("0.000000");
 
     for (std::vector<uint16_t>::iterator prime = primes.begin(); prime != primes.end(); prime++)
+    {
         for (uint16_t i = (10/ *prime); i < (1000/ *prime) + 1; i++)
         {
             temp_num = std::to_string(*prime*i);
@@ -46,25 +50,73 @@ bool Problem43()
                 if (temp_num.size() == 2)
                     temp_num = "0" + temp_num;
 
-                for (std::string::iterator letter = temp_num.begin(); letter != temp_num.end(); letter++)
-                    if (std::count(temp_num.begin(), temp_num.end(), *letter) > 1)
-                        repeated_digits = true;
-
-                if (!repeated_digits)
-                    numbers[*prime].push_back(temp_num);
-
-                repeated_digits = false;
+                if (!AreCharsRepeated(temp_num))
+                    numbers[num_set].push_back(temp_num);
             }
         }
 
-    for (std::map<uint8_t, std::vector<std::string> >::iterator i = numbers.begin(); i != numbers.end(); i++)
-    {
-        std::printf("\nPrime = %d\n", i->first);
-        for (std::vector<std::string>::iterator j = i->second.begin(); j != i->second.end(); j++)
-            std::printf("%s, ", j->c_str());
-        std::printf("\n");
+        num_set++;
     }
 
-    std::printf("\nProblem 043: \n");
+    num_set = 1;
+    std::map<uint8_t, std::vector<std::string> >::iterator number_set = numbers.begin();
+    for (std::vector<std::string>::iterator num = number_set->second.begin(); num != number_set->second.end(); num++)
+    {
+        if (num->at(0) != '0')
+        {
+            current_concatenation = *num;
+
+            Problem43_RecursiveLoop(numbers, current_concatenation, num_set, possible_concatenations);
+        }
+    }
+
+    for (uint8_t itr = 0; itr < possible_concatenations.size(); itr++)
+        for (uint8_t i = 1; i < 10; i++)
+            if (std::count(possible_concatenations[itr].begin(), possible_concatenations[itr].end(), i + '0') == 0)
+                possible_concatenations[itr] = std::to_string(i) + possible_concatenations[itr];
+
+    for (std::vector<std::string>::iterator itr = possible_concatenations.begin(); itr != possible_concatenations.end(); itr++)
+    {
+        temp_stringnum.SetNum(*itr + ".000000");
+        ans = ans + temp_stringnum;
+    }
+
+    std::printf("\nProblem 043: %s\n", ans.GetNum().c_str());
     return true;
+}
+
+void Problem43_RecursiveLoop (std::map<uint8_t, std::vector<std::string> > &numbers, std::string &current_concatenation, uint8_t &num_set, std::vector<std::string> &possible_concatenations)
+{
+    std::string str_a, str_b;
+
+    str_a = current_concatenation;
+    str_a.erase(str_a.begin(), std::prev(str_a.end(), 2));
+
+    std::map<uint8_t, std::vector<std::string> >::iterator number_set = std::next(numbers.begin(), num_set);
+    for (std::vector<std::string>::iterator num = number_set->second.begin(); num != number_set->second.end(); num++)
+    {
+        str_b = *num;
+        str_b.erase(std::prev(str_b.end(), 1), str_b.end());
+
+        if (str_a == str_b)
+        {
+            str_b = *num;
+            str_b.erase(str_b.begin(), std::prev(str_b.end(), 1));
+
+            current_concatenation += str_b;
+
+            if (num_set != numbers.size() - 1)
+            {
+                num_set++;
+
+                Problem43_RecursiveLoop(numbers, current_concatenation, num_set, possible_concatenations);
+
+                num_set--;
+            }
+            else if (!AreCharsRepeated(current_concatenation))
+                possible_concatenations.push_back(current_concatenation);
+
+            current_concatenation.erase(std::prev(current_concatenation.end(), 1), current_concatenation.end());
+        }
+    }
 }

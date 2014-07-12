@@ -39,6 +39,7 @@
 		<Unit filename="src/include/Classes/NumericGrid.h" />
 		<Unit filename="src/include/Classes/NumericTriangle.h" />
 		<Unit filename="src/include/Classes/StringNum.h" />
+		<Unit filename="src/include/OtherFunctions/AreCharsRepeated.h" />
 		<Unit filename="src/include/OtherFunctions/AreDigitsRepeated.h" />
 		<Unit filename="src/include/OtherFunctions/Combination.h" />
 		<Unit filename="src/include/OtherFunctions/CountHighBits.h" />
