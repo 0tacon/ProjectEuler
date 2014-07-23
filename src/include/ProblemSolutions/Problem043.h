@@ -1,4 +1,25 @@
 /*
+
+Copyright 2014 Daniel Forde
+
+This file is part of ProjectEuler.
+
+ProjectEuler is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+ProjectEuler is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with ProjectEuler.  If not, see <http://www.gnu.org/licenses/>.
+
+*/
+
+/*
     The number, 1406357289, is a 0 to 9 pandigital number because it is made up of each of the digits 0 to 9 in some order, but it also has a rather interesting sub-string divisibility property.
 
     Let d1 be the 1st digit, d2 be the 2nd digit, and so on. In this way, we note the following:
