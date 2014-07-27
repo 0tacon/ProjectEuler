@@ -38,25 +38,25 @@ along with ProjectEuler.  If not, see <http://www.gnu.org/licenses/>.
 #include <cstdio>
 #include <vector>
 
+#ifndef _GETALLPRIMESBELOW_
+#include "../OtherFunctions/GetAllPrimesBelow.h"
+#endif // _GETALLPRIMESBELOW_
+
 #ifndef _GETPRIMEFACTORS_
 #include "../OtherFunctions/GetPrimeFactors.h"
 #endif // _GETPRIMEFACTORS_
 
-#ifndef _PRINTVECTOR_
-#include "../OtherFunctions/PrintVector.h"
-#endif // _PRINTVECTOR_
-
 bool Problem47()
 {
-    std::vector<uint32_t> answers;
+    std::vector<uint32_t> answers, primes_under_1000 = GetAllPrimesBelow(1000);
     std::map<uint32_t, uint32_t> prime_factors;
-    uint32_t min = 10000, max = 135000, num_factors = 4;
+    uint32_t min = 647, max = 200000, num_factors = 4;
 
     for (uint32_t i = min; i < max; i++)
     {
         bool ans_found = false;
 
-        prime_factors = GetPrimeFactors(i);
+        prime_factors = GetPrimeFactors(i, primes_under_1000);
 
         if (prime_factors.size() == num_factors)
         {
@@ -64,7 +64,7 @@ bool Problem47()
 
             for (uint32_t temp = i + 1; temp < i + num_factors; temp++)
             {
-                prime_factors = GetPrimeFactors(temp);
+                prime_factors = GetPrimeFactors(temp, primes_under_1000);
 
                 if (prime_factors.size() != num_factors)
                     ans_found = false;
@@ -80,8 +80,6 @@ bool Problem47()
         }
     }
 
-    PrintVector(answers);
-
-    std::printf("\nProblem 047: \n");
+    std::printf("\nProblem 047: %d\n", answers[0]);
     return true;
 }
