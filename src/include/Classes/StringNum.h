@@ -44,6 +44,8 @@ public:
 
 	void Print();
 
+	template <typename T> void TruncateStringNum(T n);
+
 private:
 	std::string number;
 	uint16_t first_digit_index;
@@ -231,4 +233,21 @@ bool StringNum::operator==(const StringNum other)
         return true;
     else
         return false;
+}
+
+template <typename T>
+void StringNum::TruncateStringNum(T n)
+{
+    uint8_t num_digits = static_cast<uint8_t>(n), current_num_digits = number.size() - 7;
+
+    if (num_digits < current_num_digits)
+    {
+        number.erase(number.begin(), std::next(number.begin(), current_num_digits - num_digits));
+
+        uint16_t i = 0;
+        while (number[i] != '.')
+            i++;
+
+        first_digit_index = i - 1;
+    }
 }

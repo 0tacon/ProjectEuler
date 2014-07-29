@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1406135624 source:/home/daniel/dev/cppprojects/ProjectEuler/src/ProjectEuler.cpp
+1406473739 source:/home/daniel/dev/cppprojects/ProjectEuler/src/ProjectEuler.cpp
 	<iostream>
 	<cstdint>
 	"include/OtherFunctions/PrintHeader.h"
@@ -50,6 +50,7 @@
 	"include/ProblemSolutions/Problem045.h"
 	"include/ProblemSolutions/Problem046.h"
 	"include/ProblemSolutions/Problem047.h"
+	"include/ProblemSolutions/Problem048.h"
 
 1406135859 /home/daniel/dev/cppprojects/ProjectEuler/src/include/OtherFunctions/PrintHeader.h
 	<iostream>
@@ -185,7 +186,7 @@
 	<map>
 	"GetPrimeFactors.h"
 
-1406471481 /home/daniel/dev/cppprojects/ProjectEuler/src/include//OtherFunctions//GetPrimeFactors.h
+1406472869 /home/daniel/dev/cppprojects/ProjectEuler/src/include//OtherFunctions//GetPrimeFactors.h
 	<cstdint>
 	<cmath>
 	<functional>
@@ -242,7 +243,7 @@
 	<cstdint>
 	"../Classes/StringNum.h"
 
-1406135757 /home/daniel/dev/cppprojects/ProjectEuler/src/include/Classes/StringNum.h
+1406651494 /home/daniel/dev/cppprojects/ProjectEuler/src/include/Classes/StringNum.h
 	<string>
 
 1406136103 /home/daniel/dev/cppprojects/ProjectEuler/src/include/ProblemSolutions/Problem017.h
@@ -324,7 +325,7 @@
 	"GetPrimeFactors.h"
 	"GetAllPossibleProducts.h"
 
-1406471481 /home/daniel/dev/cppprojects/ProjectEuler/src/include/OtherFunctions/GetPrimeFactors.h
+1406472869 /home/daniel/dev/cppprojects/ProjectEuler/src/include/OtherFunctions/GetPrimeFactors.h
 	<cstdint>
 	<cmath>
 	<functional>
@@ -619,10 +620,16 @@
 	"../OtherFunctions/PrintVector.h"
 	"../OtherFunctions/GetAllPrimesBelow.h"
 
-1406470842 /home/daniel/dev/cppprojects/ProjectEuler/src/include/ProblemSolutions/Problem047.h
+1406472966 /home/daniel/dev/cppprojects/ProjectEuler/src/include/ProblemSolutions/Problem047.h
 	<cstdint>
 	<cstdio>
 	<vector>
+	"../OtherFunctions/GetAllPrimesBelow.h"
 	"../OtherFunctions/GetPrimeFactors.h"
-	"../OtherFunctions/PrintVector.h"
+
+1406651623 /home/daniel/dev/cppprojects/ProjectEuler/src/include/ProblemSolutions/Problem048.h
+	<cstdint>
+	<cstdio>
+	<cmath>
+	"../Classes/StringNum.h"
 
