@@ -84,6 +84,7 @@ https://projecteuler.net
 #include "include/ProblemSolutions/Problem047.h"
 #include "include/ProblemSolutions/Problem048.h"
 #include "include/ProblemSolutions/Problem049.h"
+#include "include/ProblemSolutions/Problem050.h"
 
 int main ()
 {
@@ -136,8 +137,9 @@ int main ()
     Problem45();
     Problem46();
     Problem47();
-    Problem48();*/
-    Problem49();
+    Problem48();
+    Problem49();*/
+    Problem50();
 
 	std::cout << "\n";
 	return 0;
