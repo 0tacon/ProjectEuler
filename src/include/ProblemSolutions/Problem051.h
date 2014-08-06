@@ -41,7 +41,7 @@ along with ProjectEuler.  If not, see <http://www.gnu.org/licenses/>.
 
 bool Problem51()
 {
-	std::vector<uint32_t> primes = GetAllPrimesBelow(57000);
+	std::vector<uint32_t> primes = GetAllPrimesBelow(1000000);
 	std::map<uint32_t, std::map<uint8_t, std::vector<uint8_t> > > digit_breakdowns;
 
 	for (std::vector<uint32_t>::iterator prime = primes.begin(); prime != primes.end(); prime++)
@@ -55,21 +55,6 @@ bool Problem51()
 
 			digit_breakdowns[*prime] = digit_positions;
 		}
-
-	/*for (std::map<uint32_t, std::map<uint8_t, std::vector<uint8_t> > >::iterator digit_breakdown = digit_breakdowns.begin(); digit_breakdown != digit_breakdowns.end(); digit_breakdown++)
-	{
-		std::printf("\nPrime = %d", digit_breakdown->first);
-
-		for (std::map<uint8_t, std::vector<uint8_t> >::iterator digit_position = digit_breakdown->second.begin(); digit_position != digit_breakdown->second.end(); digit_position++)
-		{
-			std::printf("\n\tDigit = %d : Positions = ", digit_position->first);
-				
-			for (std::vector<uint8_t>::iterator position = digit_position->second.begin(); position != digit_position->second.end(); position++)
-				std::printf("%d, ", *position);
-		}
-			
-		std::printf("\n");
-	}*/
 
 	std::vector<std::vector<uint32_t> > prime_families;
 	for (std::map<uint32_t, std::map<uint8_t, std::vector<uint8_t> > >::iterator digit_breakdown = digit_breakdowns.begin(); digit_breakdown != digit_breakdowns.end(); digit_breakdown++)
@@ -110,18 +95,10 @@ bool Problem51()
 					}
 				}
 
-				if (prime_family.size() > 6)
+				if (prime_family.size() > 7)
 					prime_families.push_back(prime_family);
 			}
 
-	for (std::vector<std::vector<uint32_t> >::iterator prime_family = prime_families.begin(); prime_family != prime_families.end(); prime_family++)
-	{
-		std::printf("\n");
-		for (std::vector<uint32_t>::iterator prime = prime_family->begin(); prime != prime_family->end(); prime++)
-			std::printf("%d, ", *prime);
-		std::printf("\n");
-	}
-
-	std::printf("\nProblem 051: \n");
+	std::printf("\nProblem 051: %d\n", prime_families[0][0]);
 	return true;
 }
