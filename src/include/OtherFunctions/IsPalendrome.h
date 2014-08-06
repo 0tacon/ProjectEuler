@@ -23,7 +23,7 @@ along with ProjectEuler.  If not, see <http://www.gnu.org/licenses/>.
 #include <cstdint>
 #include <cstdio>
 #include <vector>
-#include <cstring>
+#include <string>
 
 #ifndef _GETNUMDIGITS_
 	#include "../OtherFunctions/GetNumDigits.h"
