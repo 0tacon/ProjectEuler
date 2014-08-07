@@ -58,7 +58,9 @@ bool Problem51()
 
 	std::vector<std::vector<uint32_t> > prime_families;
 	for (std::map<uint32_t, std::map<uint8_t, std::vector<uint8_t> > >::iterator digit_breakdown = digit_breakdowns.begin(); digit_breakdown != digit_breakdowns.end(); digit_breakdown++)
+	{
 		for (std::map<uint8_t, std::vector<uint8_t> >::iterator digit_positions = digit_breakdown->second.begin(); digit_positions != digit_breakdown->second.end(); digit_positions++)
+		{
 			if (digit_positions->second.size() > 1)
 			{
 				std::vector<uint32_t> prime_family;
@@ -80,9 +82,9 @@ bool Problem51()
 					bool comparison_successful = true;
 
 					for (std::vector<uint8_t>::iterator position = digit_positions->second.begin(); position != digit_positions->second.end(); position++)
-						if (other_prime[*position] != comparison_letter)
-							comparison_successful = false;
-					
+					if (other_prime[*position] != comparison_letter)
+						comparison_successful = false;
+
 					if (comparison_successful)
 					{
 						for (std::vector<uint8_t>::iterator position = digit_positions->second.begin(); position != digit_positions->second.end(); position++)
@@ -98,6 +100,14 @@ bool Problem51()
 				if (prime_family.size() > 7)
 					prime_families.push_back(prime_family);
 			}
+
+			if (prime_families.size() > 0)
+				break;
+		}
+
+		if (prime_families.size() > 0)
+			break;
+	}
 
 	std::printf("\nProblem 051: %d\n", prime_families[0][0]);
 	return true;
