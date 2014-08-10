@@ -35,18 +35,19 @@ along with ProjectEuler.  If not, see <http://www.gnu.org/licenses/>.
 #define _COMBINATION_
 
 template<typename T>
-uint64_t Combination (T n, T k)
+uint64_t Combination (T n, T k, bool &overflow_flag)
 {
 	uint64_t comb = 0, numerator = 1, denominator = 1;
-	std::vector<uint16_t> num, denom;
+	std::vector<uint64_t> num, denom;
 	bool factor_cancelled = true;
+	overflow_flag = false;
 
 	// Fill the numerator product vector with all nums from n-k+1 to n
-	for (uint16_t i = n; i > k; i--)
+	for (uint64_t i = n; i >= n - k + 1; i--)
 		num.push_back(i);
 
     // Fill the denominator product vector with all nums from 1 to k
-	for (uint16_t i = k; i > 0; i--)
+	for (uint64_t i = k; i > 0; i--)
 		denom.push_back(i);
 
 	// Cancel out all common factors in numerator and denominator product vectors
@@ -54,20 +55,14 @@ uint64_t Combination (T n, T k)
 	{
 		factor_cancelled = false;
 
-		for (uint16_t a = 0; a < num.size(); a++)
-			for (uint16_t b = 0; b < denom.size(); b++)
+		for (uint64_t a = 0; a < num.size(); a++)
+			for (uint64_t b = 0; b < denom.size(); b++)
 			{
 				if (num[a] != 1 && denom[b] != 1)
 				{
-					if (IsDivisible(num[a], denom[b]))
+					if (num[a] % denom[b] == 0)
 					{
-						num[a] = num[a] / denom[b];
-						denom[b] = 1;
-						factor_cancelled = true;
-					}
-					else if (num[a] == denom[b])
-					{
-						num[a] = 1;
+						num[a] /= denom[b];
 						denom[b] = 1;
 						factor_cancelled = true;
 					}
@@ -76,12 +71,39 @@ uint64_t Combination (T n, T k)
 	}
 
 	// Compute the actual numertor
-	for (std::vector<uint16_t>::iterator n = num.begin(); n != num.end(); n++)
+	uint64_t old_numerator;
+	for (std::vector<uint64_t>::iterator n = num.begin(); n != num.end(); n++)
+	{
+		old_numerator = numerator;
 		numerator *= *n;
 
+		if (numerator < old_numerator)
+		{
+			overflow_flag = true;
+			break;
+		}
+	}
+
+	
+	if (overflow_flag)
+		return 0;
+	
 	// Compute the actual denominator
-	for (std::vector<uint16_t>::iterator d = denom.begin(); d != denom.end(); d++)
+	uint64_t old_denominator;
+	for (std::vector<uint64_t>::iterator d = denom.begin(); d != denom.end(); d++)
+	{
+		old_denominator = denominator;
 		denominator *= *d;
+
+		if (denominator < old_denominator)
+		{
+			overflow_flag = true;
+			break;
+		}
+	}
+
+	if (overflow_flag)
+		return 0;
 
     // Calculate the combination
 	comb = numerator / denominator;

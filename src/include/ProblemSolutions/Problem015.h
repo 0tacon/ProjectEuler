@@ -36,6 +36,8 @@ along with ProjectEuler.  If not, see <http://www.gnu.org/licenses/>.
 
 bool Problem15 ()
 {
-	std::cout << "\nProblem 015: " << Combination(40, 20) << "\n";
+	bool overflow_flag = false;
+
+	std::cout << "\nProblem 015: " << Combination(40, 20, overflow_flag) << "\n";
 	return true;
 }
