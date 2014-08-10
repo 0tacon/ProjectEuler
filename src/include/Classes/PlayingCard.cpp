@@ -69,7 +69,7 @@ void cPlayingCard::ConvertCharactersToCard(char value, char suit)
 	case '9':
 		m_Value = NINE;
 		break;
-	case '10':
+	case 'T':
 		m_Value = TEN;
 		break;
 	case 'J':
@@ -109,5 +109,26 @@ void cPlayingCard::ConvertCharactersToCard(char value, char suit)
 
 void cPlayingCard::PrintCard()
 {
-	std::printf("%c%c", m_Value, m_Suit);
+	switch (m_Value)
+	{
+	case TEN:
+		std::printf("T");
+		break;
+	case JACK:
+		std::printf("J");
+		break;
+	case QUEEN:
+		std::printf("Q");
+		break;
+	case KING:
+		std::printf("K");
+		break;
+	case ACE:
+		std::printf("A");
+		break;
+	default:
+		std::printf("%c", m_Value + '0');
+	}
+
+	std::printf("%c", m_Suit);
 }

@@ -31,6 +31,20 @@ along with ProjectEuler.  If not, see <http://www.gnu.org/licenses/>.
 class cPokerHand
 {
 public:
+	enum eHandType
+	{
+		HIGHCARD = 0,
+		ONEPAIR = 1,
+		TWOPAIR = 2,
+		THREE_OF_A_KIND = 3,
+		STRAIGHT = 4,
+		FLUSH = 5,
+		FULLHOUSE = 6,
+		FOUR_OF_A_KIND = 7,
+		STRAIGHT_FLUSH = 8,
+		ROYAL_FLUSH = 9,
+	};
+
 	cPokerHand();
 	cPokerHand(std::vector<char> hand);
 	~cPokerHand() {}
@@ -38,8 +52,20 @@ public:
 	void PrintHand();
 	void AnalyseHand();
 
+	bool IsRoyalFlush();
+	bool IsStraightFlush();
+	bool IsFourOfAKind();
+	bool IsFullHouse();
+	bool IsFlush();
+	bool IsStraight();
+	bool IsThreeOfAKind();
+	bool IsTwoPair();
+	bool IsOnePair();
+
 private:
 	std::vector<cPlayingCard> m_Cards;
+	eHandType m_HandType;
+	std::vector<cPlayingCard::eCardValue> m_HighCards;
 };
 
 #endif
