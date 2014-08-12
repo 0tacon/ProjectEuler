@@ -498,3 +498,36 @@ void cPokerHand::PrintValue(cPlayingCard::eCardValue value)
 		std::printf("%d", value);
 	}
 }
+
+bool cPokerHand::operator>(const cPokerHand other)
+{
+	if (this->m_HandType > other.GetHandType())
+		return true;
+	if (this->m_HandType == other.GetHandType())
+	{
+		for (uint8_t value = 0; value < m_HandValues.size(); value++)
+		{
+			if (m_HandValues[value] > other.GetHandValues()[value])
+				return true;
+			else if (m_HandValues[value] < other.GetHandValues()[value])
+				return false;
+		}
+		for (uint8_t value = 0; value < m_HighCards.size(); value++)
+		{
+			if (m_HighCards[value] > other.GetHighCards()[value])
+				return true;
+			else if (m_HighCards[value] < other.GetHighCards()[value])
+				return false;
+		}
+	}
+	
+	return false;
+}
+
+bool cPokerHand::operator==(const cPokerHand other)
+{
+	if (m_HandType == other.GetHandType() && m_HandValues == other.GetHandValues() && m_HighCards == other.GetHandValues())
+		return true;
+	
+	return false;
+}

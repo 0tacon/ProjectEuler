@@ -64,6 +64,13 @@ public:
 
 	void PrintValue(cPlayingCard::eCardValue value);
 
+	bool operator>(const cPokerHand other);
+	bool operator==(const cPokerHand other);
+
+	eHandType GetHandType() const { return m_HandType; }
+	std::vector<cPlayingCard::eCardValue> GetHighCards() const { return m_HighCards; }
+	std::vector<cPlayingCard::eCardValue> GetHandValues() const { return m_HandValues; }
+
 private:
 	std::vector<cPlayingCard> m_Cards;
 	eHandType m_HandType;

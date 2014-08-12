@@ -77,17 +77,13 @@ along with ProjectEuler.  If not, see <http://www.gnu.org/licenses/>.
 
 bool Problem54()
 {
-	//std::vector<char> vect = { 'A','D','A','C','3','S','3','H','5','D' };
-
+	uint16_t p1_wins = 0;
 	std::vector<char> vect;
-	std::string filepath = "../../data/poker_testing.txt";
+	std::string filepath = "../../data/poker.txt";
 	ReadFileIntoVect(vect, filepath);
 
 	vect.erase(std::remove(vect.begin(), vect.end(), ' '), vect.end());
 	vect.erase(std::remove(vect.begin(), vect.end(), '\n'), vect.end());
-
-	/*for (std::vector<char>::iterator itr = vect.begin(); itr != vect.end(); itr++)
-		std::printf("%c", *itr);*/
 
 	std::vector<std::vector<char> > poker_hands;
 	for (uint16_t i = 0; i < vect.size(); i += 10)
@@ -100,17 +96,15 @@ bool Problem54()
 		poker_hands.push_back(poker_hand);
 	}
 
-	for (std::vector<std::vector<char> >::iterator poker_hand = poker_hands.begin(); poker_hand != poker_hands.end(); poker_hand++)
+	for (std::vector<std::vector<char> >::iterator poker_hand = poker_hands.begin(); poker_hand != poker_hands.end(); poker_hand+=2)
 	{
-		/*std::printf("\n");
-		for (std::vector<char>::iterator itr = poker_hand->begin(); itr != poker_hand->end(); itr++)
-			std::printf("%c", *itr);
-		std::printf("\n");*/
-
 		cPokerHand hand(*poker_hand);
-		hand.PrintHand();
+		cPokerHand other_hand(*(poker_hand+1));
+		
+		if (!(hand == other_hand) && hand > other_hand)
+			p1_wins++;
 	}
 
-	std::printf("\nProblem 054: \n");
+	std::printf("\nProblem 054: %d\n", p1_wins);
 	return true;
 }
