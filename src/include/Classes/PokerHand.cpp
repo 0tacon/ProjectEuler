@@ -35,13 +35,6 @@ cPokerHand::cPokerHand()
 	m_Cards.push_back(cPlayingCard('7', 'C'));
 
 	AnalyseHand();
-
-	m_HighCards.clear();
-	for (std::vector<cPlayingCard>::iterator card = m_Cards.begin(); card != m_Cards.end(); card++)
-		m_HighCards.push_back(card->GetValue());
-
-	std::sort(m_HighCards.begin(), m_HighCards.end());
-	std::reverse(m_HighCards.begin(), m_HighCards.end());
 }
 
 cPokerHand::cPokerHand(std::vector<char> hand)
@@ -63,13 +56,6 @@ cPokerHand::cPokerHand(std::vector<char> hand)
 	}
 
 	AnalyseHand();
-
-	m_HighCards.clear();
-	for (std::vector<cPlayingCard>::iterator card = m_Cards.begin(); card != m_Cards.end(); card++)
-		m_HighCards.push_back(card->GetValue());
-
-	std::sort(m_HighCards.begin(), m_HighCards.end());
-	std::reverse(m_HighCards.begin(), m_HighCards.end());
 }
 
 void cPokerHand::PrintHand()
@@ -91,10 +77,16 @@ void cPokerHand::PrintHand()
 		std::printf("Straight Flush\n");
 		break;
 	case FOUR_OF_A_KIND:
-		std::printf("Four of a Kind\n");
+		std::printf("Four of a Kind - ");
+		PrintValue(m_HandValues[0]);
+		std::printf("\n");
 		break;
 	case FULLHOUSE:
-		std::printf("Full House\n");
+		std::printf("Full House - ");
+		PrintValue(m_HandValues[0]);
+		std::printf(", ");
+		PrintValue(m_HandValues[1]);
+		std::printf("\n");
 		break;
 	case FLUSH:
 		std::printf("Flush\n");
@@ -103,13 +95,21 @@ void cPokerHand::PrintHand()
 		std::printf("Straight\n");
 		break;
 	case THREE_OF_A_KIND:
-		std::printf("Three of a Kind\n");
+		std::printf("Three of a Kind - ");
+		PrintValue(m_HandValues[0]);
+		std::printf("\n");
 		break;
 	case TWOPAIR:
-		std::printf("Two Pair\n");
+		std::printf("Two Pair - ");
+		PrintValue(m_HandValues[0]);
+		std::printf(", ");
+		PrintValue(m_HandValues[1]);
+		std::printf("\n");
 		break;
 	case ONEPAIR:
-		std::printf("One Pair\n");
+		std::printf("One Pair - ");
+		PrintValue(m_HandValues[0]);
+		std::printf("\n");
 		break;
 	case HIGHCARD:
 		std::printf("High Card\n");
@@ -142,7 +142,17 @@ void cPokerHand::AnalyseHand()
 	else if (IsOnePair())
 		m_HandType = ONEPAIR;
 	else
+	{
 		m_HandType = HIGHCARD;
+
+		m_HighCards.clear();
+		for (std::vector<cPlayingCard>::iterator high_card = m_Cards.begin(); high_card != m_Cards.end(); high_card++)
+			m_HighCards.push_back(high_card->GetValue());
+		std::sort(m_HighCards.begin(), m_HighCards.end());
+		std::reverse(m_HighCards.begin(), m_HighCards.end());
+
+		m_HandValues.clear();
+	}
 }
 
 bool cPokerHand::IsRoyalFlush()
@@ -159,7 +169,17 @@ bool cPokerHand::IsRoyalFlush()
 				ace_present = true;
 
 			if (king_present && ace_present)
+			{
+				m_HighCards.clear();
+				for (std::vector<cPlayingCard>::iterator high_card = m_Cards.begin(); high_card != m_Cards.end(); high_card++)
+					m_HighCards.push_back(high_card->GetValue());
+				std::sort(m_HighCards.begin(), m_HighCards.end());
+				std::reverse(m_HighCards.begin(), m_HighCards.end());
+
+				m_HandValues.clear();
+
 				return true;
+			}
 		}
 	}
 
@@ -169,7 +189,17 @@ bool cPokerHand::IsRoyalFlush()
 bool cPokerHand::IsStraightFlush()
 {
 	if (IsStraight() && IsFlush())
+	{
+		m_HighCards.clear();
+		for (std::vector<cPlayingCard>::iterator high_card = m_Cards.begin(); high_card != m_Cards.end(); high_card++)
+			m_HighCards.push_back(high_card->GetValue());
+		std::sort(m_HighCards.begin(), m_HighCards.end());
+		std::reverse(m_HighCards.begin(), m_HighCards.end());
+
+		m_HandValues.clear();
+
 		return true;
+	}
 
 	return false;
 }
@@ -190,7 +220,19 @@ bool cPokerHand::IsFourOfAKind()
 		}
 
 		if (repeats == 3)
+		{
+			m_HighCards.clear();
+			for (std::vector<cPlayingCard>::iterator high_card = m_Cards.begin(); high_card != m_Cards.end(); high_card++)
+				if (high_card->GetValue() != card->GetValue())
+					m_HighCards.push_back(high_card->GetValue());
+			std::sort(m_HighCards.begin(), m_HighCards.end());
+			std::reverse(m_HighCards.begin(), m_HighCards.end());
+
+			m_HandValues.clear();
+			m_HandValues.push_back(card->GetValue());
+
 			return true;
+		}
 	}
 
 	return false;
@@ -199,7 +241,34 @@ bool cPokerHand::IsFourOfAKind()
 bool cPokerHand::IsFullHouse()
 {
 	if (IsThreeOfAKind() && IsOnePair())
+	{
+		m_HandValues.clear();
+
+		m_HighCards.clear();
+		for (std::vector<cPlayingCard>::iterator high_card = m_Cards.begin(); high_card != m_Cards.end(); high_card++)
+			m_HighCards.push_back(high_card->GetValue());
+
+		for (uint8_t card_value = 0; card_value < m_HighCards.size(); card_value++)
+			if (std::count(m_HighCards.begin(), m_HighCards.end(), m_HighCards[card_value]) == 3)
+			{
+				m_HandValues.push_back(m_HighCards[card_value]);
+				break;
+			}
+
+		for (uint8_t card_value = 0; card_value < m_HighCards.size(); card_value++)
+			if (std::count(m_HighCards.begin(), m_HighCards.end(), m_HighCards[card_value]) == 2)
+			{
+				m_HandValues.push_back(m_HighCards[card_value]);
+				break;
+			}
+
+		m_HighCards.clear();
+
+		std::sort(m_HandValues.begin(), m_HandValues.end());
+		std::reverse(m_HandValues.begin(), m_HandValues.end());
+
 		return true;
+	}
 
 	return false;
 }
@@ -209,9 +278,17 @@ bool cPokerHand::IsFlush()
 	for (std::vector<cPlayingCard>::iterator other_card = std::next(m_Cards.begin(), 1); other_card != m_Cards.end(); other_card++)
 	{
 		std::vector<cPlayingCard>::iterator card = m_Cards.begin();
-		if (card->GetSuit() != other_card->GetSuit())
+		if (card->GetSuit() != other_card->GetSuit())			
 			return false;
 	}
+
+	m_HighCards.clear();
+	for (std::vector<cPlayingCard>::iterator high_card = m_Cards.begin(); high_card != m_Cards.end(); high_card++)
+		m_HighCards.push_back(high_card->GetValue());
+	std::sort(m_HighCards.begin(), m_HighCards.end());
+	std::reverse(m_HighCards.begin(), m_HighCards.end());
+
+	m_HandValues.clear();
 
 	return true;
 }
@@ -272,10 +349,16 @@ bool cPokerHand::IsStraight()
 		std::vector<cPlayingCard::eCardValue>::iterator prev_value = std::prev(value, 1);
 
 		if (*value != *prev_value + 1)
-		{
 			return false;
-		}
 	}
+
+	m_HighCards.clear();
+	for (std::vector<cPlayingCard>::iterator high_card = m_Cards.begin(); high_card != m_Cards.end(); high_card++)
+		m_HighCards.push_back(high_card->GetValue());
+	std::sort(m_HighCards.begin(), m_HighCards.end());
+	std::reverse(m_HighCards.begin(), m_HighCards.end());
+
+	m_HandValues.clear();
 
 	return true;
 }
@@ -297,6 +380,16 @@ bool cPokerHand::IsThreeOfAKind()
 
 		if (repeats == 2)
 		{
+			m_HighCards.clear();
+			for (std::vector<cPlayingCard>::iterator high_card = m_Cards.begin(); high_card != m_Cards.end(); high_card++)
+				if (high_card->GetValue() != card->GetValue())
+					m_HighCards.push_back(high_card->GetValue());
+			std::sort(m_HighCards.begin(), m_HighCards.end());
+			std::reverse(m_HighCards.begin(), m_HighCards.end());
+
+			m_HandValues.clear();
+			m_HandValues.push_back(card->GetValue());
+
 			return true;
 		}
 	}
@@ -307,6 +400,8 @@ bool cPokerHand::IsThreeOfAKind()
 bool cPokerHand::IsTwoPair()
 {
 	uint8_t num_pairs = 0;
+
+	m_HandValues.clear();
 
 	for (std::vector<cPlayingCard>::iterator card = m_Cards.begin(); card != m_Cards.end(); card++)
 	{
@@ -322,9 +417,25 @@ bool cPokerHand::IsTwoPair()
 		}
 
 		if (repeats == 1)
+		{
+			m_HandValues.push_back(card->GetValue());
+
 			num_pairs++;
+		}
 		if (num_pairs == 2)
+		{
+			m_HighCards.clear();
+			for (std::vector<cPlayingCard>::iterator high_card = m_Cards.begin(); high_card != m_Cards.end(); high_card++)
+				if (std::count(m_HandValues.begin(), m_HandValues.end(), high_card->GetValue()) == 0)
+					m_HighCards.push_back(high_card->GetValue());
+			std::sort(m_HighCards.begin(), m_HighCards.end());
+			std::reverse(m_HighCards.begin(), m_HighCards.end());
+
+			std::sort(m_HandValues.begin(), m_HandValues.end());
+			std::reverse(m_HandValues.begin(), m_HandValues.end());
+
 			return true;
+		}
 	}
 
 	return false;
@@ -346,8 +457,44 @@ bool cPokerHand::IsOnePair()
 		}
 
 		if (repeats == 1)
+		{
+			m_HandValues.clear();
+			m_HandValues.push_back(card->GetValue());
+
+			m_HighCards.clear();
+			for (std::vector<cPlayingCard>::iterator high_card = m_Cards.begin(); high_card != m_Cards.end(); high_card++)
+				if (std::count(m_HandValues.begin(), m_HandValues.end(), high_card->GetValue()) == 0)
+					m_HighCards.push_back(high_card->GetValue());
+			std::sort(m_HighCards.begin(), m_HighCards.end());
+			std::reverse(m_HighCards.begin(), m_HighCards.end());
+
 			return true;
+		}
 	}
 
 	return false;
+}
+
+void cPokerHand::PrintValue(cPlayingCard::eCardValue value)
+{
+	switch (value)
+	{
+	case cPlayingCard::TEN:
+		std::printf("T");
+		break;
+	case cPlayingCard::JACK:
+		std::printf("J");
+		break;
+	case cPlayingCard::QUEEN:
+		std::printf("Q");
+		break;
+	case cPlayingCard::KING:
+		std::printf("K");
+		break;
+	case cPlayingCard::ACE:
+		std::printf("A");
+		break;
+	default:
+		std::printf("%d", value);
+	}
 }

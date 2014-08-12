@@ -62,10 +62,12 @@ public:
 	bool IsTwoPair();
 	bool IsOnePair();
 
+	void PrintValue(cPlayingCard::eCardValue value);
+
 private:
 	std::vector<cPlayingCard> m_Cards;
 	eHandType m_HandType;
-	std::vector<cPlayingCard::eCardValue> m_HighCards;
+	std::vector<cPlayingCard::eCardValue> m_HighCards, m_HandValues;
 };
 
 #endif
