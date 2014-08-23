@@ -28,9 +28,7 @@ along with ProjectEuler.  If not, see <http://www.gnu.org/licenses/>.
 #include <iostream>
 #include <cstdint>
 
-#ifndef _ISPALENDROME_
-	#include "../OtherFunctions/IsPalendrome.h"
-#endif
+#include "../OtherFunctions/IsPalendrome.h"
 
 bool Problem4()
 {

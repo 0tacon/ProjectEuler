@@ -29,9 +29,7 @@ along with ProjectEuler.  If not, see <http://www.gnu.org/licenses/>.
 #include <cstdio>
 #include <cmath>
 
-#ifndef _STRINGNUM_
 #include "../Classes/StringNum.h"
-#endif // _STRINGNUM_
 
 bool Problem48()
 {

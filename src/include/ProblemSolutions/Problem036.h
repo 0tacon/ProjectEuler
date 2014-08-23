@@ -33,9 +33,7 @@ along with ProjectEuler.  If not, see <http://www.gnu.org/licenses/>.
 #include <cmath>
 #include <cstring>
 
-#ifndef _ISPALENDROME_
 #include "../OtherFunctions/IsPalendrome.h"
-#endif // _ISPALENDROME_
 
 #ifndef _PRINTVECTOR_
 #include "../OtherFunctions/PrintVector.h"

@@ -39,9 +39,7 @@ along with ProjectEuler.  If not, see <http://www.gnu.org/licenses/>.
 #include <vector>
 #include <string>
 
-#ifndef _STRINGNUM_
 #include "../Classes/StringNum.h"
-#endif // _STRINGNUM_
 
 bool Problem29()
 {

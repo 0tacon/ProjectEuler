@@ -19,9 +19,10 @@ along with ProjectEuler.  If not, see <http://www.gnu.org/licenses/>.
 
 */
 
-#include <string>
-
+#ifndef _STRINGNUM_
 #define _STRINGNUM_
+
+#include <string>
 
 class StringNum
 {
@@ -251,3 +252,6 @@ void StringNum::TruncateStringNum(T n)
         first_digit_index = i - 1;
     }
 }
+
+
+#endif //_STRINGNUM_

@@ -19,6 +19,9 @@ along with ProjectEuler.  If not, see <http://www.gnu.org/licenses/>.
 
 */
 
+#ifndef _ISPALENDROME_
+#define _ISPALENDROME_
+
 #include <iostream>
 #include <cstdint>
 #include <cstdio>
@@ -29,13 +32,14 @@ along with ProjectEuler.  If not, see <http://www.gnu.org/licenses/>.
 	#include "../OtherFunctions/GetNumDigits.h"
 #endif
 
-#define _ISPALENDROME_
-
 bool IsPalendrome ( uint64_t num )
 {
 	std::string vect = std::to_string(num);
 
-	if ( std::equal( vect.begin(), vect.begin() + vect.size()/2, vect.rbegin() ) ) return true;
+	if ( std::equal( vect.begin(), vect.begin() + vect.size()/2, vect.rbegin() ) )
+		return true;
 
 	return false;
 }
+
+#endif

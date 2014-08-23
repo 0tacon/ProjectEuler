@@ -45,9 +45,7 @@ along with ProjectEuler.  If not, see <http://www.gnu.org/licenses/>.
 #include "../OtherFunctions/AreCharsRepeated.h"
 #endif // _ARECHARSREPEATED_
 
-#ifndef _STRINGNUM_
 #include "../Classes/StringNum.h"
-#endif // _STRINGNUM_
 
 void Problem43_RecursiveLoop (std::map<uint8_t, std::vector<std::string> > &numbers, std::string &current_concatenation, uint8_t &num_set, std::vector<std::string> &possible_concatenations);
 
