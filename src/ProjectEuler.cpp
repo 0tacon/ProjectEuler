@@ -90,6 +90,7 @@ https://projecteuler.net
 #include "include/ProblemSolutions/Problem053.h"
 #include "include/ProblemSolutions/Problem054.h"
 #include "include/ProblemSolutions/Problem055.h"
+#include "include/ProblemSolutions/Problem056.h"
 
 int main ()
 {
@@ -148,8 +149,9 @@ int main ()
 	Problem51();
 	Problem52();
 	Problem53();
-	Problem54();*/
-	Problem55();
+	Problem54();
+	Problem55();*/
+	Problem56();
 
 	std::cout << "\n";
 	std::cin.get();
